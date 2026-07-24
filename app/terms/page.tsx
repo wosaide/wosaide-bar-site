@@ -39,8 +39,8 @@ export default function TermsPage() {
           </p>
           <h3>联系</h3>
           <p>
-            获取支持或报告问题，请访问
-            <a href="https://github.com/wosaide"> WOS Aide 开发者主页</a>。
+            获取支持或报告问题，请发送邮件至
+            <a href="mailto:iihciyekub@gmail.com"> iihciyekub@gmail.com</a>。
           </p>
         </>
       }
@@ -138,9 +138,9 @@ export default function TermsPage() {
       </LegalSection>
       <LegalSection number="09" title="Support and contact">
         <p>
-          For support questions or to report a product issue, visit the{" "}
-          <a href="https://github.com/wosaide">WOS Aide developer profile</a> or
-          the <a href="/support">Support page</a>.
+          For support questions or to report a product issue, email{" "}
+          <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a> or
+          visit the <a href="/support">Support page</a>.
         </p>
       </LegalSection>
     </LegalPage>

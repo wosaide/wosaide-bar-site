@@ -955,6 +955,18 @@ h2 {
   margin-top: 16px;
 }
 
+.support-email {
+  font-size: 11px !important;
+  margin-top: 18px;
+}
+
+.support-email a,
+.support-cn a {
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .faq-section {
   padding-bottom: 70px;
 }

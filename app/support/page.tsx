@@ -77,12 +77,23 @@ export default function SupportPage() {
             </p>
             <a
               className="button button-dark"
-              href="https://github.com/wosaide"
-              rel="noreferrer"
-              target="_blank"
+              href="mailto:iihciyekub@gmail.com?subject=WOS%20Aide%20Bar%20Support"
             >
-              Developer profile ↗
+              Email support
             </a>
+            <p className="support-email">
+              <a href="mailto:iihciyekub@gmail.com">
+                iihciyekub@gmail.com
+              </a>
+              {" · "}
+              <a
+                href="https://github.com/wosaide"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Developer profile ↗
+              </a>
+            </p>
           </article>
         </section>
 
@@ -133,6 +144,8 @@ export default function SupportPage() {
           <p>
             报告问题时，请提供 macOS 与 App
             版本、预期结果和实际现象；请勿发送密码、机构登录信息或敏感剪贴板内容。
+            支持邮箱：
+            <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>。
           </p>
         </section>
       </main>

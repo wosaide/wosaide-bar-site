@@ -43,9 +43,9 @@ export default function PrivacyPage() {
           <h3>联系与变更</h3>
           <p>
             由于 App 没有账户或远程用户数据库，IIDEV
-            通常没有可供访问、更正或删除的个人资料。如有隐私问题，请通过
-            <a href="https://github.com/wosaide"> WOS Aide 开发者主页</a>
-            联系我们。政策如有重大变化，将更新本页日期和内容。
+            通常没有可供访问、更正或删除的个人资料。如有隐私问题，请发送邮件至
+            <a href="mailto:iihciyekub@gmail.com"> iihciyekub@gmail.com</a>
+            。政策如有重大变化，将更新本页日期和内容。
           </p>
         </>
       }
@@ -135,8 +135,8 @@ export default function PrivacyPage() {
           We may update this policy when the App, Site, or legal requirements
           change. Material changes will be reflected by the effective date
           above. For privacy or data-handling questions, contact the developer
-          through the{" "}
-          <a href="https://github.com/wosaide">WOS Aide developer profile</a>.
+          at{" "}
+          <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
         </p>
       </LegalSection>
     </LegalPage>
