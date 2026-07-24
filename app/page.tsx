@@ -74,6 +74,39 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="usage-showcase">
+          <div className="wrap usage-grid">
+            <div className="usage-copy">
+              <p className="kicker kicker-light">See it in action</p>
+              <h2>A journal search, ready in one line.</h2>
+              <p>
+                Type or paste a journal title. WOS Aide Bar matches the journal,
+                shows its indexes, and prepares the correct Web of Science
+                field—all without memorizing query syntax.
+              </p>
+              <ol className="usage-steps">
+                <li><span>1</span>Enter a journal title</li>
+                <li><span>2</span>Confirm the matched journal</li>
+                <li><span>3</span>Open the search in Web of Science</li>
+              </ol>
+              <p className="usage-cn">
+                输入或粘贴期刊名称，即可确认收录索引并发起 Web of Science 检索。
+              </p>
+            </div>
+            <figure className="usage-window">
+              <div className="usage-glow" aria-hidden="true" />
+              <Image
+                alt="WOS Aide Bar matching Nature Human Behaviour and showing its SCIE and SSCI indexes"
+                height={617}
+                priority
+                src={`${basePath}/app-usage.jpeg`}
+                width={500}
+              />
+              <figcaption>Real WOS Aide Bar interface · macOS</figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="section wrap" id="features">
           <div className="section-heading">
             <div>

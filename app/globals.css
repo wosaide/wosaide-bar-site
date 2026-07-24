@@ -438,6 +438,110 @@ h2 {
   line-height: 1.35;
 }
 
+.usage-showcase {
+  background: var(--navy-deep);
+  color: white;
+  overflow: hidden;
+  padding: 110px 0;
+}
+
+.usage-grid {
+  align-items: center;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 0.9fr 0.7fr;
+}
+
+.usage-copy h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  margin: 0;
+  max-width: 650px;
+}
+
+.usage-copy > p:not(.kicker) {
+  color: #bed0d2;
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 28px 0 0;
+  max-width: 590px;
+}
+
+.usage-steps {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0;
+}
+
+.usage-steps li {
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  font-size: 13px;
+  gap: 15px;
+  padding: 16px 0;
+}
+
+.usage-steps span {
+  align-items: center;
+  border: 1px solid rgba(244, 200, 117, 0.42);
+  border-radius: 50%;
+  color: #f4c875;
+  display: inline-flex;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  height: 25px;
+  justify-content: center;
+  width: 25px;
+}
+
+.usage-copy .usage-cn {
+  color: #8fa9ad;
+  font-size: 12px;
+  margin-top: 22px;
+}
+
+.usage-window {
+  margin: 0;
+  position: relative;
+}
+
+.usage-glow {
+  background: var(--gold);
+  border-radius: 50%;
+  filter: blur(10px);
+  height: 360px;
+  opacity: 0.24;
+  position: absolute;
+  right: -70px;
+  top: 80px;
+  width: 360px;
+}
+
+.usage-window img {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 26px;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.46);
+  display: block;
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.usage-window figcaption {
+  color: #8fa9ad;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  margin-top: 18px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .section {
   padding-bottom: 120px;
   padding-top: 120px;
@@ -1069,6 +1173,7 @@ h2 {
 @media (max-width: 900px) {
   .hero-context,
   .privacy-grid,
+  .usage-grid,
   .section-heading,
   .footer-grid,
   .legal-layout,
@@ -1098,6 +1203,11 @@ h2 {
 
   .privacy-grid {
     gap: 50px;
+  }
+
+  .usage-grid {
+    gap: 64px;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
   }
 
   .legal-aside {
@@ -1164,9 +1274,25 @@ h2 {
   }
 
   .section,
-  .privacy-section {
+  .privacy-section,
+  .usage-showcase {
     padding-bottom: 82px;
     padding-top: 82px;
+  }
+
+  .usage-grid {
+    gap: 50px;
+    grid-template-columns: 1fr;
+  }
+
+  .usage-copy h2 {
+    font-size: 46px;
+  }
+
+  .usage-window {
+    justify-self: center;
+    max-width: 500px;
+    width: 100%;
   }
 
   .section-heading {
