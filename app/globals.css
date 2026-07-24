@@ -80,6 +80,10 @@ a {
   border-radius: 9px;
 }
 
+.site-header .site-brand img {
+  filter: brightness(0) saturate(100%);
+}
+
 nav {
   align-items: center;
   display: flex;
