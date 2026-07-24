@@ -1,9 +1,50 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import type { SiteLocale } from "../_lib/site-copy";
 
-export function SiteShell({ children }: { children: ReactNode }) {
+const shellCopy = {
+  en: {
+    features: "Features",
+    privacy: "Privacy",
+    terms: "Terms",
+    support: "Support",
+    product: "Product",
+    legal: "Legal",
+    description: "A native macOS research utility by IIDEV.",
+    disclaimer: "Not affiliated with Clarivate or Web of Science.",
+  },
+  "zh-Hans": {
+    features: "功能",
+    privacy: "隐私",
+    terms: "条款",
+    support: "支持",
+    product: "产品",
+    legal: "法律",
+    description: "IIDEV 开发的原生 macOS 科研工具。",
+    disclaimer: "与 Clarivate 或 Web of Science 无隶属关系。",
+  },
+  "zh-Hant": {
+    features: "功能",
+    privacy: "隱私",
+    terms: "條款",
+    support: "支援",
+    product: "產品",
+    legal: "法律",
+    description: "IIDEV 開發的原生 macOS 科研工具。",
+    disclaimer: "與 Clarivate 或 Web of Science 無隸屬關係。",
+  },
+};
+
+export function SiteShell({
+  children,
+  locale = "en",
+}: {
+  children: ReactNode;
+  locale?: SiteLocale;
+}) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const copy = shellCopy[locale];
 
   return (
     <div className="site-shell">
@@ -19,12 +60,37 @@ export function SiteShell({ children }: { children: ReactNode }) {
             />
             <span>WOS Aide Bar</span>
           </Link>
-          <nav aria-label="Primary navigation">
-            <Link href="/#features">Features</Link>
-            <Link href="/privacy">Privacy</Link>
-            <Link href="/terms">Terms</Link>
-            <Link href="/support">Support</Link>
-          </nav>
+          <div className="nav-actions">
+            <nav aria-label="Primary navigation">
+              <Link href="/#features">{copy.features}</Link>
+              <Link href="/privacy">{copy.privacy}</Link>
+              <Link href="/terms">{copy.terms}</Link>
+              <Link href="/support">{copy.support}</Link>
+            </nav>
+            <div className="language-switch" aria-label="Language">
+              <Link
+                aria-current={locale === "en" ? "page" : undefined}
+                href="/en"
+                hrefLang="en"
+              >
+                EN
+              </Link>
+              <Link
+                aria-current={locale === "zh-Hans" ? "page" : undefined}
+                href="/zh-hans"
+                hrefLang="zh-Hans"
+              >
+                简
+              </Link>
+              <Link
+                aria-current={locale === "zh-Hant" ? "page" : undefined}
+                href="/zh-hant"
+                hrefLang="zh-Hant"
+              >
+                繁
+              </Link>
+            </div>
+          </div>
         </div>
       </header>
       {children}
@@ -41,21 +107,21 @@ export function SiteShell({ children }: { children: ReactNode }) {
               <span>WOS Aide Bar</span>
             </Link>
             <p>
-              A native macOS research utility by IIDEV.
+              {copy.description}
               <br />
-              Not affiliated with Clarivate or Web of Science.
+              {copy.disclaimer}
             </p>
           </div>
           <div className="footer-links">
             <div>
-              <strong>Product</strong>
-              <Link href="/#features">Features</Link>
-              <Link href="/support">Support</Link>
+              <strong>{copy.product}</strong>
+              <Link href="/#features">{copy.features}</Link>
+              <Link href="/support">{copy.support}</Link>
             </div>
             <div>
-              <strong>Legal</strong>
-              <Link href="/privacy">Privacy Policy</Link>
-              <Link href="/terms">Terms of Use</Link>
+              <strong>{copy.legal}</strong>
+              <Link href="/privacy">{copy.privacy}</Link>
+              <Link href="/terms">{copy.terms}</Link>
               <a
                 href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
                 rel="noreferrer"

@@ -26,6 +26,9 @@ async function render(pathname) {
 
 for (const [path, title, phrase] of [
   ["/", "WOS Aide Bar", "Search,"],
+  ["/en", "WOS Aide Bar", "More than a journal search box"],
+  ["/zh-hans", "WOS Aide Bar", "不只是一个期刊检索框"],
+  ["/zh-hant", "WOS Aide Bar", "不只是一個期刊檢索框"],
   ["/privacy", "Privacy Policy", "Data the App does not collect"],
   ["/terms", "Terms of Use", "Optional one-time support purchases"],
   ["/support", "Support", "How can we help?"],
