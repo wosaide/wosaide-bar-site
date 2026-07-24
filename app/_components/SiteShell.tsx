@@ -3,6 +3,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 export function SiteShell({ children }: { children: ReactNode }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <div className="site-shell">
       <header className="site-header">
@@ -12,7 +14,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
               alt=""
               height={34}
               priority
-              src="/brand/app-icon.png"
+              src={`${basePath}/brand/app-icon.png`}
               width={34}
             />
             <span>WOS Aide Bar</span>
@@ -33,7 +35,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
               <Image
                 alt=""
                 height={32}
-                src="/brand/bird-logo.png"
+                src={`${basePath}/brand/bird-logo.png`}
                 width={32}
               />
               <span>WOS Aide Bar</span>

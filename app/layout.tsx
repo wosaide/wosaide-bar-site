@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   applicationName: "WOS Aide Bar",
   authors: [{ name: "IIDEV" }],
   icons: {
-    icon: "/brand/app-icon.png",
-    apple: "/brand/app-icon.png",
+    icon: `${basePath}/brand/app-icon.png`,
+    apple: `${basePath}/brand/app-icon.png`,
   },
   openGraph: {
     type: "website",

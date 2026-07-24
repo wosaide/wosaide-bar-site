@@ -3,27 +3,38 @@ import Link from "next/link";
 import { SiteShell } from "./_components/SiteShell";
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <SiteShell>
       <main>
-        <section className="hero wrap">
-          <div className="hero-copy">
-            <div className="eyebrow">
+        <section className="visual-hero">
+          <Image
+            alt="WOS Aide Bar — Search, without the syntax. A macOS-style journal search interface."
+            className="visual-hero-image"
+            height={1024}
+            priority
+            sizes="(max-width: 760px) 100vw, 1425px"
+            src={`${basePath}/hero-product.png`}
+            width={1536}
+          />
+        </section>
+
+        <section className="hero-context wrap">
+          <div>
+            <p className="eyebrow">
               <span className="eyebrow-dot" />
               Native macOS menu-bar utility
-            </div>
-            <h1>
-              Search,
-              <br />
-              <em>without the syntax.</em>
-            </h1>
-            <p className="lede">
+            </p>
+            <p className="hero-context-copy">
               Turn a journal name, topic, author, DOI, or advanced query into a
               precise Web of Science search—right from your menu bar.
             </p>
             <p className="lede-cn">
               从菜单栏快速构建 Web of Science 检索式。剪贴板、历史记录与收藏只留在你的 Mac。
             </p>
+          </div>
+          <div className="hero-context-actions">
             <div className="hero-actions">
               <Link className="button button-primary" href="/support">
                 Get support
@@ -41,54 +52,6 @@ export default function Home() {
               <span>No account</span>
               <span>No analytics</span>
               <span>No tracking</span>
-            </div>
-          </div>
-
-          <div className="product-stage" aria-label="WOS Aide Bar interface preview">
-            <div className="orb orb-one" />
-            <div className="orb orb-two" />
-            <div className="menubar-demo">
-              <div className="demo-topline">
-                <div className="brand-lockup">
-                  <Image
-                    alt=""
-                    height={38}
-                    src="/brand/bird-logo.png"
-                    width={38}
-                  />
-                  <div>
-                    <strong>WOS Aide Bar</strong>
-                    <small>Quick Search</small>
-                  </div>
-                </div>
-                <span className="language-pill">EN</span>
-              </div>
-              <div className="query-card">
-                <span className="query-label">SEARCH FIELD</span>
-                <div className="query-choice">
-                  <strong>Publication Name</strong>
-                  <span>SO</span>
-                </div>
-              </div>
-              <div className="search-input">
-                <span className="search-mark">⌕</span>
-                <span>Nature Human Behaviour</span>
-              </div>
-              <div className="suggestion-row">
-                <span className="index-badge">SSCI</span>
-                <div>
-                  <strong>NATURE HUMAN BEHAVIOUR</strong>
-                  <small>ISSN 2397-3374</small>
-                </div>
-                <span className="arrow">↗</span>
-              </div>
-              <button className="demo-button" type="button">
-                Open Web of Science <span>↗</span>
-              </button>
-              <div className="demo-footer">
-                <span>⌘K Quick Search</span>
-                <span>Private on your Mac</span>
-              </div>
             </div>
           </div>
         </section>
@@ -245,7 +208,7 @@ export default function Home() {
           <Image
             alt="WOS Aide Bar app icon"
             height={100}
-            src="/brand/app-icon.png"
+            src={`${basePath}/brand/app-icon.png`}
             width={100}
           />
           <div>

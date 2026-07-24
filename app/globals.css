@@ -97,14 +97,45 @@ nav a:focus-visible {
   color: var(--orange);
 }
 
-.hero {
+.visual-hero {
   align-items: center;
+  background: #f5f0e8;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 74px);
+  overflow: hidden;
+}
+
+.visual-hero-image {
+  display: block;
+  height: auto;
+  max-height: calc(100vh - 74px);
+  max-width: 1425px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.hero-context {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
   display: grid;
-  gap: 70px;
-  grid-template-columns: 0.95fr 1.05fr;
-  min-height: 720px;
-  padding-bottom: 88px;
-  padding-top: 88px;
+  gap: 64px;
+  grid-template-columns: 1.15fr 0.85fr;
+  padding-bottom: 54px;
+  padding-top: 54px;
+}
+
+.hero-context-copy {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 29px;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 700px;
+}
+
+.hero-context-actions {
+  justify-self: end;
 }
 
 .eyebrow,
@@ -134,26 +165,6 @@ nav a:focus-visible {
 h1,
 h2 {
   font-family: var(--font-display), Georgia, serif;
-}
-
-.hero h1 {
-  font-size: clamp(66px, 7.3vw, 104px);
-  font-weight: 600;
-  letter-spacing: -0.065em;
-  line-height: 0.79;
-  margin: 0;
-}
-
-.hero h1 em {
-  color: var(--orange);
-  font-weight: 500;
-}
-
-.lede {
-  font-size: 19px;
-  line-height: 1.58;
-  margin: 38px 0 0;
-  max-width: 570px;
 }
 
 .lede-cn {
@@ -1065,7 +1076,7 @@ h2 {
 }
 
 @media (max-width: 900px) {
-  .hero,
+  .hero-context,
   .privacy-grid,
   .section-heading,
   .footer-grid,
@@ -1074,14 +1085,12 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    gap: 30px;
-    padding-top: 64px;
+  .hero-context {
+    gap: 24px;
   }
 
-  .hero-copy {
-    position: relative;
-    z-index: 2;
+  .hero-context-actions {
+    justify-self: start;
   }
 
   .product-stage {
@@ -1130,17 +1139,23 @@ h2 {
     display: none;
   }
 
-  .hero {
-    min-height: auto;
-    padding-bottom: 70px;
+  .visual-hero {
+    min-height: 0;
   }
 
-  .hero h1 {
-    font-size: 61px;
+  .visual-hero-image {
+    height: auto;
+    max-height: none;
+    width: 100%;
   }
 
-  .lede {
-    font-size: 16px;
+  .hero-context {
+    padding-bottom: 42px;
+    padding-top: 42px;
+  }
+
+  .hero-context-copy {
+    font-size: 24px;
   }
 
   .product-stage {
