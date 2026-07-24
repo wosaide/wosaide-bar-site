@@ -8,17 +8,14 @@ export default function Home() {
   return (
     <SiteShell>
       <main>
-        <section className="visual-hero">
-          <Image
-            alt="WOS Aide Bar — Search, without the syntax. A macOS-style journal search interface."
-            className="visual-hero-image"
-            height={1024}
-            priority
-            sizes="(max-width: 760px) 100vw, 1425px"
-            src={`${basePath}/hero-product.png`}
-            width={1536}
-          />
-        </section>
+        <section
+          aria-label="WOS Aide Bar — Search, without the syntax. A macOS-style journal search interface."
+          className="visual-hero"
+          role="img"
+          style={{
+            backgroundImage: `url("${basePath}/hero-product.png")`,
+          }}
+        />
 
         <section className="hero-context wrap">
           <div>
