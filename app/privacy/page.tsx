@@ -18,7 +18,14 @@ export default function PrivacyPage() {
         <>
           <h2>隐私政策摘要</h2>
           <p>
-            WOS Aide Bar 不要求开发者账户，不含广告、追踪、开发者分析或开发者运营的崩溃报告服务。剪贴板文字、检索历史、收藏、设置以及导入或下载后的期刊列表主要保存在你的 Mac 上，不会发送给 IIDEV。
+            WOS Aide Bar 不要求开发者账户，不含广告、追踪、开发者分析或开发者运营的崩溃报告服务。剪贴板文字、检索历史、收藏、设置、AI 结果、DOI 查询历史、本地使用统计以及导入或下载后的期刊列表主要保存在你的 Mac 上，不会发送给 IIDEV。
+          </p>
+          <p>
+            剪贴板文字只会在你打开菜单栏面板、主动刷新或使用剪贴板查询快捷键时于本机读取。发起 Web of Science 查询时，App 会请求 macOS 在默认浏览器中打开包含查询内容的网址；相关浏览器活动和登录由对应服务处理。
+          </p>
+          <h3>本地使用统计</h3>
+          <p>
+            本地统计只记录聚合后的使用次数、日期、服务商与模型名称、WOS 字段、Token 用量及成功情况，不记录原始检索词、参考文献文字、期刊输入或剪贴板文字。每日活动最多保留 400 天；累计统计会保留到你主动清除。所有统计仅在此 Mac 上计算和保存，IIDEV 不接收或使用这些数据。
           </p>
           <h3>AI 助手</h3>
           <p>
@@ -26,7 +33,7 @@ export default function PrivacyPage() {
           </p>
           <h3>Crossref 与期刊 CSV</h3>
           <p>
-            Crossref DOI 查询默认关闭。启用并主动选择后，参考文献文字会直接发送给 Crossref；返回结果可在本机缓存最多 30 天，最多 100 次已完成查询及原始文献会保存在本机，直至你删除。UTD24 与 FT50 列表仅在你点击下载时从 GitHub 获取；GitHub 或其 CDN 会像处理普通网络请求一样看到 IP、时间及请求信息。你自行导入的 Web of Science CSV 只在本机解析，不会上传。
+            Crossref DOI 查询默认关闭。启用并主动选择后，参考文献文字会直接发送给 Crossref；返回结果可在本机缓存最多 30 天，最多 100 次已完成查询及原始文献会保存在本机，直至你删除。App 内置一个仅含期刊名称的小型 UTD24 默认列表；完整的 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50 目录仅在你点击下载或刷新时从 GitHub 获取。GitHub 或其 CDN 会像处理普通网络请求一样看到 IP、时间及请求信息。你自行导入的 CSV 只在本机解析，不会上传。
           </p>
           <h3>购买、网站与联系</h3>
           <p>
@@ -49,12 +56,13 @@ export default function PrivacyPage() {
         <p>The App locally processes information needed for features you use:</p>
         <ul>
           <li>
-            Clipboard text, read when you open the menu-bar panel or explicitly
-            refresh it.
+            Clipboard text, read when you open the menu-bar panel, explicitly
+            refresh it, or invoke the clipboard-search shortcut.
           </li>
           <li>
             Search history, favorites, preferences, AI results, DOI query
-            history, and imported or downloaded journal lists.
+            history, local usage statistics, and imported or downloaded journal
+            lists.
           </li>
           <li>
             Search terms used to construct a Web of Science URL on your device.
@@ -65,6 +73,14 @@ export default function PrivacyPage() {
           SDK, tracking technology, developer-operated analytics, or
           developer-operated crash reporting. You can remove individual
           records or clear the relevant history in Settings.
+        </p>
+        <p>
+          Local usage statistics contain aggregate counts, dates, provider and
+          model names, WOS field names, token usage, and success indicators—not
+          raw search queries, reference text, journal input, or clipboard text.
+          Daily activity is retained for up to 400 days; lifetime totals remain
+          until you clear statistics. All statistics are calculated and stored
+          on this Mac and are not received or used by IIDEV.
         </p>
       </LegalSection>
 
@@ -135,9 +151,11 @@ export default function PrivacyPage() {
 
       <LegalSection number="05" title="Journal-list downloads and imports">
         <p>
-          The App does not bundle a commercial journal database. You may import
-          your own CSV files, which are parsed and stored locally. Optional
-          UTD24 and FT50 title lists are downloaded from the public{" "}
+          The App includes a small default UTD24 list containing journal titles
+          only; it does not bundle the complete downloadable journal catalogs.
+          You may import your own CSV files, which are parsed and stored
+          locally. Complete SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50
+          catalogs are downloaded from the public{" "}
           <a href="https://github.com/wosaide/wosaide-journal-lists">
             WOS Aide journal-list repository
           </a>{" "}
@@ -188,13 +206,15 @@ export default function PrivacyPage() {
 
       <LegalSection number="08" title="Retention and deletion choices">
         <p>
-          Device-local data remains until you delete it in the App, remove the
-          App, or macOS removes it. Backup copies follow your Apple or backup
-          provider settings. AI credentials in Keychain are handled separately
-          as described above. Revoking AI permission prevents future remote AI
-          requests until you allow them again; it does not retrieve or delete
-          data already processed by a third-party provider. Contact that
-          provider for its account or data-rights procedures.
+          Device-local data remains until you delete it in the App, an
+          applicable retention limit removes it, you remove the App, or macOS
+          removes it. Backup copies follow your Apple or backup-provider
+          settings. AI credentials in Keychain are handled separately as
+          described above and may survive App deletion or device migration.
+          Revoking AI permission prevents future remote AI requests until you
+          allow them again; it does not retrieve or delete data already
+          processed by a third-party provider. Contact that provider for its
+          account or data-rights procedures.
         </p>
       </LegalSection>
 
