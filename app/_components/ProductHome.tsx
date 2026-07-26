@@ -11,23 +11,15 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
   return (
     <SiteShell locale={locale}>
       <main>
-        <section
-          aria-label="WOS Aide Bar — Search, without the syntax."
-          className="visual-hero"
-          role="img"
-          style={{ backgroundImage: `url("${basePath}/hero-product.png")` }}
-        />
-
-        <section className="hero-context wrap">
-          <div>
+        <section className="product-hero">
+          <div className="wrap product-hero-grid">
+            <div className="product-hero-copy">
             <p className="eyebrow">
               <span className="eyebrow-dot" />
               {copy.eyebrow}
             </p>
-            <p className="hero-context-copy">{copy.hero}</p>
-            <p className="lede-cn">{copy.heroSecondary}</p>
-          </div>
-          <div className="hero-context-actions">
+              <h1>{copy.hero}</h1>
+              <p className="product-hero-lede">{copy.heroSecondary}</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/support">
                 {copy.support}
@@ -45,6 +37,40 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
               {copy.assurances.map((assurance) => (
                 <span key={assurance}>{assurance}</span>
               ))}
+            </div>
+            </div>
+
+            <div className="hero-product-stack" aria-label="Current WOS Aide Bar interface">
+              <div className="hero-screen hero-screen-main">
+                <div className="hero-screen-label">
+                  <span>WOS Aide Bar 1.0</span>
+                  <b>Live app capture</b>
+                </div>
+                <Image
+                  alt="Current WOS Aide Bar menu-bar control center"
+                  height={483}
+                  priority
+                  src={`${basePath}/screenshots/main-panel.png`}
+                  width={900}
+                />
+              </div>
+              <div className="hero-screen hero-screen-search">
+                <Image
+                  alt="Current WOS Aide Bar quick-search window"
+                  height={162}
+                  priority
+                  src={`${basePath}/screenshots/manual-search.png`}
+                  width={714}
+                />
+              </div>
+              <Image
+                alt=""
+                className="hero-app-icon"
+                height={112}
+                priority
+                src={`${basePath}/brand/app-icon.png`}
+                width={112}
+              />
             </div>
           </div>
         </section>
