@@ -7,44 +7,85 @@ import { SiteShell } from "./SiteShell";
 export function ProductHome({ locale }: { locale: SiteLocale }) {
   const copy = homeCopy[locale];
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const documentMeta = {
+    en: {
+      label: "Research note / 01",
+      release: "Release",
+      platform: "Platform",
+      method: "Method",
+      local: "Local-first",
+    },
+    "zh-Hans": {
+      label: "研究工具 / 01",
+      release: "版本",
+      platform: "平台",
+      method: "原则",
+      local: "本地优先",
+    },
+    "zh-Hant": {
+      label: "研究工具 / 01",
+      release: "版本",
+      platform: "平台",
+      method: "原則",
+      local: "本機優先",
+    },
+  }[locale];
 
   return (
     <SiteShell locale={locale}>
       <main>
         <section className="product-hero">
           <div className="wrap product-hero-grid">
+            <aside className="hero-index" aria-label={documentMeta.label}>
+              <p className="document-label">{documentMeta.label}</p>
+              <dl>
+                <div>
+                  <dt>{documentMeta.release}</dt>
+                  <dd>1.0</dd>
+                </div>
+                <div>
+                  <dt>{documentMeta.platform}</dt>
+                  <dd>macOS 13+</dd>
+                </div>
+                <div>
+                  <dt>{documentMeta.method}</dt>
+                  <dd>{documentMeta.local}</dd>
+                </div>
+              </dl>
+              <div className="trust-line" aria-label="Product assurances">
+                {copy.assurances.map((assurance) => (
+                  <span key={assurance}>{assurance}</span>
+                ))}
+              </div>
+            </aside>
+
             <div className="product-hero-copy">
-            <p className="eyebrow">
-              <span className="eyebrow-dot" />
-              {copy.eyebrow}
-            </p>
+              <p className="eyebrow">
+                <span className="eyebrow-dot" />
+                {copy.eyebrow}
+              </p>
               <h1>{copy.hero}</h1>
               <p className="product-hero-lede">{copy.heroSecondary}</p>
-            <div className="hero-actions">
-              <Link className="button button-primary" href="/support">
-                {copy.support}
-              </Link>
-              <a
-                className="button button-secondary"
-                href="https://github.com/wosaide"
-                rel="noreferrer"
-                target="_blank"
-              >
-                {copy.developer}
-              </a>
-            </div>
-            <div className="trust-line" aria-label="Product assurances">
-              {copy.assurances.map((assurance) => (
-                <span key={assurance}>{assurance}</span>
-              ))}
-            </div>
+              <div className="hero-actions">
+                <Link className="button button-primary" href="/support">
+                  {copy.support}
+                </Link>
+                <a
+                  className="button button-secondary"
+                  href="https://github.com/wosaide"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {copy.developer}
+                </a>
+              </div>
             </div>
 
             <div className="hero-product-stack" aria-label="Current WOS Aide Bar interface">
               <div className="hero-screen hero-screen-main">
                 <div className="hero-screen-label">
-                  <span>WOS Aide Bar 1.0</span>
-                  <b>Live app capture</b>
+                  <span>Figure 01</span>
+                  <b>Current interface · WOS Aide Bar 1.0</b>
                 </div>
                 <Image
                   alt="Current WOS Aide Bar menu-bar control center"

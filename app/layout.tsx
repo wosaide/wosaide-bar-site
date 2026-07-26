@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
+import "./academic.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const display = Cormorant_Garamond({
+const display = Source_Serif_4({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
@@ -20,9 +21,9 @@ const display = Cormorant_Garamond({
 
 const siteOrigin =
   process.env.NEXT_PUBLIC_SITE_ORIGIN ??
-  "https://wosaide-bar.hybrid-klvvc-7155.chatgpt.site";
+  "https://wosaide.github.io";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const socialImage = `${siteOrigin}${basePath}/og.png`;
+const socialImage = `${siteOrigin}${basePath}/og-academic.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${siteOrigin}${basePath}/`),
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
         url: socialImage,
         width: 1536,
         height: 1024,
-        alt: "WOS Aide Bar product preview",
+        alt: "WOS Aide Bar academic product preview",
       },
     ],
   },
