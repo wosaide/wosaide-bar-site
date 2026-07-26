@@ -30,8 +30,8 @@ const faqs = [
     a: "Apple processes payments and refunds. Use Apple’s Report a Problem service or contact Apple Support with the Apple Account used for the purchase.",
   },
   {
-    q: "Can I replace a built-in journal catalog?",
-    a: "Yes. In Settings, open Journal Lists to import a compatible current Web of Science CSV or restore the built-in catalog.",
+    q: "How do I add journal catalogs?",
+    a: "Open Settings → Journal Lists. Import a current Web of Science CSV you obtained from Clarivate, or optionally download the attributed UTD24 and FT50 title lists from GitHub. No commercial catalog is bundled.",
   },
 ];
 

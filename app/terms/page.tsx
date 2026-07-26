@@ -12,43 +12,33 @@ export default function TermsPage() {
     <LegalPage
       eyebrow="Legal · Terms"
       title="Terms of Use"
-      intro="These supplemental terms explain WOS Aide Bar’s role as an independent research utility, how optional support purchases work, and the responsibilities that remain with you."
-      updated="Effective July 24, 2026"
+      intro="These terms supplement Apple’s Standard EULA and explain WOS Aide Bar’s independent role, optional external features, journal-list sources, and voluntary support purchases."
+      updated="Effective July 26, 2026"
       chinese={
         <>
-          <h2>使用条款</h2>
+          <h2>使用条款摘要</h2>
           <p>
-            从 Apple App Store 获取 WOS Aide Bar，即表示你同意 Apple
-            标准最终用户许可协议。本条款作为补充；如有冲突，以适用的 Apple
-            标准许可协议及不可排除的法律权利为准。
+            从 Apple App Store 获取或使用 WOS Aide Bar，即表示你同意 Apple 标准最终用户许可协议及本补充条款；如有冲突，以 Apple 标准协议和不可排除的法律权利为准。
           </p>
-          <h3>产品用途与第三方服务</h3>
+          <h3>用途与外部服务</h3>
           <p>
-            本 App 用于在设备上构建并打开 Web of Science
-            检索网址。它不提供 Web of Science 账户、订阅或内容访问，也不隶属于
-            Clarivate。你需要自行确保检索内容合法、拥有所需访问权限，并核对检索结果。
+            本 App 是独立的科研效率工具，不隶属于 Clarivate、Crossref、OpenAI、OpenRouter、Financial Times 或 UT Dallas。Web of Science、AI、Crossref、GitHub 及自定义端点各自适用其条款、隐私政策、访问限制与费用。你应在依赖检索式、AI 输出、DOI 匹配或期刊名单前自行核验。
+          </p>
+          <h3>期刊名单与内容权利</h3>
+          <p>
+            App 不内置商业期刊数据库。你须确保自己有权导入和使用所选 CSV。可选 UTD24 与 FT50 清单仅用于名称识别和互操作，相关名称、商标及第三方资料归各权利人所有。
           </p>
           <h3>自愿支持购买</h3>
           <p>
-            支持项目是可重复购买、完全自愿的一次性 App 内购买，不解锁功能、不是订阅，也不是慈善捐赠。价格会在确认前由
-            Apple 显示；付款、税费、退款和购买记录受 Apple 的规则管理。
-          </p>
-          <h3>保证与责任</h3>
-          <p>
-            在法律允许的最大范围内，App 与网站按“现状”和“可用”状态提供。查询生成、期刊目录和外部服务可能发生错误或变化。任何责任限制均不影响你依法不能被排除的消费者权利。
-          </p>
-          <h3>联系</h3>
-          <p>
-            获取支持或报告问题，请发送邮件至
-            <a href="mailto:iihciyekub@gmail.com"> iihciyekub@gmail.com</a>。
+            支持项目为可重复购买、完全自愿的一次性 App 内购买，不解锁功能、不是订阅或慈善捐赠。价格、付款、税费和退款由 Apple 管理。
           </p>
         </>
       }
     >
-      <LegalSection number="01" title="Agreement and Apple’s license terms">
+      <LegalSection number="01" title="Agreement and Apple’s EULA">
         <p>
-          By downloading or using WOS Aide Bar, you agree to these Terms and
-          Apple&apos;s{" "}
+          By downloading, installing, or using WOS Aide Bar, you agree to these
+          Terms and Apple&apos;s{" "}
           <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">
             Standard Licensed Application End User License Agreement
           </a>
@@ -56,89 +46,126 @@ export default function TermsPage() {
           Standard EULA and any non-waivable law control.
         </p>
       </LegalSection>
-      <LegalSection number="02" title="What the App does">
+
+      <LegalSection number="02" title="What the App provides">
         <p>
-          WOS Aide Bar is a productivity utility that constructs search URLs on
-          your device and asks macOS to open them in your default browser. It
-          does not provide a Web of Science account, subscription, database, or
-          guarantee of access. Features and supported query formats may change
-          as the App evolves.
+          WOS Aide Bar is a research-productivity utility that constructs
+          search URLs on your device, opens them in your browser, manages local
+          journal-title suggestions, and offers optional AI query generation
+          and Crossref DOI matching. It does not provide a Web of Science
+          account, subscription, database, publication assessment, or guarantee
+          of access or results.
         </p>
       </LegalSection>
+
       <LegalSection number="03" title="Your responsibilities">
-        <p>You agree to:</p>
         <ul>
-          <li>Use the App lawfully and in accordance with applicable rights.</li>
+          <li>Use the App and external services lawfully.</li>
           <li>
-            Review generated queries and results before relying on them for
-            research, publication, or professional decisions.
+            Review generated queries, AI output, DOI matches, and journal-list
+            suggestions before relying on them.
           </li>
           <li>
-            Maintain any third-party account or institutional access required
-            to use external services.
+            Maintain required third-party accounts, credentials, subscriptions,
+            permissions, and institutional access.
           </li>
           <li>
-            Avoid interfering with the App, the Site, or third-party systems,
-            except where applicable law expressly permits security research or
-            interoperability work.
+            Import only CSV files that you have the right to possess and use.
+          </li>
+          <li>
+            Protect API keys and verify the operator and privacy practices of
+            any custom AI endpoint you configure.
           </li>
         </ul>
       </LegalSection>
-      <LegalSection number="04" title="Optional one-time support purchases">
+
+      <LegalSection number="04" title="AI and Crossref features">
         <p>
-          The App may offer repeatable, optional one-time in-app purchases that
-          let you support continued development. These purchases do not unlock
-          features, content, credits, or services; all core App features remain
-          available without them. They are not subscriptions and are not
-          charitable donations.
+          AI Assistant and Crossref DOI lookup are optional third-party
+          integrations. AI output may be incomplete, inaccurate, biased, or
+          unsuitable. DOI matching may return the wrong work or no work. You
+          remain responsible for checking syntax, sources, citations, licenses,
+          and research decisions.
         </p>
         <p>
-          Apple displays the price before confirmation and processes payment,
-          taxes, transaction records, and any refund request under its rules.
-          Purchase availability and localized pricing can vary by storefront.
-        </p>
-      </LegalSection>
-      <LegalSection number="05" title="Third-party services and names">
-        <p>
-          Web of Science and Clarivate are third-party names and services. WOS
-          Aide Bar and IIDEV are not affiliated with, sponsored by, or endorsed
-          by Clarivate. External services may change, become unavailable, or
-          apply separate terms, privacy policies, access controls, and fees.
-          You use those services at your own discretion.
+          Remote AI providers and custom endpoint operators may impose separate
+          terms, privacy practices, account rules, usage limits, and fees.
+          Crossref applies its own service terms and policies. IIDEV does not
+          control those services and cannot guarantee their availability,
+          confidentiality, retention, or output.
         </p>
       </LegalSection>
-      <LegalSection number="06" title="Intellectual property">
+
+      <LegalSection number="05" title="Journal-list sources and rights">
+        <p>
+          No commercial Web of Science journal database is bundled with the
+          App. Core Collection CSV files are user-supplied and processed
+          locally. Optional UTD24 and FT50 journal-title lists may be downloaded
+          from the project&apos;s public GitHub repository for identification
+          and interoperability.
+        </p>
+        <p>
+          Third-party list names, journal names, marks, and source materials
+          remain the property of their respective owners. Availability through
+          the App does not transfer ownership, endorsement, ranking authority,
+          database rights, or permission to republish a source dataset. Source
+          organizations may revise their lists at any time.
+        </p>
+      </LegalSection>
+
+      <LegalSection number="06" title="Third-party services and independence">
+        <p>
+          WOS Aide Bar and IIDEV are independent and are not affiliated with,
+          sponsored by, or endorsed by Clarivate, Web of Science, Crossref,
+          OpenAI, OpenRouter, GitHub, Financial Times, or the University of
+          Texas at Dallas. Their services, accounts, subscriptions, content,
+          APIs, marks, and access are governed by their own terms.
+        </p>
+      </LegalSection>
+
+      <LegalSection number="07" title="Optional support purchases">
+        <p>
+          The App may offer repeatable, voluntary one-time in-app purchases to
+          support continued development. They do not unlock features, content,
+          credits, or services; they are not subscriptions or charitable
+          donations. Apple displays the price before confirmation and handles
+          payment, taxes, records, and refund requests under its rules.
+        </p>
+      </LegalSection>
+
+      <LegalSection number="08" title="Intellectual property">
         <p>
           The App, Site, design, and original materials are protected by
-          applicable intellectual-property laws. Third-party names, marks, and
-          content belong to their respective owners. Nothing in these Terms
-          grants rights beyond the license provided under Apple&apos;s Standard
-          EULA or applicable open-source notices.
+          applicable intellectual-property laws. Third-party names, marks,
+          software, and content belong to their respective owners. Nothing in
+          these Terms grants rights beyond Apple&apos;s Standard EULA,
+          applicable open-source notices, or rights that law gives you.
         </p>
       </LegalSection>
-      <LegalSection number="07" title="Disclaimers">
+
+      <LegalSection number="09" title="Disclaimers and limitation">
         <p>
           To the maximum extent permitted by law, the App and Site are provided
-          “as is” and “as available.” We do not promise that generated queries,
-          journal catalogs, search results, or external services will always be
-          complete, current, accurate, available, or fit for a particular
-          research purpose. The App is a query-construction aid, not legal,
-          medical, financial, or research-integrity advice.
+          “as is” and “as available.” We do not promise that queries, AI output,
+          DOI matches, journal lists, or external services will be complete,
+          current, accurate, secure, uninterrupted, or fit for a particular
+          purpose. The App is not legal, medical, financial, bibliometric, or
+          research-integrity advice.
+        </p>
+        <p>
+          Liability is limited only to the extent permitted by applicable law.
+          Nothing here excludes consumer rights or remedies that cannot legally
+          be excluded.
         </p>
       </LegalSection>
-      <LegalSection number="08" title="Limitation, termination, and changes">
+
+      <LegalSection number="10" title="Termination, changes, and contact">
         <p>
-          Liability is limited only to the extent permitted by applicable law,
-          and nothing here excludes rights or remedies that cannot legally be
-          excluded. Your license may end if you materially violate applicable
-          license terms. You may stop using the App at any time. We may update
-          these Terms for future App versions or Site changes; the effective
-          date above identifies the current version.
-        </p>
-      </LegalSection>
-      <LegalSection number="09" title="Support and contact">
-        <p>
-          For support questions or to report a product issue, email{" "}
+          Your license may end if you materially violate applicable license
+          terms. You may stop using the App at any time. We may update these
+          Terms for future App versions, service changes, or legal requirements;
+          the effective date identifies the current version. For support or
+          legal questions, email{" "}
           <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a> or
           visit the <a href="/support">Support page</a>.
         </p>

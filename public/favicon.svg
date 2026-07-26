@@ -1,6 +1,83 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 19.2727C22 20.779 20.779 22 19.2727 22H14.7273C13.221 22 12 20.779 12 19.2727V12H19.2727C20.779 12 22 13.221 22 14.7273V19.2727Z" fill="#68C4FF"/>
-<path d="M20 2C21.1046 2 22 2.89543 22 4V7C22 8.10457 21.1046 9 20 9H17C15.8954 9 15 8.10457 15 7V4C15 2.89543 15.8954 2 17 2H20Z" fill="#0C79D8"/>
-<path d="M7 15C8.10457 15 9 15.8954 9 17V20C9 21.1046 8.10457 22 7 22H4C2.89543 22 2 21.1046 2 20V17C2 15.8954 2.89543 15 4 15H7Z" fill="#0C79D8"/>
-<path d="M12 12H4.72727C3.22104 12 2 10.779 2 9.27273V4.72727C2 3.22104 3.22104 2 4.72727 2H9.27273C10.779 2 12 3.22104 12 4.72727V12Z" fill="#2E9EFF"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="10 7 188 188"
+  width="1024"
+  height="1024"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Geometric bird</title>
+  <desc id="description">
+    A geometric black bird, redrawn as separately addressable vector parts for animation.
+  </desc>
+
+  <style>
+    #bird {
+      fill: #242424;
+    }
+
+    #eye {
+      fill: #ffffff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #bird {
+        fill: #ffffff;
+      }
+
+      #eye {
+        fill: #242424;
+      }
+    }
+
+    .anim-part {
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+  </style>
+
+  <!-- Change this value once to recolor the whole bird. -->
+  <g id="bird">
+    <g id="head-and-neck" class="anim-part" data-part="head-and-neck">
+      <path d="
+        M 119.7,45.1
+        L 88.2,57.2
+        L 88.2,68.8
+        L 150.2,108.6
+        L 90.4,108.6
+        C 80.5,108.6 72.6,101.4 72.6,92.3
+        L 57.0,92.3
+        C 57.0,108.4 69.6,122.0 85.8,123.4
+        L 80.2,147.3
+        C 47.9,143.8 25.5,119.0 25.5,87.5
+        L 25.5,51.2
+        C 25.5,30.5 46.4,16.2 65.2,23.6
+        Z
+      "/>
+    </g>
+
+    <g id="body" class="anim-part" data-part="body">
+      <path d="
+        M 78.8,123.5
+        L 175.0,123.5
+        L 182.3,163.2
+        L 166.7,163.2
+        L 160.4,147.5
+        L 78.8,147.5
+        Z
+      "/>
+    </g>
+
+    <g id="front-leg" class="anim-part" data-part="front-leg">
+      <path d="M 104.1,145.8 L 119.4,145.8 L 119.4,179.6 L 104.1,179.6 Z"/>
+    </g>
+
+    <g id="back-leg" class="anim-part" data-part="back-leg">
+      <path d="M 73.7,142.0 L 88.2,147.4 L 75.8,178.9 L 60.6,173.6 Z"/>
+    </g>
+
+    <g id="eye" class="anim-part" data-part="eye">
+      <circle cx="56.5" cy="52.8" r="7.8"/>
+    </g>
+  </g>
 </svg>

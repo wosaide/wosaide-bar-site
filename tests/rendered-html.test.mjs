@@ -29,8 +29,8 @@ for (const [path, title, phrase] of [
   ["/en", "WOS Aide Bar", "More than a journal search box"],
   ["/zh-hans", "WOS Aide Bar", "不只是一个期刊检索框"],
   ["/zh-hant", "WOS Aide Bar", "不只是一個期刊檢索框"],
-  ["/privacy", "Privacy Policy", "Data the App does not collect"],
-  ["/terms", "Terms of Use", "Optional one-time support purchases"],
+  ["/privacy", "Privacy Policy", "Optional AI Assistant"],
+  ["/terms", "Terms of Use", "Journal-list sources and rights"],
   ["/support", "Support", "How can we help?"],
 ]) {
   test(`server-renders ${path}`, async () => {

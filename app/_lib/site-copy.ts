@@ -77,15 +77,15 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     hero:
       "Search Web of Science without memorizing the syntax—and keep your journal tools one shortcut away.",
     heroSecondary:
-      "Autocomplete journal names, browse 20,000+ WOS Core journals, and keep a personal journal list ready on your Mac.",
+      "Import your own WOS journal CSV, optionally download UTD24 and FT50 title lists, and keep a personal journal list ready on your Mac.",
     support: "Get support",
     developer: "Developer profile ↗",
     assurances: ["No account", "No analytics", "No tracking"],
     metrics: [
-      { value: "20K+", label: "supported WOS Core journals" },
-      { value: "24,146", label: "catalog records across four indexes" },
-      { value: "3", label: "interface languages" },
-      { value: "100%", label: "local history and journal lists" },
+      { value: "6", label: "optional journal-list sources" },
+      { value: "2", label: "public GitHub CSV lists" },
+      { value: "9", label: "interface languages" },
+      { value: "0", label: "analytics and tracking SDKs" },
     ],
     showcaseKicker: "Explore the app",
     showcaseTitle: "More than a journal search box.",
@@ -105,10 +105,10 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         ...sharedImages.core,
         badge: "WOS Core",
-        title: "20,000+ journals built in",
+        title: "Bring your current WOS lists",
         description:
-          "Enable the SCIE, SSCI, AHCI, and ESCI lists you need. Replace any list with a current CSV while all processing stays local.",
-        stat: "24,146 catalog records",
+          "Import SCIE, SSCI, AHCI, or ESCI CSV files you obtain from Clarivate. The app validates and indexes them locally without republishing the source data.",
+        stat: "User-supplied CSV · local parsing",
         imageAlt:
           "WOS Aide Bar settings showing SCIE, SSCI, AHCI, and ESCI journal catalogs",
       },
@@ -127,7 +127,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "Custom lists",
         title: "Make the journal list yours",
         description:
-          "Enter one journal per line, restore the built-in UTD24 list, or import a CSV using familiar journal-title headings.",
+          "Enter one journal per line, start from the UTD24 personal list, or import a CSV using familiar journal-title headings.",
         stat: "Manual entry or CSV import",
         imageAlt:
           "WOS Aide Bar custom journal list editor with import and save controls",
@@ -180,12 +180,12 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "Local app storage",
         description:
-          "History, favorites, settings, and imported journal lists remain in the app sandbox.",
+          "History, favorites, settings, and installed journal lists remain in the app sandbox.",
       },
       {
-        title: "No profiling",
+        title: "Clear external-service choices",
         description:
-          "No advertising, analytics, tracking, or developer-operated crash-reporting SDK.",
+          "Remote AI requires explicit permission; Crossref is off by default. No advertising, analytics, or tracking SDK.",
       },
     ],
     detailsKicker: "Clear before you install",
@@ -199,7 +199,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       "Help, troubleshooting, and contact",
     ],
     ctaKicker: "Made for macOS 13 and later",
-    ctaTitle: "Keep the search close. Keep the data local.",
+    ctaTitle: "Keep search close. Choose exactly when data leaves your Mac.",
     learnMore: "Learn more",
   },
   "zh-Hans": {
@@ -207,15 +207,15 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     eyebrow: "原生 macOS 菜单栏科研工具",
     hero: "无需记忆复杂语法，也能快速检索 Web of Science；常用期刊工具，一个快捷键即可呼出。",
     heroSecondary:
-      "自动补全期刊名称，覆盖 20,000+ 本 WOS Core 期刊，并可在 Mac 上维护自己的期刊列表。",
+      "导入自己的 WOS 期刊 CSV，也可选择下载 UTD24 与 FT50 名称清单，并在 Mac 上维护个人期刊列表。",
     support: "获取支持",
     developer: "开发者主页 ↗",
     assurances: ["无需账户", "无分析统计", "无跟踪"],
     metrics: [
-      { value: "20K+", label: "支持的 WOS Core 期刊" },
-      { value: "24,146", label: "四大索引目录记录" },
-      { value: "3", label: "界面语言" },
-      { value: "100%", label: "本地历史与期刊列表" },
+      { value: "6", label: "可选期刊列表来源" },
+      { value: "2", label: "公开 GitHub CSV 清单" },
+      { value: "9", label: "界面语言" },
+      { value: "0", label: "分析与跟踪 SDK" },
     ],
     showcaseKicker: "探索 App",
     showcaseTitle: "不只是一个期刊检索框。",
@@ -233,10 +233,10 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         ...sharedImages.core,
         badge: "WOS Core",
-        title: "内置 20,000+ 本期刊",
+        title: "导入你自己的最新 WOS 列表",
         description:
-          "按需启用 SCIE、SSCI、AHCI、ESCI，也可用最新 CSV 替换任一目录；所有处理都在本机完成。",
-        stat: "24,146 条目录记录",
+          "导入你从 Clarivate 获得的 SCIE、SSCI、AHCI 或 ESCI CSV；App 在本机验证并建立索引，不公开转载原始数据。",
+        stat: "用户提供 CSV · 本机解析",
         imageAlt: "WOS Aide Bar 显示四大 WOS Core 期刊目录",
       },
       {
@@ -253,7 +253,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "自定义列表",
         title: "期刊列表由你定义",
         description:
-          "每行输入一本期刊，也可恢复内置 UTD24 列表，或从含期刊名称字段的 CSV 导入。",
+          "每行输入一本期刊，也可从 UTD24 个人列表开始，或从含期刊名称字段的 CSV 导入。",
         stat: "手动编辑或 CSV 导入",
         imageAlt: "WOS Aide Bar 自定义期刊列表编辑界面",
       },
@@ -297,11 +297,11 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "数据保存在本机",
-        description: "历史、收藏、设置和导入的期刊列表都保留在 App 沙盒中。",
+        description: "历史、收藏、设置和已安装期刊列表都保留在 App 沙盒中。",
       },
       {
-        title: "不建立用户画像",
-        description: "无广告、无分析统计、无跟踪，也没有开发者运营的崩溃上报 SDK。",
+        title: "外部服务由你明确选择",
+        description: "远程 AI 先征得同意，Crossref 默认关闭；无广告、无分析统计或跟踪 SDK。",
       },
     ],
     detailsKicker: "安装前清楚了解",
@@ -311,7 +311,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     supportLabel: "支持",
     detailsDescriptions: ["App 与网站的数据处理方式", "许可、外部服务与购买", "帮助、故障排查与联系"],
     ctaKicker: "适用于 macOS 13 及更高版本",
-    ctaTitle: "检索近在手边，数据留在本机。",
+    ctaTitle: "检索近在手边，数据何时离开由你决定。",
     learnMore: "了解更多",
   },
   "zh-Hant": {
@@ -319,15 +319,15 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     eyebrow: "原生 macOS 選單列科研工具",
     hero: "無需記憶複雜語法，也能快速檢索 Web of Science；常用期刊工具，一個快速鍵即可叫出。",
     heroSecondary:
-      "自動補全期刊名稱，涵蓋 20,000+ 本 WOS Core 期刊，並可在 Mac 上維護自己的期刊列表。",
+      "匯入自己的 WOS 期刊 CSV，也可選擇下載 UTD24 與 FT50 名稱清單，並在 Mac 上維護個人期刊列表。",
     support: "取得支援",
     developer: "開發者首頁 ↗",
     assurances: ["無需帳戶", "無分析統計", "無追蹤"],
     metrics: [
-      { value: "20K+", label: "支援的 WOS Core 期刊" },
-      { value: "24,146", label: "四大索引目錄記錄" },
-      { value: "3", label: "介面語言" },
-      { value: "100%", label: "本機歷史與期刊列表" },
+      { value: "6", label: "可選期刊清單來源" },
+      { value: "2", label: "公開 GitHub CSV 清單" },
+      { value: "9", label: "介面語言" },
+      { value: "0", label: "分析與追蹤 SDK" },
     ],
     showcaseKicker: "探索 App",
     showcaseTitle: "不只是一個期刊檢索框。",
@@ -345,10 +345,10 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         ...sharedImages.core,
         badge: "WOS Core",
-        title: "內建 20,000+ 本期刊",
+        title: "匯入你自己的最新 WOS 清單",
         description:
-          "按需啟用 SCIE、SSCI、AHCI、ESCI，也可用最新 CSV 取代任一目錄；所有處理都在本機完成。",
-        stat: "24,146 筆目錄記錄",
+          "匯入你從 Clarivate 取得的 SCIE、SSCI、AHCI 或 ESCI CSV；App 在本機驗證並建立索引，不公開轉載原始資料。",
+        stat: "使用者提供 CSV · 本機解析",
         imageAlt: "WOS Aide Bar 顯示四大 WOS Core 期刊目錄",
       },
       {
@@ -365,7 +365,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "自訂列表",
         title: "期刊列表由你定義",
         description:
-          "每行輸入一本期刊，也可恢復內建 UTD24 列表，或從含期刊名稱欄位的 CSV 匯入。",
+          "每行輸入一本期刊，也可從 UTD24 個人清單開始，或從含期刊名稱欄位的 CSV 匯入。",
         stat: "手動編輯或 CSV 匯入",
         imageAlt: "WOS Aide Bar 自訂期刊列表編輯介面",
       },
@@ -409,11 +409,11 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "資料保存在本機",
-        description: "歷史、收藏、設定和匯入的期刊列表都保留在 App 沙盒中。",
+        description: "歷史、收藏、設定和已安裝期刊清單都保留在 App 沙盒中。",
       },
       {
-        title: "不建立使用者輪廓",
-        description: "無廣告、無分析統計、無追蹤，也沒有開發者營運的崩潰回報 SDK。",
+        title: "外部服務由你明確選擇",
+        description: "遠端 AI 先徵得同意，Crossref 預設關閉；無廣告、無分析統計或追蹤 SDK。",
       },
     ],
     detailsKicker: "安裝前清楚瞭解",
@@ -423,7 +423,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     supportLabel: "支援",
     detailsDescriptions: ["App 與網站的資料處理方式", "授權、外部服務與購買", "協助、疑難排解與聯絡"],
     ctaKicker: "適用於 macOS 13 及更高版本",
-    ctaTitle: "檢索近在手邊，資料留在本機。",
+    ctaTitle: "檢索近在手邊，資料何時離開由你決定。",
     learnMore: "瞭解更多",
   },
 };
