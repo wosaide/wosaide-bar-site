@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "How do I add journal catalogs?",
-    a: "Open Settings → Journal Lists. Import a current Web of Science CSV you obtained from Clarivate, or optionally download the attributed UTD24 and FT50 title lists from GitHub. No commercial catalog is bundled.",
+    a: "Open Settings → Journal Lists. Import a SCIE, SSCI, AHCI, ESCI, or AJG 2024 CSV you obtained and may lawfully use. UTD24 and FT50 title lists can be downloaded from GitHub on request. No commercial catalog is bundled.",
   },
 ];
 

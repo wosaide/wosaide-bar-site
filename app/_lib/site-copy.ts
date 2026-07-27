@@ -134,7 +134,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "Journal catalogs",
         title: "Current lists, installed only when you need them",
         description:
-          "Download or replace SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 CSV lists. Files are validated, indexed, and matched locally.",
+          "Import your own SCIE, SSCI, AHCI, ESCI, or AJG 2024 CSV. Download UTD24 and FT50 title lists on request. Files are validated, indexed, and matched locally.",
         stat: "7 sources · local CSV processing",
         imageAlt: "WOS Aide Bar journal catalog manager",
       },
@@ -296,7 +296,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "期刊目录",
         title: "只在需要时安装最新清单",
         description:
-          "下载或替换 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50 CSV；所有文件都在本机验证、索引与匹配。",
+          "导入你自行取得的 SCIE、SSCI、AHCI、ESCI 或 AJG 2024 CSV；UTD24 与 FT50 名称清单可按需下载。所有文件都在本机验证、索引与匹配。",
         stat: "7 个来源 · 本地 CSV 处理",
         imageAlt: "WOS Aide Bar 期刊目录管理器",
       },
@@ -442,7 +442,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "期刊目錄",
         title: "只在需要時安裝最新清單",
         description:
-          "下載或替換 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 與 FT50 CSV；所有檔案都在本機驗證、索引與配對。",
+          "匯入你自行取得的 SCIE、SSCI、AHCI、ESCI 或 AJG 2024 CSV；UTD24 與 FT50 名稱清單可按需下載。所有檔案都在本機驗證、索引與配對。",
         stat: "7 個來源 · 本機 CSV 處理",
         imageAlt: "WOS Aide Bar 期刊目錄管理器",
       },

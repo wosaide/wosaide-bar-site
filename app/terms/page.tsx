@@ -13,7 +13,7 @@ export default function TermsPage() {
       eyebrow="Legal · Terms"
       title="Terms of Use"
       intro="These terms supplement Apple’s Standard EULA and explain WOS Aide Bar’s independent role, optional external features, journal-list sources, and voluntary support purchases."
-      updated="Effective July 26, 2026"
+      updated="Effective July 27, 2026"
       chinese={
         <>
           <h2>使用条款摘要</h2>
@@ -26,7 +26,7 @@ export default function TermsPage() {
           </p>
           <h3>期刊名单与内容权利</h3>
           <p>
-            App 不内置商业期刊数据库。你须确保自己有权导入和使用所选 CSV。可选 UTD24 与 FT50 清单仅用于名称识别和互操作，相关名称、商标及第三方资料归各权利人所有。
+            App 不内置商业期刊数据库。SCIE、SSCI、AHCI、ESCI 与 AJG 2024 仅支持用户自行导入；你须确保有权取得和使用所选 CSV。可选 UTD24 与 FT50 名称清单可按需从项目 GitHub 下载，仅用于名称识别和互操作。相关名称、商标及第三方资料归各权利人所有。
           </p>
           <h3>自愿支持购买</h3>
           <p>
@@ -99,10 +99,11 @@ export default function TermsPage() {
       <LegalSection number="05" title="Journal-list sources and rights">
         <p>
           No commercial Web of Science journal database is bundled with the
-          App. Core Collection CSV files are user-supplied and processed
-          locally. Optional UTD24 and FT50 journal-title lists may be downloaded
-          from the project&apos;s public GitHub repository for identification
-          and interoperability.
+          App. SCIE, SSCI, AHCI, ESCI, and AJG 2024 CSV files are user-supplied
+          and processed locally; you are responsible for obtaining and using
+          them lawfully. Optional UTD24 and FT50 journal-title lists may be
+          downloaded from the project&apos;s public GitHub repository for
+          identification and interoperability.
         </p>
         <p>
           Third-party list names, journal names, marks, and source materials

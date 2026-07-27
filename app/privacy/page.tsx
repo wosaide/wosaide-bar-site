@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       eyebrow="Legal · Privacy"
       title="Privacy Policy"
       intro="WOS Aide Bar has no developer account system, advertising, tracking, or developer-operated analytics. Most data stays on your Mac. Optional features contact clearly identified third-party services only when you choose to use them."
-      updated="Effective July 26, 2026"
+      updated="Effective July 27, 2026"
       chinese={
         <>
           <h2>隐私政策摘要</h2>
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           </p>
           <h3>Crossref 与期刊 CSV</h3>
           <p>
-            Crossref DOI 查询默认关闭。启用并主动选择后，参考文献文字会直接发送给 Crossref；返回结果可在本机缓存最多 30 天，最多 100 次已完成查询及原始文献会保存在本机，直至你删除。App 内置一个仅含期刊名称的小型 UTD24 默认列表；完整的 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50 目录仅在你点击下载或刷新时从 GitHub 获取。GitHub 或其 CDN 会像处理普通网络请求一样看到 IP、时间及请求信息。你自行导入的 CSV 只在本机解析，不会上传。
+            Crossref DOI 查询默认关闭。启用并主动选择后，参考文献文字会直接发送给 Crossref；返回结果可在本机缓存最多 30 天。已完成查询及原始文献会在本机保留至你删除；保存上限默认为 100，可在设置中调整为 10 至 500。App 内置一个仅含期刊名称的小型 UTD24 默认列表；SCIE、SSCI、AHCI、ESCI 与 AJG 2024 仅支持导入你自行合法取得的 CSV。UTD24 与 FT50 只在你点击下载或刷新时从 GitHub 获取。GitHub 或其 CDN 会像处理普通网络请求一样看到 IP、时间及请求信息。导入的 CSV 只在本机解析，不会上传。
           </p>
           <h3>购买、网站与联系</h3>
           <p>
@@ -111,6 +111,16 @@ export default function PrivacyPage() {
           a request. Local endpoints do not require remote-data permission.
         </p>
         <p>
+          Data is sent only to perform the feature you request. IIDEV does not
+          authorize an integrated service to use App-transmitted data for
+          advertising or tracking. IIDEV integrates only services whose
+          published privacy and security commitments provide protection at
+          least equivalent to this policy and applicable Apple requirements
+          for data sent by the App. A custom endpoint is selected by you and is
+          not controlled by IIDEV; grant permission only if its operator
+          commits to at least equivalent protection.
+        </p>
+        <p>
           Provider policies:{" "}
           <a href="https://openai.com/policies/privacy-policy/">
             OpenAI privacy policy
@@ -136,9 +146,10 @@ export default function PrivacyPage() {
         </p>
         <p>
           Returned metadata may be cached on your Mac for up to 30 days using a
-          hash key. Up to 100 completed DOI queries—including original
-          references, candidates, and results—are stored locally until you
-          remove them or clear DOI history in Settings.
+          hash key. Completed DOI queries—including original references,
+          candidates, and results—are stored locally until you remove them or
+          clear DOI history in Settings. The saved-item limit is 100 by default
+          and can be configured from 10 to 500.
         </p>
         <p>
           See the{" "}
@@ -154,8 +165,10 @@ export default function PrivacyPage() {
           The App includes a small default UTD24 list containing journal titles
           only; it does not bundle the complete downloadable journal catalogs.
           You may import your own CSV files, which are parsed and stored
-          locally. Complete SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50
-          catalogs are downloaded from the public{" "}
+          locally. SCIE, SSCI, AHCI, ESCI, and AJG 2024 are available only
+          through user-selected CSV import; you are responsible for obtaining
+          and using those files lawfully. UTD24 and FT50 journal-title lists
+          can be downloaded from the public{" "}
           <a href="https://github.com/wosaide/wosaide-journal-lists">
             WOS Aide journal-list repository
           </a>{" "}
