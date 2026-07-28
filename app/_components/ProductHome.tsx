@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { homeCopy, type SiteLocale } from "../_lib/site-copy";
+import { FeatureDemoCarousel } from "./FeatureDemoCarousel";
 import { ProductShowcase } from "./ProductShowcase";
 import { SiteShell } from "./SiteShell";
 
@@ -83,37 +84,12 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
 
             <div
               className="hero-product-stack"
-              aria-label={copy.journalDemoAriaLabel}
+              aria-label={copy.demoControls.carouselLabel}
             >
-              <div className="hero-video-frame">
-                <div className="hero-screen-label">
-                  <span>Figure 01</span>
-                  <b>{copy.journalDemoCaption}</b>
-                </div>
-                <video
-                  aria-label={copy.journalDemoAriaLabel}
-                  autoPlay
-                  disablePictureInPicture
-                  disableRemotePlayback
-                  loop
-                  muted
-                  playsInline
-                  poster={`${basePath}/videos/area-demo-poster.jpg`}
-                  preload="auto"
-                >
-                  <source
-                    src={`${basePath}/videos/area-demo.mp4`}
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <Image
-                alt=""
-                className="hero-app-icon"
-                height={112}
-                priority
-                src={`${basePath}/brand/app-icon.png`}
-                width={112}
+              <FeatureDemoCarousel
+                basePath={basePath}
+                controls={copy.demoControls}
+                items={copy.demoItems}
               />
             </div>
           </div>

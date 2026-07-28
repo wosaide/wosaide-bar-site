@@ -40,3 +40,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local source recordings (optimized web assets live under public/videos)
+/videos/

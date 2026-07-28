@@ -11,6 +11,24 @@ export type ShowcaseItem = {
   title: string;
 };
 
+export type DemoItem = {
+  ariaLabel: string;
+  badge: string;
+  description: string;
+  poster: string;
+  stat: string;
+  title: string;
+  video: string;
+};
+
+export type DemoControls = {
+  carouselLabel: string;
+  next: string;
+  pause: string;
+  play: string;
+  previous: string;
+};
+
 export type HomeCopy = {
   locale: SiteLocale;
   eyebrow: string;
@@ -19,6 +37,8 @@ export type HomeCopy = {
   support: string;
   developer: string;
   assurances: string[];
+  demoControls: DemoControls;
+  demoItems: DemoItem[];
   metrics: Array<{ value: string; label: string }>;
   journalDemoCaption: string;
   journalDemoAriaLabel: string;
@@ -82,6 +102,25 @@ const screens = {
   },
 };
 
+const demoMedia = {
+  journal: {
+    poster: "/videos/features/journal-match-poster.jpg",
+    video: "/videos/features/journal-match.mp4",
+  },
+  doi: {
+    poster: "/videos/features/doi-lookup-poster.jpg",
+    video: "/videos/features/doi-lookup.mp4",
+  },
+  query: {
+    poster: "/videos/features/ai-query-poster.jpg",
+    video: "/videos/features/ai-query.mp4",
+  },
+  settings: {
+    poster: "/videos/features/settings-tour-poster.jpg",
+    video: "/videos/features/settings-tour.mp4",
+  },
+};
+
 export const homeCopy: Record<SiteLocale, HomeCopy> = {
   en: {
     locale: "en",
@@ -93,6 +132,55 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     support: "Product & support",
     developer: "Source & developer ↗",
     assurances: ["No account", "Local-first data", "Explicit consent"],
+    demoControls: {
+      carouselLabel: "Four live product workflows",
+      previous: "Previous demo",
+      next: "Next demo",
+      pause: "Pause demo",
+      play: "Play demo",
+    },
+    demoItems: [
+      {
+        ...demoMedia.journal,
+        badge: "Journal matching",
+        title: "Type the initials. Get the indexed title.",
+        description:
+          "Enter an abbreviation such as IJIR. WOS Aide Bar matches the journal catalogs you installed—including SCIE, SSCI, AHCI, and ESCI—and surfaces the full title, ISSNs, publisher, language, and index coverage.",
+        stat: "Local catalog match · no upload",
+        ariaLabel:
+          "WOS Aide Bar matching journal initials to indexed full titles and catalog details",
+      },
+      {
+        ...demoMedia.doi,
+        badge: "DOI resolution",
+        title: "Paste the citation. Open the exact paper.",
+        description:
+          "Send a copied reference to Crossref only when you choose to. Review the matched title, DOI, authors, journal, and year, then open the DOI or continue directly to Web of Science.",
+        stat: "Crossref on demand · history on Mac",
+        ariaLabel:
+          "WOS Aide Bar resolving a literature reference to a DOI and Web of Science result",
+      },
+      {
+        ...demoMedia.query,
+        badge: "AI query builder",
+        title: "Ask naturally. Review a valid WOS expression.",
+        description:
+          "Turn a research question into a structured Web of Science query with OpenAI, OpenRouter, an OpenAI-compatible service, or a local LLM endpoint. Review the expression before opening the search.",
+        stat: "Remote or local LLM · syntax reviewed",
+        ariaLabel:
+          "WOS Aide Bar converting natural language into a reviewed Web of Science query",
+      },
+      {
+        ...demoMedia.settings,
+        badge: "Settings & control",
+        title: "Configure the app around your workflow.",
+        description:
+          "Choose providers and models, connect a local endpoint, manage consent, journal catalogs, personal lists, language, appearance, launch behavior, and shortcuts from one native settings window.",
+        stat: "Keychain credentials · permission controls",
+        ariaLabel:
+          "Tour of WOS Aide Bar settings for AI providers, models, privacy, journal lists, appearance, and shortcuts",
+      },
+    ],
     metrics: [
       { value: "7", label: "optional journal catalog sources" },
       { value: "9", label: "interface languages" },
@@ -260,6 +348,55 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     support: "产品与支持",
     developer: "源码与开发者 ↗",
     assurances: ["无需账户", "数据本地优先", "外发前明确同意"],
+    demoControls: {
+      carouselLabel: "四段真实功能演示",
+      previous: "上一段演示",
+      next: "下一段演示",
+      pause: "暂停演示",
+      play: "播放演示",
+    },
+    demoItems: [
+      {
+        ...demoMedia.journal,
+        badge: "期刊智能匹配",
+        title: "输入首字母，找到完整收录期刊名。",
+        description:
+          "输入 IJIR 等简称，WOS Aide Bar 会在你已安装的 SCIE、SSCI、AHCI、ESCI 等期刊目录中本地匹配，并显示完整刊名、ISSN、出版社、语言和收录范围。",
+        stat: "本地目录匹配 · 无需上传",
+        ariaLabel:
+          "WOS Aide Bar 将期刊首字母简称匹配为完整收录刊名和目录信息",
+      },
+      {
+        ...demoMedia.doi,
+        badge: "DOI 文献解析",
+        title: "粘贴参考文献，直达准确论文。",
+        description:
+          "只有在你主动选择时，才把复制的参考文献发送给 Crossref。确认匹配的标题、DOI、作者、期刊与年份，然后打开 DOI 或直接继续检索 Web of Science。",
+        stat: "按需使用 Crossref · 历史留在 Mac",
+        ariaLabel:
+          "WOS Aide Bar 将参考文献解析为 DOI 并打开 Web of Science 结果",
+      },
+      {
+        ...demoMedia.query,
+        badge: "AI 检索式生成",
+        title: "用自然语言提问，审核后再检索。",
+        description:
+          "使用 OpenAI、OpenRouter、兼容 OpenAI 的服务或本地 LLM 端点，把研究问题转换成结构化 Web of Science Query；确认表达式后再打开检索。",
+        stat: "远程或本地 LLM · 语法复核",
+        ariaLabel:
+          "WOS Aide Bar 将自然语言转换为经审核的 Web of Science 检索表达式",
+      },
+      {
+        ...demoMedia.settings,
+        badge: "设置与控制",
+        title: "让 App 适应你的科研工作流。",
+        description:
+          "在一个原生设置窗口中选择服务商与模型、连接本地端点、管理外发许可、期刊目录、个人清单、语言、外观、登录启动和快捷键。",
+        stat: "钥匙串保存密钥 · 明确权限控制",
+        ariaLabel:
+          "WOS Aide Bar 的 AI 服务商、模型、隐私、期刊清单、外观和快捷键设置演示",
+      },
+    ],
     metrics: [
       { value: "7", label: "可选期刊目录来源" },
       { value: "9", label: "界面语言" },
@@ -409,6 +546,55 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     support: "產品與支援",
     developer: "原始碼與開發者 ↗",
     assurances: ["無需帳戶", "資料本機優先", "外傳前明確同意"],
+    demoControls: {
+      carouselLabel: "四段真實功能示範",
+      previous: "上一段示範",
+      next: "下一段示範",
+      pause: "暫停示範",
+      play: "播放示範",
+    },
+    demoItems: [
+      {
+        ...demoMedia.journal,
+        badge: "期刊智慧配對",
+        title: "輸入首字母，找到完整收錄期刊名。",
+        description:
+          "輸入 IJIR 等簡稱，WOS Aide Bar 會在你已安裝的 SCIE、SSCI、AHCI、ESCI 等期刊目錄中於本機配對，並顯示完整刊名、ISSN、出版社、語言和收錄範圍。",
+        stat: "本機目錄配對 · 無需上傳",
+        ariaLabel:
+          "WOS Aide Bar 將期刊首字母簡稱配對為完整收錄刊名和目錄資訊",
+      },
+      {
+        ...demoMedia.doi,
+        badge: "DOI 文獻解析",
+        title: "貼上參考文獻，直達準確論文。",
+        description:
+          "只有在你主動選擇時，才把複製的參考文獻傳送給 Crossref。確認配對的標題、DOI、作者、期刊與年份，然後開啟 DOI 或直接繼續檢索 Web of Science。",
+        stat: "按需使用 Crossref · 歷史留在 Mac",
+        ariaLabel:
+          "WOS Aide Bar 將參考文獻解析為 DOI 並開啟 Web of Science 結果",
+      },
+      {
+        ...demoMedia.query,
+        badge: "AI 檢索式生成",
+        title: "用自然語言提問，審核後再檢索。",
+        description:
+          "使用 OpenAI、OpenRouter、相容 OpenAI 的服務或本機 LLM 端點，把研究問題轉換成結構化 Web of Science Query；確認運算式後再開啟檢索。",
+        stat: "遠端或本機 LLM · 語法覆核",
+        ariaLabel:
+          "WOS Aide Bar 將自然語言轉換為經審核的 Web of Science 檢索運算式",
+      },
+      {
+        ...demoMedia.settings,
+        badge: "設定與控制",
+        title: "讓 App 配合你的科研工作流程。",
+        description:
+          "在一個原生設定視窗中選擇服務商與模型、連接本機端點、管理外傳許可、期刊目錄、個人清單、語言、外觀、登入啟動和快速鍵。",
+        stat: "鑰匙圈保存密鑰 · 明確權限控制",
+        ariaLabel:
+          "WOS Aide Bar 的 AI 服務商、模型、隱私、期刊清單、外觀和快速鍵設定示範",
+      },
+    ],
     metrics: [
       { value: "7", label: "可選期刊目錄來源" },
       { value: "9", label: "介面語言" },
