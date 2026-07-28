@@ -20,6 +20,8 @@ export type HomeCopy = {
   developer: string;
   assurances: string[];
   metrics: Array<{ value: string; label: string }>;
+  journalDemoCaption: string;
+  journalDemoAriaLabel: string;
   showcaseKicker: string;
   showcaseTitle: string;
   showcaseIntro: string;
@@ -97,6 +99,10 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       { value: "3", label: "AI provider modes" },
       { value: "0", label: "analytics or tracking SDKs" },
     ],
+    journalDemoCaption:
+      "Live workflow · journal initials to the indexed full title",
+    journalDemoAriaLabel:
+      "Demonstration of WOS Aide Bar completing journal initials to a full Web of Science-indexed journal title",
     showcaseKicker: "The complete app",
     showcaseTitle: "One compact utility. The whole research loop.",
     showcaseIntro:
@@ -260,6 +266,9 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       { value: "3", label: "AI 服务模式" },
       { value: "0", label: "分析或跟踪 SDK" },
     ],
+    journalDemoCaption: "真实操作演示 · 从期刊首字母简写到收录全名",
+    journalDemoAriaLabel:
+      "WOS Aide Bar 将期刊首字母简写补全为 Web of Science 收录期刊全名的演示",
     showcaseKicker: "完整 App",
     showcaseTitle: "一个紧凑工具，覆盖完整科研检索流程。",
     showcaseIntro: "下面每张图都来自 WOS Aide Bar 1.0 的当前真实界面，不是概念渲染。",
@@ -406,6 +415,9 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       { value: "3", label: "AI 服務模式" },
       { value: "0", label: "分析或追蹤 SDK" },
     ],
+    journalDemoCaption: "真實操作示範 · 從期刊首字母簡寫到收錄全名",
+    journalDemoAriaLabel:
+      "WOS Aide Bar 將期刊首字母簡寫補全為 Web of Science 收錄期刊全名的示範",
     showcaseKicker: "完整 App",
     showcaseTitle: "一個緊湊工具，涵蓋完整科研檢索流程。",
     showcaseIntro: "下方每張圖都來自 WOS Aide Bar 1.0 的目前真實介面，不是概念渲染。",

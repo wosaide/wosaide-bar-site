@@ -81,28 +81,30 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
               </div>
             </div>
 
-            <div className="hero-product-stack" aria-label="Current WOS Aide Bar interface">
-              <div className="hero-screen hero-screen-main">
+            <div
+              className="hero-product-stack"
+              aria-label={copy.journalDemoAriaLabel}
+            >
+              <div className="hero-video-frame">
                 <div className="hero-screen-label">
                   <span>Figure 01</span>
-                  <b>Current interface · WOS Aide Bar 1.0</b>
+                  <b>{copy.journalDemoCaption}</b>
                 </div>
-                <Image
-                  alt="Current WOS Aide Bar menu-bar control center"
-                  height={483}
-                  priority
-                  src={`${basePath}/screenshots/main-panel.png`}
-                  width={900}
-                />
-              </div>
-              <div className="hero-screen hero-screen-search">
-                <Image
-                  alt="Current WOS Aide Bar quick-search window"
-                  height={162}
-                  priority
-                  src={`${basePath}/screenshots/manual-search.png`}
-                  width={714}
-                />
+                <video
+                  aria-label={copy.journalDemoAriaLabel}
+                  autoPlay
+                  disablePictureInPicture
+                  disableRemotePlayback
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                >
+                  <source
+                    src={`${basePath}/videos/journal-name-completion.mp4`}
+                    type="video/mp4"
+                  />
+                </video>
               </div>
               <Image
                 alt=""
