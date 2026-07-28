@@ -2,64 +2,43 @@ import Image from "next/image";
 import Link from "next/link";
 import { homeCopy, type SiteLocale } from "../_lib/site-copy";
 import { FeatureDemoCarousel } from "./FeatureDemoCarousel";
-import { ProductShowcase } from "./ProductShowcase";
 import { SiteShell } from "./SiteShell";
 
 export function ProductHome({ locale }: { locale: SiteLocale }) {
   const copy = homeCopy[locale];
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  const documentMeta = {
+  const pageCopy = {
     en: {
-      label: "Research note / 01",
-      release: "Release",
-      platform: "Platform",
-      method: "Method",
-      local: "Local-first",
+      workflowKicker: "Four essential workflows",
+      workflowTitle: "From a rough clue to a reviewable search.",
+      workflowIntro:
+        "Each workflow below is captured from the current app. Choose a demo in the player, or scan the four capabilities at a glance.",
+      privacyNote: "No account. No tracking SDK. No developer data server.",
+      availability: "Native for macOS 13 and later",
     },
     "zh-Hans": {
-      label: "研究工具 / 01",
-      release: "版本",
-      platform: "平台",
-      method: "原则",
-      local: "本地优先",
+      workflowKicker: "四个核心工作流",
+      workflowTitle: "从一个线索，到可核验的检索式。",
+      workflowIntro:
+        "所有画面均来自当前 App。可在上方播放器切换演示，也可以在这里快速浏览四项能力。",
+      privacyNote: "无需账户，无跟踪 SDK，无开发者数据服务器。",
+      availability: "原生支持 macOS 13 及以上版本",
     },
     "zh-Hant": {
-      label: "研究工具 / 01",
-      release: "版本",
-      platform: "平台",
-      method: "原則",
-      local: "本機優先",
+      workflowKicker: "四個核心工作流",
+      workflowTitle: "從一個線索，到可核驗的檢索式。",
+      workflowIntro:
+        "所有畫面均來自目前 App。可在上方播放器切換示範，也可以在這裡快速瀏覽四項能力。",
+      privacyNote: "無需帳戶，無追蹤 SDK，無開發者資料伺服器。",
+      availability: "原生支援 macOS 13 及以上版本",
     },
   }[locale];
 
   return (
     <SiteShell locale={locale}>
-      <main>
+      <main lang={locale}>
         <section className="product-hero">
           <div className="wrap product-hero-grid">
-            <aside className="hero-index" aria-label={documentMeta.label}>
-              <p className="document-label">{documentMeta.label}</p>
-              <dl>
-                <div>
-                  <dt>{documentMeta.release}</dt>
-                  <dd>1.0</dd>
-                </div>
-                <div>
-                  <dt>{documentMeta.platform}</dt>
-                  <dd>macOS 13+</dd>
-                </div>
-                <div>
-                  <dt>{documentMeta.method}</dt>
-                  <dd>{documentMeta.local}</dd>
-                </div>
-              </dl>
-              <div className="trust-line" aria-label="Product assurances">
-                {copy.assurances.map((assurance) => (
-                  <span key={assurance}>{assurance}</span>
-                ))}
-              </div>
-            </aside>
-
             <div className="product-hero-copy">
               <p className="eyebrow">
                 <span className="eyebrow-dot" />
@@ -71,14 +50,17 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
                 <Link className="button button-primary" href="/support">
                   {copy.support}
                 </Link>
-                <a
+                <Link
                   className="button button-secondary"
-                  href="https://github.com/wosaide"
-                  rel="noreferrer"
-                  target="_blank"
+                  href="#features"
                 >
                   {copy.developer}
-                </a>
+                </Link>
+              </div>
+              <div className="trust-line" aria-label="Product assurances">
+                {copy.assurances.map((assurance) => (
+                  <span key={assurance}>{assurance}</span>
+                ))}
               </div>
             </div>
 
@@ -95,41 +77,25 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
           </div>
         </section>
 
-        <section className="proof-strip">
-          <div className="wrap proof-grid">
-            {copy.metrics.map((metric) => (
-              <div key={metric.label}>
-                <strong>{metric.value}</strong>
-                <span>{metric.label}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <ProductShowcase
-          basePath={basePath}
-          intro={copy.showcaseIntro}
-          items={copy.showcaseItems}
-          kicker={copy.showcaseKicker}
-          title={copy.showcaseTitle}
-        />
-
-        <section className="section wrap" id="features">
+        <section className="workflow-section wrap" id="features">
           <div className="section-heading">
             <div>
-              <p className="kicker">{copy.featureKicker}</p>
-              <h2>{copy.featureTitle}</h2>
+              <p className="kicker">{pageCopy.workflowKicker}</p>
+              <h2>{pageCopy.workflowTitle}</h2>
             </div>
-            <p>{copy.featureIntro}</p>
+            <p>{pageCopy.workflowIntro}</p>
           </div>
-          <div className="feature-grid product-feature-grid">
-            {copy.features.map((feature, index) => (
-              <article className="feature-card" key={feature.title}>
-                <span className="feature-number">
+          <div className="workflow-list">
+            {copy.demoItems.map((item, index) => (
+              <article key={item.title}>
+                <span>
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
+                <div>
+                  <p>{item.badge}</p>
+                  <h3>{item.title}</h3>
+                </div>
+                <p>{item.description}</p>
               </article>
             ))}
           </div>
@@ -140,6 +106,7 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
             <div>
               <p className="kicker kicker-light">{copy.privacyKicker}</p>
               <h2>{copy.privacyTitle}</h2>
+              <p className="privacy-note">{pageCopy.privacyNote}</p>
             </div>
             <div className="privacy-points">
               {copy.privacyItems.map((item, index) => (
@@ -187,6 +154,7 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
           <div>
             <p className="kicker">{copy.ctaKicker}</p>
             <h2>{copy.ctaTitle}</h2>
+            <p>{pageCopy.availability}</p>
           </div>
           <Link className="button button-primary" href="/support">
             {copy.learnMore}

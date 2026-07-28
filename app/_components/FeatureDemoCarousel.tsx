@@ -72,76 +72,75 @@ export function FeatureDemoCarousel({
         }
       }}
     >
-      <div className="demo-document-row">
-        <span>{controls.carouselLabel}</span>
-        <b>
-          {String(activeIndex + 1).padStart(2, "0")} /{" "}
-          {String(items.length).padStart(2, "0")}
-        </b>
+      <div className="demo-topbar">
+        <div>
+          <span>{controls.carouselLabel}</span>
+          <b>
+            {String(activeIndex + 1).padStart(2, "0")} /{" "}
+            {String(items.length).padStart(2, "0")}
+          </b>
+        </div>
+        <div className="demo-controls">
+          <button
+            aria-label={controls.previous}
+            onClick={() => move(-1)}
+            type="button"
+          >
+            ←
+          </button>
+          <button
+            aria-label={isPaused ? controls.play : controls.pause}
+            className="demo-play-control"
+            onClick={() => setIsPaused((paused) => !paused)}
+            type="button"
+          >
+            {isPaused ? controls.play : controls.pause}
+          </button>
+          <button
+            aria-label={controls.next}
+            onClick={() => move(1)}
+            type="button"
+          >
+            →
+          </button>
+        </div>
       </div>
 
-      <div className="demo-stage">
-        <div className="demo-copy" aria-live="polite">
+      <div
+        aria-labelledby={`demo-tab-${activeIndex}`}
+        className="demo-media"
+        id={`demo-panel-${activeIndex}`}
+        key={active.video}
+        role="tabpanel"
+      >
+        <video
+          aria-label={active.ariaLabel}
+          autoPlay={!isPaused && !reduceMotion}
+          disablePictureInPicture
+          disableRemotePlayback
+          muted
+          onEnded={() => {
+            if (!isPaused && !reduceMotion) {
+              move(1);
+            }
+          }}
+          playsInline
+          poster={`${basePath}${active.poster}`}
+          preload="auto"
+          ref={videoRef}
+        >
+          <source src={`${basePath}${active.video}`} type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="demo-copy" aria-live="polite">
+        <div>
           <p className="demo-badge">{active.badge}</p>
           <h2>{active.title}</h2>
+        </div>
+        <div>
           <p className="demo-description">{active.description}</p>
           <p className="demo-stat">{active.stat}</p>
-
-          <div className="demo-controls">
-            <button
-              aria-label={controls.previous}
-              onClick={() => move(-1)}
-              type="button"
-            >
-              ←
-            </button>
-            <button
-              aria-label={isPaused ? controls.play : controls.pause}
-              className="demo-play-control"
-              onClick={() => setIsPaused((paused) => !paused)}
-              type="button"
-            >
-              {isPaused ? controls.play : controls.pause}
-            </button>
-            <button
-              aria-label={controls.next}
-              onClick={() => move(1)}
-              type="button"
-            >
-              →
-            </button>
-          </div>
-        </div>
-
-        <div
-          aria-labelledby={`demo-tab-${activeIndex}`}
-          className="demo-media"
-          id={`demo-panel-${activeIndex}`}
-          key={active.video}
-          role="tabpanel"
-        >
-          <div className="demo-media-label">
-            <span>Figure {String(activeIndex + 1).padStart(2, "0")}</span>
-            <b>{active.badge}</b>
-          </div>
-          <video
-            aria-label={active.ariaLabel}
-            autoPlay={!isPaused && !reduceMotion}
-            disablePictureInPicture
-            disableRemotePlayback
-            muted
-            onEnded={() => {
-              if (!isPaused && !reduceMotion) {
-                move(1);
-              }
-            }}
-            playsInline
-            poster={`${basePath}${active.poster}`}
-            preload="auto"
-            ref={videoRef}
-          >
-            <source src={`${basePath}${active.video}`} type="video/mp4" />
-          </video>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./academic.css";
 
@@ -13,17 +13,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const display = Source_Serif_4({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
 const siteOrigin =
   process.env.NEXT_PUBLIC_SITE_ORIGIN ??
   "https://wosaide.github.io";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const socialImage = `${siteOrigin}${basePath}/og-academic.png`;
+const socialImage = `${siteOrigin}${basePath}/og-wosaide.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${siteOrigin}${basePath}/`),
@@ -49,7 +43,7 @@ export const metadata: Metadata = {
         url: socialImage,
         width: 1536,
         height: 1024,
-        alt: "WOS Aide Bar academic product preview",
+        alt: "WOS Aide Bar product preview with the native macOS settings interface",
       },
     ],
   },
@@ -70,7 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${display.variable}`}
+        className={`${geistSans.variable} ${geistMono.variable}`}
       >
         {children}
       </body>

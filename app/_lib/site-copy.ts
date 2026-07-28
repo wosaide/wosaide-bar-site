@@ -124,13 +124,12 @@ const demoMedia = {
 export const homeCopy: Record<SiteLocale, HomeCopy> = {
   en: {
     locale: "en",
-    eyebrow: "WOS Aide Bar 1.0 · Native macOS research utility",
-    hero:
-      "Build precise literature searches without memorizing Web of Science syntax.",
+    eyebrow: "Native macOS utility for literature search",
+    hero: "Search Web of Science without memorizing the syntax.",
     heroSecondary:
-      "Search from the menu bar, turn research questions into reviewed queries with an optional three-stage AI assistant, resolve references with Crossref, and keep journal catalogs, favorites, history, and personal insights on your Mac.",
-    support: "Product & support",
-    developer: "Source & developer ↗",
+      "Journal initials, DOI matching, AI-assisted query building, and private settings—one focused menu-bar app.",
+    support: "Get WOS Aide Bar",
+    developer: "Explore the four workflows",
     assurances: ["No account", "Local-first data", "Explicit consent"],
     demoControls: {
       carouselLabel: "Four live product workflows",
@@ -341,12 +340,12 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
   },
   "zh-Hans": {
     locale: "zh-Hans",
-    eyebrow: "WOS Aide Bar 1.0 · 原生 macOS 科研工具",
-    hero: "无需记忆 Web of Science 语法，也能构建精确的文献检索。",
+    eyebrow: "原生 macOS 文献检索工具",
+    hero: "无需记忆语法，直接检索 Web of Science。",
     heroSecondary:
-      "从菜单栏快速检索；用可选的三阶段 AI 助手把研究问题变成经审核的检索式；通过 Crossref 解析参考文献；期刊目录、收藏、历史与个人洞察均保存在 Mac。",
-    support: "产品与支持",
-    developer: "源码与开发者 ↗",
+      "期刊首字母匹配、DOI 解析、AI 辅助检索式与隐私设置，集中在一个轻量菜单栏 App。",
+    support: "获取 WOS Aide Bar",
+    developer: "查看四个工作流",
     assurances: ["无需账户", "数据本地优先", "外发前明确同意"],
     demoControls: {
       carouselLabel: "四段真实功能演示",
@@ -539,12 +538,12 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
   },
   "zh-Hant": {
     locale: "zh-Hant",
-    eyebrow: "WOS Aide Bar 1.0 · 原生 macOS 科研工具",
-    hero: "無需記憶 Web of Science 語法，也能建立精確的文獻檢索。",
+    eyebrow: "原生 macOS 文獻檢索工具",
+    hero: "無需記憶語法，直接檢索 Web of Science。",
     heroSecondary:
-      "從選單列快速檢索；用可選的三階段 AI 助手把研究問題變成經審核的檢索式；透過 Crossref 解析參考文獻；期刊目錄、收藏、歷史與個人洞察均保存在 Mac。",
-    support: "產品與支援",
-    developer: "原始碼與開發者 ↗",
+      "期刊首字母配對、DOI 解析、AI 輔助檢索式與隱私設定，集中在一個輕量選單列 App。",
+    support: "取得 WOS Aide Bar",
+    developer: "查看四個工作流程",
     assurances: ["無需帳戶", "資料本機優先", "外傳前明確同意"],
     demoControls: {
       carouselLabel: "四段真實功能示範",
