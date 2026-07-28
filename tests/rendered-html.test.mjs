@@ -25,10 +25,10 @@ async function render(pathname) {
 }
 
 for (const [path, title, phrase] of [
-  ["/", "WOS Aide Bar", "Search Web of Science without memorizing the syntax."],
+  ["/", "WOS Aide Bar", "Make Web of Science search construction simple."],
   ["/en", "WOS Aide Bar", "Four essential workflows"],
-  ["/zh-hans", "WOS Aide Bar", "四个核心工作流"],
-  ["/zh-hant", "WOS Aide Bar", "四個核心工作流"],
+  ["/zh-hans", "WOS Aide Bar", "WOS Aide Bar 不提供 Web of Science 账户"],
+  ["/zh-hant", "WOS Aide Bar", "WOS Aide Bar 不提供 Web of Science 帳戶"],
   ["/privacy", "Privacy Policy", "Optional AI Assistant"],
   ["/terms", "Terms of Use", "Journal-list sources and rights"],
   ["/support", "Support", "How can we help?"],

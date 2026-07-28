@@ -17,16 +17,16 @@ const siteOrigin =
   process.env.NEXT_PUBLIC_SITE_ORIGIN ??
   "https://wosaide.github.io";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const socialImage = `${siteOrigin}${basePath}/og-wosaide.png`;
+const socialImage = `${siteOrigin}${basePath}/og.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${siteOrigin}${basePath}/`),
   title: {
-    default: "WOS Aide Bar — Search, without the syntax",
+    default: "WOS Aide Bar — Make WOS search construction simple",
     template: "%s · WOS Aide Bar",
   },
   description:
-    "A private, native macOS menu-bar utility for building Web of Science search URLs.",
+    "A macOS companion for researchers with Web of Science access: match journal initials, build WOS queries, and organize reusable searches.",
   applicationName: "WOS Aide Bar",
   authors: [{ name: "IIDEV" }],
   icons: {
@@ -35,23 +35,23 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "WOS Aide Bar — Search, without the syntax",
+    title: "WOS Aide Bar — Make WOS search construction simple",
     description:
-      "Turn journal names and research ideas into precise Web of Science searches from your Mac menu bar.",
+      "For researchers with Web of Science access: match journal initials, build WOS queries, and organize reusable searches.",
     images: [
       {
         url: socialImage,
         width: 1536,
         height: 1024,
-        alt: "WOS Aide Bar product preview with the native macOS settings interface",
+        alt: "WOS Aide Bar makes Web of Science search construction simple",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WOS Aide Bar — Search, without the syntax",
+    title: "WOS Aide Bar — Make WOS search construction simple",
     description:
-      "A private, native macOS menu-bar utility for Web of Science search URLs.",
+      "A macOS companion for researchers with Web of Science access.",
     images: [socialImage],
   },
 };

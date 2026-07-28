@@ -10,27 +10,39 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
   const pageCopy = {
     en: {
       workflowKicker: "Four essential workflows",
-      workflowTitle: "From a rough clue to a reviewable search.",
+      workflowTitle: "From a research question to a reviewable WOS query.",
       workflowIntro:
-        "Each workflow below is captured from the current app. Choose a demo in the player, or scan the four capabilities at a glance.",
+        "WOS Aide Bar sits between your research intent and the Web of Science search page. It reduces manual syntax work without replacing Web of Science.",
+      accessLabel: "Before you search",
+      accessNote:
+        "WOS Aide Bar does not provide a Web of Science account, subscription, or database access. Sign in with your own or institutional access before using the generated search.",
       privacyNote: "No account. No tracking SDK. No developer data server.",
-      availability: "Native for macOS 13 and later",
+      availability:
+        "Requires macOS 13+ and your own Web of Science access",
     },
     "zh-Hans": {
       workflowKicker: "四个核心工作流",
-      workflowTitle: "从一个线索，到可核验的检索式。",
+      workflowTitle: "从研究问题，到可核验的 WOS Query。",
       workflowIntro:
-        "所有画面均来自当前 App。可在上方播放器切换演示，也可以在这里快速浏览四项能力。",
+        "WOS Aide Bar 位于你的研究意图与 Web of Science 检索页面之间，减少手动编写语法的工作，但不会替代 Web of Science。",
+      accessLabel: "使用前提",
+      accessNote:
+        "WOS Aide Bar 不提供 Web of Science 账户、订阅或数据库访问权限。请先通过个人或机构权限登录 WOS，再使用 App 生成并打开检索。",
       privacyNote: "无需账户，无跟踪 SDK，无开发者数据服务器。",
-      availability: "原生支持 macOS 13 及以上版本",
+      availability:
+        "需要 macOS 13 及以上版本，以及你自己的 Web of Science 使用权限",
     },
     "zh-Hant": {
       workflowKicker: "四個核心工作流",
-      workflowTitle: "從一個線索，到可核驗的檢索式。",
+      workflowTitle: "從研究問題，到可核驗的 WOS Query。",
       workflowIntro:
-        "所有畫面均來自目前 App。可在上方播放器切換示範，也可以在這裡快速瀏覽四項能力。",
+        "WOS Aide Bar 位於你的研究意圖與 Web of Science 檢索頁面之間，減少手動編寫語法的工作，但不會取代 Web of Science。",
+      accessLabel: "使用前提",
+      accessNote:
+        "WOS Aide Bar 不提供 Web of Science 帳戶、訂閱或資料庫存取權限。請先透過個人或機構權限登入 WOS，再使用 App 產生並開啟檢索。",
       privacyNote: "無需帳戶，無追蹤 SDK，無開發者資料伺服器。",
-      availability: "原生支援 macOS 13 及以上版本",
+      availability:
+        "需要 macOS 13 及以上版本，以及你自己的 Web of Science 使用權限",
     },
   }[locale];
 
@@ -46,6 +58,10 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
               </p>
               <h1>{copy.hero}</h1>
               <p className="product-hero-lede">{copy.heroSecondary}</p>
+              <p className="access-note">
+                <strong>{pageCopy.accessLabel}</strong>
+                {pageCopy.accessNote}
+              </p>
               <div className="hero-actions">
                 <Link className="button button-primary" href="/support">
                   {copy.support}
