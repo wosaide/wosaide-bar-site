@@ -43,3 +43,23 @@ for (const [path, title, phrase] of [
     assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
   });
 }
+
+test("privacy page includes every app language", async () => {
+  const response = await render("/privacy");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  for (const language of [
+    "English",
+    "简体中文",
+    "繁體中文",
+    "日本語",
+    "한국어",
+    "Español",
+    "Português \\(Brasil\\)",
+    "Français",
+    "Deutsch",
+  ]) {
+    assert.match(html, new RegExp(language));
+  }
+});

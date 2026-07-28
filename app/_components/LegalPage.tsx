@@ -2,6 +2,13 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { SiteShell } from "./SiteShell";
 
+export type LegalTranslation = {
+  id: string;
+  label: string;
+  lang: string;
+  content: ReactNode;
+};
+
 export function LegalPage({
   eyebrow,
   title,
@@ -9,14 +16,29 @@ export function LegalPage({
   updated,
   children,
   chinese,
+  translations,
 }: {
   eyebrow: string;
   title: string;
   intro: string;
   updated: string;
   children: ReactNode;
-  chinese: ReactNode;
+  chinese?: ReactNode;
+  translations?: LegalTranslation[];
 }) {
+  const localizedSections =
+    translations ??
+    (chinese
+      ? [
+          {
+            id: "chinese",
+            label: "简体中文",
+            lang: "zh-Hans",
+            content: chinese,
+          },
+        ]
+      : []);
+
   return (
     <SiteShell>
       <main className="legal-main">
@@ -28,7 +50,11 @@ export function LegalPage({
             <div className="legal-meta">
               <span>{updated}</span>
               <a href="#english">English</a>
-              <a href="#chinese">中文</a>
+              {localizedSections.map((translation) => (
+                <a href={`#${translation.id}`} key={translation.id}>
+                  {translation.label}
+                </a>
+              ))}
             </div>
           </div>
         </section>
@@ -40,10 +66,17 @@ export function LegalPage({
           </aside>
           <article className="legal-copy" id="english">
             {children}
-            <section id="chinese" className="translation">
-              <p className="translation-label">简体中文</p>
-              {chinese}
-            </section>
+            {localizedSections.map((translation) => (
+              <section
+                id={translation.id}
+                className="translation"
+                lang={translation.lang}
+                key={translation.id}
+              >
+                <p className="translation-label">{translation.label}</p>
+                {translation.content}
+              </section>
+            ))}
           </article>
         </div>
       </main>

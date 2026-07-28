@@ -8,7 +8,7 @@ app.
 - `/` — English product page
 - `/zh-hans/` — Simplified Chinese product page
 - `/zh-hant/` — Traditional Chinese product page
-- `/privacy/` — bilingual privacy policy
+- `/privacy/` — privacy policy with summaries in all nine app languages
 - `/terms/` — bilingual supplemental terms
 - `/support/` — support and troubleshooting
 
