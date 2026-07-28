@@ -98,10 +98,11 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
                   loop
                   muted
                   playsInline
+                  poster={`${basePath}/videos/area-demo-poster.jpg`}
                   preload="auto"
                 >
                   <source
-                    src={`${basePath}/videos/journal-name-completion.mp4`}
+                    src={`${basePath}/videos/area-demo.mp4`}
                     type="video/mp4"
                   />
                 </video>
