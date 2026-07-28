@@ -116,8 +116,8 @@ const demoMedia = {
     video: "/videos/features/ai-query.mp4",
   },
   settings: {
-    poster: "/videos/features/settings-tour-poster.jpg",
-    video: "/videos/features/settings-tour.mp4",
+    poster: "/videos/features/settings-workflow-04-v2-poster.jpg",
+    video: "/videos/features/settings-workflow-04-v2.mp4",
   },
 };
 
