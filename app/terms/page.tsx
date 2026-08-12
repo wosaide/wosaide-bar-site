@@ -13,7 +13,7 @@ export default function TermsPage() {
       eyebrow="Legal · Terms"
       title="Terms of Use"
       intro="These terms supplement Apple’s Standard EULA and explain WOS Aide Bar’s independent role, optional external features, journal-list sources, and voluntary support purchases."
-      updated="Effective July 27, 2026"
+      updated="Effective August 12, 2026"
       chinese={
         <>
           <h2>使用条款摘要</h2>
@@ -22,7 +22,11 @@ export default function TermsPage() {
           </p>
           <h3>用途与外部服务</h3>
           <p>
-            本 App 是独立的科研效率工具，不隶属于 Clarivate、Crossref、OpenAI、OpenRouter、Financial Times 或 UT Dallas。Web of Science、AI、Crossref、GitHub 及自定义端点各自适用其条款、隐私政策、访问限制与费用。你应在依赖检索式、AI 输出、DOI 匹配或期刊名单前自行核验。
+            本 App 是独立的科研效率工具，不隶属于 Clarivate、Crossref、EasyScholar、OpenAI、OpenRouter、Financial Times 或 UT Dallas。Web of Science、AI、划词翻译、Crossref、EasyScholar、GitHub 及自定义端点各自适用其条款、隐私政策、访问限制与费用。你应在依赖检索式、AI 或翻译输出、DOI 匹配、CAS／JCR 查询结果或期刊名单前自行核验。
+          </p>
+          <h3>划词翻译与 EasyScholar</h3>
+          <p>
+            划词翻译与 EasyScholar 查询均为可选功能。划词翻译需要你主动启用、授予 macOS 辅助功能权限并选择快捷键；远程翻译使用你选择的 AI 服务。EasyScholar 查询使用你自行提供并负责保护的 API Key。第三方输出可能不完整、过时或不准确，不构成翻译、期刊评价或科研决策建议。
           </p>
           <h3>期刊名单与内容权利</h3>
           <p>
@@ -51,10 +55,11 @@ export default function TermsPage() {
         <p>
           WOS Aide Bar is a research-productivity utility that constructs
           search URLs on your device, opens them in your browser, manages local
-          journal-title suggestions, and offers optional AI query generation
-          and Crossref DOI matching. It does not provide a Web of Science
-          account, subscription, database, publication assessment, or guarantee
-          of access or results.
+          journal-title suggestions, and offers optional AI query generation,
+          selection translation, Crossref DOI matching, and EasyScholar
+          journal-rank lookup. It does not provide a Web of Science account,
+          subscription, database, translation service, publication assessment,
+          or guarantee of access or results.
         </p>
       </LegalSection>
 
@@ -62,8 +67,9 @@ export default function TermsPage() {
         <ul>
           <li>Use the App and external services lawfully.</li>
           <li>
-            Review generated queries, AI output, DOI matches, and journal-list
-            suggestions before relying on them.
+            Review generated queries, AI and translation output, DOI matches,
+            EasyScholar ranking results, and journal-list suggestions before
+            relying on them.
           </li>
           <li>
             Maintain required third-party accounts, credentials, subscriptions,
@@ -73,26 +79,39 @@ export default function TermsPage() {
             Import only CSV files that you have the right to possess and use.
           </li>
           <li>
-            Protect API keys and verify the operator and privacy practices of
-            any custom AI endpoint you configure.
+            Protect API keys and verify the operator, terms, and privacy
+            practices of any AI endpoint or EasyScholar service you use.
+          </li>
+          <li>
+            Enable selection translation and grant macOS Accessibility
+            permission only when you understand that the configured shortcut
+            may read the text you currently select in another application.
           </li>
         </ul>
       </LegalSection>
 
-      <LegalSection number="04" title="AI and Crossref features">
+      <LegalSection
+        number="04"
+        title="AI, selection translation, Crossref, and EasyScholar"
+      >
         <p>
-          AI Assistant and Crossref DOI lookup are optional third-party
-          integrations. AI output may be incomplete, inaccurate, biased, or
-          unsuitable. DOI matching may return the wrong work or no work. You
-          remain responsible for checking syntax, sources, citations, licenses,
-          and research decisions.
+          AI Assistant, selection translation, Crossref DOI lookup, and
+          EasyScholar journal-rank lookup are optional third-party
+          integrations. AI and translation output may be incomplete,
+          inaccurate, biased, or unsuitable. DOI matching may return the wrong
+          work or no work. CAS, JCR, and other journal-rank information may be
+          unavailable, delayed, incomplete, or outdated. You remain responsible
+          for checking syntax, translations, sources, citations, licenses,
+          journal information, and research decisions.
         </p>
         <p>
-          Remote AI providers and custom endpoint operators may impose separate
-          terms, privacy practices, account rules, usage limits, and fees.
-          Crossref applies its own service terms and policies. IIDEV does not
-          control those services and cannot guarantee their availability,
-          confidentiality, retention, or output.
+          Remote AI providers, custom endpoint operators, Crossref, and
+          EasyScholar may impose separate terms, privacy practices, account or
+          API-key rules, usage limits, and fees. Selection translation uses the
+          AI provider and endpoint you choose. EasyScholar access requires a
+          user-provided API key. IIDEV does not operate or control those
+          services and cannot guarantee their availability, confidentiality,
+          retention, ranking methodology, or output.
         </p>
       </LegalSection>
 
@@ -118,9 +137,10 @@ export default function TermsPage() {
         <p>
           WOS Aide Bar and IIDEV are independent and are not affiliated with,
           sponsored by, or endorsed by Clarivate, Web of Science, Crossref,
-          OpenAI, OpenRouter, GitHub, Financial Times, or the University of
-          Texas at Dallas. Their services, accounts, subscriptions, content,
-          APIs, marks, and access are governed by their own terms.
+          EasyScholar, OpenAI, OpenRouter, GitHub, Financial Times, or the
+          University of Texas at Dallas. Their services, accounts,
+          subscriptions, content, APIs, marks, methodologies, and access are
+          governed by their own terms.
         </p>
       </LegalSection>
 
@@ -147,11 +167,12 @@ export default function TermsPage() {
       <LegalSection number="09" title="Disclaimers and limitation">
         <p>
           To the maximum extent permitted by law, the App and Site are provided
-          “as is” and “as available.” We do not promise that queries, AI output,
-          DOI matches, journal lists, or external services will be complete,
-          current, accurate, secure, uninterrupted, or fit for a particular
-          purpose. The App is not legal, medical, financial, bibliometric, or
-          research-integrity advice.
+          “as is” and “as available.” We do not promise that queries, AI or
+          translation output, DOI matches, journal-rank results, journal lists,
+          or external services will be complete, current, accurate, secure,
+          uninterrupted, or fit for a particular purpose. The App is not
+          legal, medical, financial, translation, bibliometric, publication,
+          or research-integrity advice.
         </p>
         <p>
           Liability is limited only to the extent permitted by applicable law.
