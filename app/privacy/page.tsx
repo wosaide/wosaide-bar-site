@@ -20,7 +20,7 @@ const translations: LegalTranslation[] = [
       <>
         <h2>隐私政策摘要</h2>
         <p>
-          WOS Aide Bar 不要求开发者账户，不含广告、追踪、开发者分析或开发者运营的崩溃报告服务。剪贴板文字、检索历史、收藏、设置、AI 结果、DOI 查询历史、本地使用统计以及导入或下载后的期刊列表主要保存在你的 Mac 上，不会发送给 IIDEV。
+          WOS Aide Bar 不要求开发者账户，不含广告、追踪、开发者分析或开发者运营的崩溃报告服务。剪贴板文字、检索历史、收藏、设置、AI 结果、翻译历史、DOI 查询历史、EasyScholar 查询历史、本地使用统计以及导入或下载后的期刊列表主要保存在你的 Mac 上，不会发送给 IIDEV。
         </p>
         <p>
           剪贴板文字只会在你打开菜单栏面板、主动刷新或使用剪贴板查询快捷键时于本机读取。发起 Web of Science 查询时，App 会请求 macOS 在默认浏览器中打开包含查询内容的网址；相关浏览器活动和登录由对应服务处理。
@@ -32,6 +32,10 @@ const translations: LegalTranslation[] = [
         <h3>AI 助手</h3>
         <p>
           AI 助手为可选功能。远程请求发送前，App 会显示服务商、端点和将发送的数据，并要求你明确允许。允许后，输入的研究问题、为完成请求所需的上下文及随机安装安全标识符（仅 OpenAI）会直接发送至你选择的 OpenAI、OpenRouter 或自定义兼容服务；IIDEV 不会接收这些内容。你可以在设置中撤回许可。API 密钥保存在 macOS 钥匙串中，可能在卸载 App 后仍由系统保留，直至你主动删除。
+        </p>
+        <h3>划词翻译与 EasyScholar</h3>
+        <p>
+          划词翻译默认关闭。启用后，只有在你按下所配置的快捷键时，App 才会通过你授予的 macOS 辅助功能权限读取当前选中文字及其屏幕位置；必要时会执行一次复制并立即恢复原剪贴板内容。经单独授权后，选中文字和翻译方向会直接发送给所选 AI 服务。原文、译文、语言方向、服务商、模型和日期最多以 100 条历史记录保存在本机，可随时清除。EasyScholar 查询也仅在你点击期刊的 CAS/JCR 按钮后发生；用户提供的 API Key 与期刊名称会通过 HTTPS 直接发送给 EasyScholar。结果最多缓存 24 小时，并最多保存 100 条本机历史，均可清除。IIDEV 不接收这些请求或结果。
         </p>
         <h3>Crossref 与期刊 CSV</h3>
         <p>
@@ -53,7 +57,7 @@ const translations: LegalTranslation[] = [
       <>
         <h2>隱私權政策摘要</h2>
         <p>
-          WOS Aide Bar 不要求建立開發者帳戶，不含廣告、追蹤、開發者分析或由開發者營運的當機回報服務。剪貼簿文字、搜尋記錄、收藏、設定、AI 結果、DOI 查詢記錄、本機使用統計，以及匯入或下載的期刊清單，主要儲存在你的 Mac 上，不會傳送給 IIDEV。
+          WOS Aide Bar 不要求建立開發者帳戶，不含廣告、追蹤、開發者分析或由開發者營運的當機回報服務。剪貼簿文字、搜尋記錄、收藏、設定、AI 結果、翻譯記錄、DOI 查詢記錄、EasyScholar 查詢記錄、本機使用統計，以及匯入或下載的期刊清單，主要儲存在你的 Mac 上，不會傳送給 IIDEV。
         </p>
         <p>
           剪貼簿文字只會在你開啟選單列面板、主動重新整理或使用剪貼簿搜尋快捷鍵時於本機讀取。當你開始 Web of Science 搜尋時，App 會要求 macOS 在預設瀏覽器中開啟包含查詢內容的網址；相關瀏覽器活動與登入由相應服務處理。
@@ -65,6 +69,10 @@ const translations: LegalTranslation[] = [
         <h3>AI 助手</h3>
         <p>
           AI 助手為選用功能。傳送遠端要求前，App 會顯示供應商、端點及將傳送的資料，並要求你明確同意。同意後，研究問題、完成要求所需的內容，以及隨機安裝安全識別碼（僅 OpenAI）會直接傳送至你選擇的 OpenAI、OpenRouter 或自訂相容服務；IIDEV 不會接收這些內容。你可以在設定中撤回許可。API 金鑰儲存在 macOS 鑰匙圈中，解除安裝 App 後仍可能由系統保留，直到你主動刪除。
+        </p>
+        <h3>選取文字翻譯與 EasyScholar</h3>
+        <p>
+          選取文字翻譯預設關閉。啟用後，只有在你按下設定的快速鍵時，App 才會透過你授予的 macOS 輔助使用權限讀取目前選取的文字及其螢幕位置；必要時會執行一次複製並立即還原原有剪貼簿內容。經另行授權後，選取文字及翻譯方向會直接傳送給所選 AI 服務。原文、譯文、語言方向、供應商、模型與日期最多以 100 筆記錄儲存在本機，可隨時清除。EasyScholar 查詢也只會在你按下期刊的 CAS/JCR 按鈕後進行；使用者提供的 API Key 與期刊名稱會透過 HTTPS 直接傳送給 EasyScholar。結果最多快取 24 小時，並最多儲存 100 筆本機記錄，兩者均可清除。IIDEV 不會接收這些要求或結果。
         </p>
         <h3>Crossref 與期刊 CSV</h3>
         <p>
@@ -86,7 +94,7 @@ const translations: LegalTranslation[] = [
       <>
         <h2>プライバシーポリシーの概要</h2>
         <p>
-          WOS Aide Bar は開発者アカウントを必要とせず、広告、トラッキング、開発者による分析、または開発者が運営するクラッシュレポート機能を含みません。クリップボードのテキスト、検索履歴、お気に入り、設定、AI の結果、DOI 検索履歴、ローカルの使用統計、インポートまたはダウンロードしたジャーナルリストは、主にお使いの Mac に保存され、IIDEV には送信されません。
+          WOS Aide Bar は開発者アカウントを必要とせず、広告、トラッキング、開発者による分析、または開発者が運営するクラッシュレポート機能を含みません。クリップボードのテキスト、検索履歴、お気に入り、設定、AI の結果、翻訳履歴、DOI 検索履歴、EasyScholar 検索履歴、ローカルの使用統計、インポートまたはダウンロードしたジャーナルリストは、主にお使いの Mac に保存され、IIDEV には送信されません。
         </p>
         <p>
           クリップボードのテキストは、メニューバーパネルを開く、明示的に更新する、またはクリップボード検索のショートカットを使用した場合にのみ、Mac 上で読み取られます。Web of Science 検索を開始すると、App は macOS に、検索内容を含む URL をデフォルトブラウザで開くよう要求します。ブラウザでの操作やログインは、各サービスによって処理されます。
@@ -98,6 +106,10 @@ const translations: LegalTranslation[] = [
         <h3>AI アシスタント</h3>
         <p>
           AI アシスタントは任意の機能です。リモートリクエストを送信する前に、App はプロバイダー、エンドポイント、送信されるデータを表示し、明示的な許可を求めます。許可した場合、研究上の質問、リクエストの処理に必要なコンテキスト、およびランダムなインストール安全識別子（OpenAI のみ）が、選択した OpenAI、OpenRouter、または互換性のあるカスタムサービスに直接送信されます。IIDEV がこの内容を受信することはありません。許可は設定で取り消せます。API キーは macOS キーチェーンに保存され、App をアンインストールした後も、ユーザーが削除するまでシステムに残る場合があります。
+        </p>
+        <h3>選択テキスト翻訳と EasyScholar</h3>
+        <p>
+          選択テキスト翻訳は初期設定で無効です。有効にした場合も、設定したショートカットを押したときに限り、許可された macOS アクセシビリティ権限を使って現在の選択テキストと画面上の位置を読み取ります。必要な場合は一度だけコピーを実行し、以前のクリップボード内容を直ちに復元します。個別の同意後、選択テキストと翻訳方向が選択した AI サービスに直接送信されます。原文、訳文、言語方向、プロバイダー、モデル、日付は最大 100 件まで Mac に保存され、いつでも消去できます。EasyScholar 検索はジャーナルの CAS/JCR ボタンを押した場合にのみ実行され、ユーザーが用意した API キーとジャーナル名が HTTPS で EasyScholar に直接送信されます。結果は最長 24 時間キャッシュされ、履歴は最大 100 件までローカルに保存され、どちらも消去できます。IIDEV はこれらの要求や結果を受信しません。
         </p>
         <h3>Crossref とジャーナル CSV</h3>
         <p>
@@ -119,7 +131,7 @@ const translations: LegalTranslation[] = [
       <>
         <h2>개인정보 처리방침 요약</h2>
         <p>
-          WOS Aide Bar는 개발자 계정을 요구하지 않으며 광고, 추적, 개발자 분석 또는 개발자가 운영하는 충돌 보고 서비스를 포함하지 않습니다. 클립보드 텍스트, 검색 기록, 즐겨찾기, 설정, AI 결과, DOI 조회 기록, 로컬 사용 통계 및 가져오거나 다운로드한 저널 목록은 주로 사용자의 Mac에 저장되며 IIDEV로 전송되지 않습니다.
+          WOS Aide Bar는 개발자 계정을 요구하지 않으며 광고, 추적, 개발자 분석 또는 개발자가 운영하는 충돌 보고 서비스를 포함하지 않습니다. 클립보드 텍스트, 검색 기록, 즐겨찾기, 설정, AI 결과, 번역 기록, DOI 조회 기록, EasyScholar 조회 기록, 로컬 사용 통계 및 가져오거나 다운로드한 저널 목록은 주로 사용자의 Mac에 저장되며 IIDEV로 전송되지 않습니다.
         </p>
         <p>
           클립보드 텍스트는 메뉴 막대 패널을 열거나, 직접 새로 고침하거나, 클립보드 검색 단축키를 사용할 때만 Mac에서 읽습니다. Web of Science 검색을 시작하면 App은 macOS에 검색 내용이 포함된 URL을 기본 브라우저에서 열도록 요청합니다. 관련 브라우저 활동과 로그인은 해당 서비스에서 처리합니다.
@@ -131,6 +143,10 @@ const translations: LegalTranslation[] = [
         <h3>AI 어시스턴트</h3>
         <p>
           AI 어시스턴트는 선택 기능입니다. 원격 요청을 보내기 전에 App은 제공업체, 엔드포인트 및 전송할 데이터를 표시하고 사용자의 명시적 허용을 요청합니다. 허용하면 연구 질문, 요청 수행에 필요한 맥락 및 무작위 설치 안전 식별자(OpenAI에만 해당)가 선택한 OpenAI, OpenRouter 또는 호환되는 사용자 지정 서비스로 직접 전송됩니다. IIDEV는 이 내용을 받지 않습니다. 설정에서 허용을 철회할 수 있습니다. API 키는 macOS 키체인에 저장되며 App을 제거한 후에도 사용자가 직접 삭제할 때까지 시스템에 남아 있을 수 있습니다.
+        </p>
+        <h3>선택 텍스트 번역 및 EasyScholar</h3>
+        <p>
+          선택 텍스트 번역은 기본적으로 꺼져 있습니다. 기능을 켠 뒤에도 설정한 단축키를 누를 때만 사용자가 허용한 macOS 손쉬운 사용 권한으로 현재 선택한 텍스트와 화면 위치를 읽습니다. 필요한 경우 복사를 한 번 수행한 뒤 이전 클립보드 내용을 즉시 복원합니다. 별도의 동의 후 선택한 텍스트와 번역 방향이 선택한 AI 서비스로 직접 전송됩니다. 원문, 번역문, 언어 방향, 제공업체, 모델 및 날짜는 최대 100개까지 Mac에 저장되며 언제든지 삭제할 수 있습니다. EasyScholar 조회는 저널의 CAS/JCR 버튼을 누른 경우에만 실행되며 사용자가 제공한 API 키와 저널 이름이 HTTPS를 통해 EasyScholar로 직접 전송됩니다. 결과는 최대 24시간 캐시되고 기록은 최대 100개까지 로컬에 저장되며 모두 삭제할 수 있습니다. IIDEV는 이러한 요청이나 결과를 받지 않습니다.
         </p>
         <h3>Crossref 및 저널 CSV</h3>
         <p>
@@ -152,7 +168,7 @@ const translations: LegalTranslation[] = [
       <>
         <h2>Resumen de la política de privacidad</h2>
         <p>
-          WOS Aide Bar no requiere una cuenta con el desarrollador y no incluye publicidad, seguimiento, analíticas del desarrollador ni un servicio de informes de fallos operado por el desarrollador. El texto del portapapeles, el historial de búsquedas, los favoritos, los ajustes, los resultados de IA, el historial de consultas DOI, las estadísticas de uso locales y las listas de revistas importadas o descargadas se guardan principalmente en tu Mac y no se envían a IIDEV.
+          WOS Aide Bar no requiere una cuenta con el desarrollador y no incluye publicidad, seguimiento, analíticas del desarrollador ni un servicio de informes de fallos operado por el desarrollador. El texto del portapapeles, el historial de búsquedas, los favoritos, los ajustes, los resultados de IA, el historial de traducciones, el historial de consultas DOI, el historial de EasyScholar, las estadísticas de uso locales y las listas de revistas importadas o descargadas se guardan principalmente en tu Mac y no se envían a IIDEV.
         </p>
         <p>
           El texto del portapapeles solo se lee localmente cuando abres el panel de la barra de menús, lo actualizas de forma explícita o utilizas el atajo de búsqueda del portapapeles. Al iniciar una búsqueda en Web of Science, la App solicita a macOS que abra en el navegador predeterminado una URL que contiene la consulta. La actividad del navegador y el inicio de sesión son gestionados por los servicios correspondientes.
@@ -164,6 +180,10 @@ const translations: LegalTranslation[] = [
         <h3>Asistente de IA</h3>
         <p>
           El Asistente de IA es opcional. Antes de enviar una solicitud remota, la App muestra el proveedor, el punto de conexión y los datos que se enviarán, y solicita tu permiso expreso. Si lo autorizas, la pregunta de investigación, el contexto necesario para completar la solicitud y un identificador de seguridad de instalación aleatorio (solo con OpenAI) se envían directamente al servicio OpenAI, OpenRouter o compatible personalizado que hayas elegido. IIDEV no recibe ese contenido. Puedes retirar el permiso en Ajustes. Las claves API se guardan en el llavero de macOS y pueden permanecer en el sistema después de desinstalar la App hasta que las elimines.
+        </p>
+        <h3>Traducción de texto seleccionado y EasyScholar</h3>
+        <p>
+          La traducción de texto seleccionado está desactivada de forma predeterminada. Una vez activada, la App usa el permiso de Accesibilidad de macOS para leer el texto seleccionado y su posición en pantalla únicamente cuando pulsas el atajo configurado. Si es necesario, ejecuta una sola copia y restaura inmediatamente el contenido anterior del portapapeles. Tras un consentimiento independiente, el texto seleccionado y la dirección de traducción se envían directamente al servicio de IA elegido. El original, la traducción, los idiomas, el proveedor, el modelo y las fechas se guardan localmente en un historial de hasta 100 elementos que puedes borrar. La consulta de EasyScholar solo se realiza al pulsar el botón CAS/JCR de una revista; la clave API aportada por el usuario y el nombre de la revista se envían directamente a EasyScholar mediante HTTPS. Los resultados se almacenan en caché hasta 24 horas y se guardan hasta 100 elementos de historial local; ambos pueden borrarse. IIDEV no recibe estas solicitudes ni sus resultados.
         </p>
         <h3>Crossref y archivos CSV de revistas</h3>
         <p>
@@ -185,7 +205,7 @@ const translations: LegalTranslation[] = [
       <>
         <h2>Resumo da Política de Privacidade</h2>
         <p>
-          O WOS Aide Bar não exige uma conta com o desenvolvedor e não inclui publicidade, rastreamento, análises do desenvolvedor nem um serviço de relatórios de falhas operado pelo desenvolvedor. O texto da área de transferência, o histórico de pesquisas, os favoritos, os ajustes, os resultados de IA, o histórico de consultas DOI, as estatísticas locais de uso e as listas de periódicos importadas ou baixadas ficam armazenados principalmente no seu Mac e não são enviados à IIDEV.
+          O WOS Aide Bar não exige uma conta com o desenvolvedor e não inclui publicidade, rastreamento, análises do desenvolvedor nem um serviço de relatórios de falhas operado pelo desenvolvedor. O texto da área de transferência, o histórico de pesquisas, os favoritos, os ajustes, os resultados de IA, o histórico de traduções, o histórico de consultas DOI, o histórico do EasyScholar, as estatísticas locais de uso e as listas de periódicos importadas ou baixadas ficam armazenados principalmente no seu Mac e não são enviados à IIDEV.
         </p>
         <p>
           O texto da área de transferência só é lido localmente quando você abre o painel da barra de menus, atualiza-o explicitamente ou usa o atalho de pesquisa da área de transferência. Ao iniciar uma pesquisa no Web of Science, o App solicita ao macOS que abra no navegador padrão uma URL contendo a consulta. A atividade do navegador e o login são tratados pelos respectivos serviços.
@@ -197,6 +217,10 @@ const translations: LegalTranslation[] = [
         <h3>Assistente de IA</h3>
         <p>
           O Assistente de IA é opcional. Antes de enviar uma solicitação remota, o App mostra o provedor, o endpoint e os dados que serão enviados, e solicita sua permissão expressa. Se você permitir, a pergunta de pesquisa, o contexto necessário para concluir a solicitação e um identificador aleatório de segurança da instalação (somente para OpenAI) serão enviados diretamente ao serviço OpenAI, OpenRouter ou compatível personalizado que você escolher. A IIDEV não recebe esse conteúdo. A permissão pode ser revogada nos Ajustes. As chaves de API são armazenadas nas Chaves do macOS e podem permanecer no sistema após a desinstalação do App até que você as exclua.
+        </p>
+        <h3>Tradução de texto selecionado e EasyScholar</h3>
+        <p>
+          A tradução de texto selecionado vem desativada. Depois de ativada, o App usa a permissão de Acessibilidade do macOS para ler o texto selecionado e sua posição na tela somente quando você pressiona o atalho configurado. Se necessário, executa uma única cópia e restaura imediatamente o conteúdo anterior da área de transferência. Após um consentimento separado, o texto selecionado e a direção da tradução são enviados diretamente ao serviço de IA escolhido. O original, a tradução, os idiomas, o provedor, o modelo e as datas ficam em um histórico local de até 100 itens que pode ser apagado. A consulta ao EasyScholar ocorre somente quando você pressiona o botão CAS/JCR de um periódico; a chave de API fornecida pelo usuário e o nome do periódico são enviados diretamente ao EasyScholar por HTTPS. Os resultados ficam em cache por até 24 horas e até 100 itens de histórico são armazenados localmente; ambos podem ser apagados. A IIDEV não recebe essas solicitações nem resultados.
         </p>
         <h3>Crossref e arquivos CSV de periódicos</h3>
         <p>
@@ -218,7 +242,7 @@ const translations: LegalTranslation[] = [
       <>
         <h2>Résumé de la politique de confidentialité</h2>
         <p>
-          WOS Aide Bar ne nécessite aucun compte développeur et ne contient ni publicité, ni suivi, ni analyse opérée par le développeur, ni service de rapport de plantage exploité par le développeur. Le texte du presse-papiers, l’historique des recherches, les favoris, les réglages, les résultats de l’IA, l’historique des recherches DOI, les statistiques d’utilisation locales et les listes de revues importées ou téléchargées sont principalement conservés sur votre Mac et ne sont pas envoyés à IIDEV.
+          WOS Aide Bar ne nécessite aucun compte développeur et ne contient ni publicité, ni suivi, ni analyse opérée par le développeur, ni service de rapport de plantage exploité par le développeur. Le texte du presse-papiers, l’historique des recherches, les favoris, les réglages, les résultats de l’IA, l’historique des traductions, l’historique des recherches DOI, l’historique EasyScholar, les statistiques d’utilisation locales et les listes de revues importées ou téléchargées sont principalement conservés sur votre Mac et ne sont pas envoyés à IIDEV.
         </p>
         <p>
           Le texte du presse-papiers n’est lu localement que lorsque vous ouvrez le panneau de la barre des menus, l’actualisez explicitement ou utilisez le raccourci de recherche du presse-papiers. Lorsque vous lancez une recherche Web of Science, l’App demande à macOS d’ouvrir dans le navigateur par défaut une URL contenant la requête. L’activité du navigateur et la connexion sont traitées par les services concernés.
@@ -230,6 +254,10 @@ const translations: LegalTranslation[] = [
         <h3>Assistant IA</h3>
         <p>
           L’Assistant IA est facultatif. Avant d’envoyer une requête à distance, l’App affiche le fournisseur, le point de terminaison et les données qui seront envoyées, puis demande votre autorisation explicite. Si vous l’autorisez, la question de recherche, le contexte nécessaire au traitement de la requête et un identifiant de sécurité d’installation aléatoire (OpenAI uniquement) sont envoyés directement au service OpenAI, OpenRouter ou compatible personnalisé de votre choix. IIDEV ne reçoit pas ce contenu. Vous pouvez retirer l’autorisation dans Réglages. Les clés API sont stockées dans le trousseau macOS et peuvent rester dans le système après la désinstallation de l’App jusqu’à ce que vous les supprimiez.
+        </p>
+        <h3>Traduction du texte sélectionné et EasyScholar</h3>
+        <p>
+          La traduction du texte sélectionné est désactivée par défaut. Une fois activée, l’App utilise l’autorisation d’accessibilité de macOS pour lire le texte sélectionné et sa position à l’écran uniquement lorsque vous appuyez sur le raccourci configuré. Si nécessaire, elle effectue une seule copie puis restaure immédiatement le contenu précédent du presse-papiers. Après un consentement distinct, le texte sélectionné et le sens de traduction sont envoyés directement au service d’IA choisi. Le texte original, la traduction, les langues, le fournisseur, le modèle et les dates sont conservés localement dans un historique de 100 éléments maximum, que vous pouvez effacer. La recherche EasyScholar n’a lieu que lorsque vous cliquez sur le bouton CAS/JCR d’une revue ; la clé API fournie par l’utilisateur et le nom de la revue sont envoyés directement à EasyScholar via HTTPS. Les résultats sont mis en cache pendant 24 heures maximum et jusqu’à 100 éléments d’historique sont stockés localement ; les deux peuvent être effacés. IIDEV ne reçoit ni ces requêtes ni leurs résultats.
         </p>
         <h3>Crossref et fichiers CSV de revues</h3>
         <p>
@@ -251,7 +279,7 @@ const translations: LegalTranslation[] = [
       <>
         <h2>Zusammenfassung der Datenschutzerklärung</h2>
         <p>
-          WOS Aide Bar erfordert kein Entwicklerkonto und enthält keine Werbung, kein Tracking, keine vom Entwickler betriebene Analyse und keinen vom Entwickler betriebenen Absturzberichtsdienst. Zwischenablagetext, Suchverlauf, Favoriten, Einstellungen, KI-Ergebnisse, DOI-Abfrageverlauf, lokale Nutzungsstatistiken sowie importierte oder heruntergeladene Zeitschriftenlisten werden hauptsächlich auf deinem Mac gespeichert und nicht an IIDEV gesendet.
+          WOS Aide Bar erfordert kein Entwicklerkonto und enthält keine Werbung, kein Tracking, keine vom Entwickler betriebene Analyse und keinen vom Entwickler betriebenen Absturzberichtsdienst. Zwischenablagetext, Suchverlauf, Favoriten, Einstellungen, KI-Ergebnisse, Übersetzungsverlauf, DOI-Abfrageverlauf, EasyScholar-Verlauf, lokale Nutzungsstatistiken sowie importierte oder heruntergeladene Zeitschriftenlisten werden hauptsächlich auf deinem Mac gespeichert und nicht an IIDEV gesendet.
         </p>
         <p>
           Text aus der Zwischenablage wird nur dann lokal gelesen, wenn du das Menüleistenfenster öffnest, ausdrücklich aktualisierst oder das Tastaturkürzel für die Zwischenablagesuche verwendest. Wenn du eine Web-of-Science-Suche startest, fordert die App macOS auf, eine URL mit der Suchanfrage im Standardbrowser zu öffnen. Browseraktivitäten und Anmeldungen werden von den jeweiligen Diensten verarbeitet.
@@ -263,6 +291,10 @@ const translations: LegalTranslation[] = [
         <h3>KI-Assistent</h3>
         <p>
           Der KI-Assistent ist optional. Vor dem Senden einer Remote-Anfrage zeigt die App den Anbieter, den Endpunkt und die zu übertragenden Daten an und bittet um deine ausdrückliche Erlaubnis. Nach deiner Zustimmung werden die Forschungsfrage, der zur Bearbeitung erforderliche Kontext und eine zufällige Installations-Sicherheitskennung (nur bei OpenAI) direkt an den von dir gewählten Dienst OpenAI, OpenRouter oder einen kompatiblen benutzerdefinierten Dienst gesendet. IIDEV empfängt diese Inhalte nicht. Du kannst die Erlaubnis in den Einstellungen widerrufen. API-Schlüssel werden im macOS-Schlüsselbund gespeichert und können nach der Deinstallation der App im System verbleiben, bis du sie löschst.
+        </p>
+        <h3>Übersetzung ausgewählter Texte und EasyScholar</h3>
+        <p>
+          Die Übersetzung ausgewählter Texte ist standardmäßig deaktiviert. Nach der Aktivierung verwendet die App die von dir gewährte macOS-Bedienungshilfen-Berechtigung nur beim Drücken des konfigurierten Tastaturkürzels, um den aktuell ausgewählten Text und seine Bildschirmposition zu lesen. Falls erforderlich, wird einmal kopiert und der vorherige Inhalt der Zwischenablage sofort wiederhergestellt. Nach einer gesonderten Einwilligung werden der ausgewählte Text und die Übersetzungsrichtung direkt an den gewählten KI-Dienst gesendet. Originaltext, Übersetzung, Sprachen, Anbieter, Modell und Datumsangaben werden lokal in einem Verlauf mit bis zu 100 Einträgen gespeichert, den du löschen kannst. Eine EasyScholar-Abfrage erfolgt nur, wenn du bei einer Zeitschrift die CAS/JCR-Schaltfläche auswählst; der vom Benutzer bereitgestellte API-Schlüssel und der Zeitschriftentitel werden über HTTPS direkt an EasyScholar gesendet. Ergebnisse werden bis zu 24 Stunden zwischengespeichert und bis zu 100 Verlaufseinträge lokal gespeichert; beides kann gelöscht werden. IIDEV erhält weder diese Anfragen noch die Ergebnisse.
         </p>
         <h3>Crossref und Zeitschriften-CSV-Dateien</h3>
         <p>
@@ -284,7 +316,7 @@ export default function PrivacyPage() {
       eyebrow="Legal · Privacy"
       title="Privacy Policy"
       intro="WOS Aide Bar has no developer account system, advertising, tracking, or developer-operated analytics. Most data stays on your Mac. Optional features contact clearly identified third-party services only when you choose to use them."
-      updated="Effective July 27, 2026"
+      updated="Effective August 12, 2026"
       translations={translations}
     >
       <LegalSection number="01" title="Scope and controller">
@@ -304,9 +336,9 @@ export default function PrivacyPage() {
             refresh it, or invoke the clipboard-search shortcut.
           </li>
           <li>
-            Search history, favorites, preferences, AI results, DOI query
-            history, local usage statistics, and imported or downloaded journal
-            lists.
+            Search history, favorites, preferences, AI results, translation
+            history, DOI query history, EasyScholar lookup history, local usage
+            statistics, and imported or downloaded journal lists.
           </li>
           <li>
             Search terms used to construct a Web of Science URL on your device.
@@ -380,7 +412,59 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="04" title="Optional Crossref DOI lookup">
+      <LegalSection number="04" title="Optional selection translation">
+        <p>
+          Selection translation is off by default. If you enable it, the App
+          uses the macOS Accessibility permission you grant to read the focused
+          selection and its screen position only when you press the configured
+          shortcut. The App does not continuously monitor clicks or inspect
+          other apps. If the focused app does not expose its visible selection
+          through Accessibility, the same shortcut performs one Copy command,
+          reads the resulting text, and immediately restores the previous
+          pasteboard contents.
+        </p>
+        <p>
+          Before selected text is sent to a remote AI endpoint, the App shows
+          the provider, endpoint, data disclosure, and privacy-policy link and
+          asks for separate, purpose-scoped consent. If you allow the request,
+          the selected text and translation direction are sent directly to the
+          chosen OpenAI, OpenRouter, or compatible endpoint. IIDEV does not
+          receive the request or response. A local endpoint does not transmit
+          the text to a third-party AI service.
+        </p>
+        <p>
+          Successful translations are stored locally for reuse. Each entry can
+          include the original text, translated result, language direction,
+          selected provider and model, creation and last-used dates, and reuse
+          count. At most 100 entries are kept. You can clear all translation
+          history from the translation popover.
+        </p>
+      </LegalSection>
+
+      <LegalSection number="05" title="Optional EasyScholar journal-rank lookup">
+        <p>
+          EasyScholar lookup is optional and requires an API key that you
+          provide. The key is stored in macOS Keychain. Only when you press the
+          CAS/JCR button for a selected journal does the App send that API key
+          and the journal title directly over HTTPS to EasyScholar at
+          easyscholar.cc. EasyScholar and its network providers may process the
+          request, network metadata, key, title, and returned ranking fields
+          under their own practices. IIDEV does not receive the request or
+          response.
+        </p>
+        <p>
+          Returned ranking fields are cached on your Mac for up to 24 hours,
+          with no more than 200 cache entries. Successful results are also kept
+          in local lookup history, with no more than 100 entries, until you
+          remove an item or clear EasyScholar history in Settings. The API key
+          is not stored with cached or historical results.
+        </p>
+        <p>
+          See the <a href="https://www.easyscholar.cc/">EasyScholar website</a>.
+        </p>
+      </LegalSection>
+
+      <LegalSection number="06" title="Optional Crossref DOI lookup">
         <p>
           Crossref DOI lookup is off by default. If you enable it and explicitly
           choose the Crossref action, each non-empty reference line is sent
@@ -404,7 +488,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="05" title="Journal-list downloads and imports">
+      <LegalSection number="07" title="Journal-list downloads and imports">
         <p>
           The App includes a small default UTD24 list containing journal titles
           only; it does not bundle the complete downloadable journal catalogs.
@@ -429,7 +513,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="06" title="Web of Science and browser activity">
+      <LegalSection number="08" title="Web of Science and browser activity">
         <p>
           When you start a search, the App asks macOS to open the generated Web
           of Science URL in your default browser. Browser activity,
@@ -447,7 +531,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="07" title="App Store and optional purchases">
+      <LegalSection number="09" title="App Store and optional purchases">
         <p>
           Optional support purchases are processed by Apple through the App
           Store and StoreKit. Apple may process account, transaction, device,
@@ -461,7 +545,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="08" title="Retention and deletion choices">
+      <LegalSection number="10" title="Retention and deletion choices">
         <p>
           Device-local data remains until you delete it in the App, an
           applicable retention limit removes it, you remove the App, or macOS
@@ -475,7 +559,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="09" title="Site data">
+      <LegalSection number="11" title="Site data">
         <p>
           The Site does not use advertising cookies, behavioral analytics,
           account registration, or contact forms. Hosting and network providers
@@ -486,7 +570,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="10" title="Children, changes, and contact">
+      <LegalSection number="12" title="Children, changes, and contact">
         <p>
           The App is a general research-productivity tool and is not directed
           to children. We may update this policy when the App, Site, or legal

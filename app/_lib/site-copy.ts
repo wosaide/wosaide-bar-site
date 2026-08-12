@@ -289,6 +289,16 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "Resolve one or several references only when you choose the Crossref action, with history and cache controls available in Settings.",
       },
       {
+        title: "Selection translation",
+        description:
+          "Select text in another app and press your shortcut to translate it with a chosen AI profile. Access is on demand, consent is explicit, and up to 100 results stay in local history.",
+      },
+      {
+        title: "EasyScholar journal ranks",
+        description:
+          "Look up CAS and JCR ranking fields only when you choose the journal action, using your own EasyScholar API key with local cache and history controls.",
+      },
+      {
         title: "WOS field guidance",
         description:
           "Search by source, topic, author, organization, publication year, identifier, or a free-form advanced query without keeping field codes in memory.",
@@ -315,12 +325,12 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "User-initiated access",
         description:
-          "Clipboard text is read locally only after you open the panel or explicitly refresh. Crossref lookup is off by default.",
+          "Clipboard and selected text are read only after an explicit panel, refresh, or shortcut action. Crossref and selection translation are off by default.",
       },
       {
         title: "Sandboxed local storage",
         description:
-          "History, favorites, settings, installed catalogs, AI history, caches, and usage insights stay in the app sandbox; API keys stay in macOS Keychain.",
+          "Search, AI, translation, DOI, and journal-rank history, favorites, settings, catalogs, caches, and usage insights stay in the app sandbox; API keys stay in macOS Keychain.",
       },
       {
         title: "Transparent external services",
@@ -502,6 +512,14 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         description: "只有选择 Crossref 操作时才解析一条或多条参考文献；设置中可管理历史与缓存。",
       },
       {
+        title: "全局划词翻译",
+        description: "在其他 App 中选中文字并按下快捷键，即可通过所选 AI 配置翻译。仅按需读取、明确征得许可，最多 100 条结果保存在本机历史中。",
+      },
+      {
+        title: "EasyScholar 期刊等级",
+        description: "仅在你主动选择期刊查询时，使用自己的 EasyScholar API Key 获取 CAS 与 JCR 等级，并提供本机缓存与历史管理。",
+      },
+      {
         title: "WOS 字段引导",
         description: "按来源、主题、作者、机构、出版年、标识符检索，或直接输入高级检索式，无需背字段代码。",
       },
@@ -523,11 +541,11 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     privacyItems: [
       {
         title: "仅在用户操作时访问",
-        description: "只有打开面板或主动刷新时才在本机读取剪贴板；Crossref 查询默认关闭。",
+        description: "只有打开面板、主动刷新或按下快捷键后才读取剪贴板或选中文字；Crossref 与划词翻译默认关闭。",
       },
       {
         title: "沙盒内本地保存",
-        description: "历史、收藏、设置、已安装目录、AI 历史、缓存与使用洞察留在 App 沙盒；API 密钥保存在 macOS 钥匙串。",
+        description: "检索、AI、翻译、DOI 与期刊等级历史，以及收藏、设置、目录、缓存与使用洞察均留在 App 沙盒；API 密钥保存在 macOS 钥匙串。",
       },
       {
         title: "外部服务清楚透明",
@@ -704,6 +722,14 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         description: "只有選擇 Crossref 操作時才解析一條或多條參考文獻；設定中可管理歷史與快取。",
       },
       {
+        title: "全域選取文字翻譯",
+        description: "在其他 App 中選取文字並按下快速鍵，即可透過所選 AI 設定翻譯。僅按需讀取、明確取得同意，最多 100 筆結果保存在本機記錄中。",
+      },
+      {
+        title: "EasyScholar 期刊等級",
+        description: "僅在你主動選擇期刊查詢時，使用自己的 EasyScholar API Key 取得 CAS 與 JCR 等級，並提供本機快取與記錄管理。",
+      },
+      {
         title: "WOS 欄位引導",
         description: "按來源、主題、作者、機構、出版年、識別碼檢索，或直接輸入進階檢索式，無需背欄位代碼。",
       },
@@ -725,11 +751,11 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     privacyItems: [
       {
         title: "僅在使用者操作時存取",
-        description: "只有開啟面板或主動重新整理時才在本機讀取剪貼簿；Crossref 查詢預設關閉。",
+        description: "只有開啟面板、主動重新整理或按下快速鍵後才讀取剪貼簿或選取文字；Crossref 與選取文字翻譯預設關閉。",
       },
       {
         title: "沙盒內本機保存",
-        description: "歷史、收藏、設定、已安裝目錄、AI 歷史、快取與使用洞察留在 App 沙盒；API 密鑰保存在 macOS 鑰匙圈。",
+        description: "搜尋、AI、翻譯、DOI 與期刊等級記錄，以及收藏、設定、目錄、快取與使用洞察均留在 App 沙盒；API 密鑰保存在 macOS 鑰匙圈。",
       },
       {
         title: "外部服務清楚透明",
