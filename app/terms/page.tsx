@@ -13,7 +13,7 @@ export default function TermsPage() {
       eyebrow="Legal · Terms"
       title="Terms of Use"
       intro="These terms supplement Apple’s Standard EULA and explain WOS Aide Bar’s independent role, optional external features, journal-list sources, and voluntary support purchases."
-      updated="Effective August 12, 2026"
+      updated="Effective August 14, 2026"
       chinese={
         <>
           <h2>使用条款摘要</h2>
@@ -22,7 +22,7 @@ export default function TermsPage() {
           </p>
           <h3>用途与外部服务</h3>
           <p>
-            本 App 是独立的科研效率工具，不隶属于 Clarivate、Crossref、EasyScholar、OpenAI、OpenRouter、Financial Times 或 UT Dallas。Web of Science、AI、划词翻译、Crossref、EasyScholar、GitHub 及自定义端点各自适用其条款、隐私政策、访问限制与费用。你应在依赖检索式、AI 或翻译输出、DOI 匹配、CAS／JCR 查询结果或期刊名单前自行核验。
+            本 App 是独立的科研效率工具，不隶属于任何外部服务商或数据来源。Web of Science、AI 服务商、Crossref、EasyScholar、GitHub、自定义端点及期刊名单来源各自适用其条款、隐私政策、访问限制与费用。你应在依赖检索式、AI 或翻译输出、DOI 匹配、CAS／JCR 查询结果或期刊名单前自行核验。
           </p>
           <h3>划词翻译与 EasyScholar</h3>
           <p>
@@ -136,11 +136,11 @@ export default function TermsPage() {
       <LegalSection number="06" title="Third-party services and independence">
         <p>
           WOS Aide Bar and IIDEV are independent and are not affiliated with,
-          sponsored by, or endorsed by Clarivate, Web of Science, Crossref,
-          EasyScholar, OpenAI, OpenRouter, GitHub, Financial Times, or the
-          University of Texas at Dallas. Their services, accounts,
-          subscriptions, content, APIs, marks, methodologies, and access are
-          governed by their own terms.
+          sponsored by, or endorsed by any external service provider or data
+          source. AI providers, Web of Science, Crossref, EasyScholar, GitHub,
+          custom endpoint operators, and journal-list sources govern their own
+          services, accounts, subscriptions, content, APIs, marks,
+          methodologies, and access under their respective terms.
         </p>
       </LegalSection>
 

@@ -168,7 +168,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "AI query builder",
         title: "Ask naturally. Review a valid WOS expression.",
         description:
-          "Turn a research question into a structured Web of Science query with OpenAI, OpenRouter, an OpenAI-compatible service, or a local LLM endpoint. Review the expression before opening the search.",
+          "Turn a research question into a structured Web of Science query with OpenAI, Anthropic, Gemini, Azure OpenAI, OpenRouter, compatible cloud services, Ollama, LM Studio, or a custom endpoint. Review the expression before opening the search.",
         stat: "Remote or local LLM · syntax reviewed",
         ariaLabel:
           "WOS Aide Bar converting natural language into a reviewed Web of Science query",
@@ -187,7 +187,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     metrics: [
       { value: "7", label: "optional journal catalog sources" },
       { value: "9", label: "interface languages" },
-      { value: "3", label: "AI provider modes" },
+      { value: "12", label: "provider templates" },
       { value: "0", label: "analytics or tracking SDKs" },
     ],
     journalDemoCaption:
@@ -197,7 +197,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     showcaseKicker: "The complete app",
     showcaseTitle: "One compact utility. The whole research loop.",
     showcaseIntro:
-      "Every image below is a current capture from WOS Aide Bar 1.0—not a concept render.",
+      "These product captures show WOS Aide Bar 1.0—not concept renders.",
     showcaseItems: [
       {
         ...screens.main,
@@ -222,7 +222,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "AI assistant",
         title: "Your provider, model, and endpoint",
         description:
-          "Use OpenAI, OpenRouter, an OpenAI-compatible service, or a local LM Studio-style endpoint. Models are discovered from the service, credentials stay in Keychain, and remote sharing requires consent.",
+          "Choose from 12 templates spanning OpenAI, Anthropic, Gemini, Azure OpenAI, OpenRouter, compatible cloud services, Ollama, LM Studio, and custom endpoints. Profiles stay unavailable until enabled; discovery, manual model IDs, connection health, Keychain credentials, and content-sharing consent are explicit.",
         stat: "Three-stage generation and review",
         imageAlt: "WOS Aide Bar assistant provider and model configuration",
       },
@@ -281,7 +281,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "Provider freedom",
         description:
-          "Choose OpenAI, OpenRouter, named compatible services, or a local model endpoint, with model discovery and manual model entry.",
+          "Choose remote, regional, or local providers with native Anthropic and Gemini protocols, Azure deployment settings, model discovery, a manual allowlist, enable controls, and connection health.",
       },
       {
         title: "Crossref DOI lookup",
@@ -335,7 +335,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "Transparent external services",
         description:
-          "Before the first remote AI request, the app names the provider and endpoint and asks for permission. Requests go directly to that configured service, not through IIDEV.",
+          "Model refresh and connection tests run only when requested and never include research or selected text. Before the first content-bearing remote request, the app names the provider and endpoint and asks for purpose-specific permission. Requests go directly to that service, not through IIDEV.",
       },
     ],
     detailsKicker: "Clear before you install",
@@ -398,7 +398,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "AI 检索式生成",
         title: "用自然语言提问，审核后再检索。",
         description:
-          "使用 OpenAI、OpenRouter、兼容 OpenAI 的服务或本地 LLM 端点，把研究问题转换成结构化 Web of Science Query；确认表达式后再打开检索。",
+          "使用 OpenAI、Anthropic、Gemini、Azure OpenAI、OpenRouter、国内兼容服务、Ollama、LM Studio 或自定义端点，把研究问题转换成结构化 Web of Science Query；确认表达式后再打开检索。",
         stat: "远程或本地 LLM · 语法复核",
         ariaLabel:
           "WOS Aide Bar 将自然语言转换为经审核的 Web of Science 检索表达式",
@@ -417,7 +417,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     metrics: [
       { value: "7", label: "可选期刊目录来源" },
       { value: "9", label: "界面语言" },
-      { value: "3", label: "AI 服务模式" },
+      { value: "12", label: "服务商模板" },
       { value: "0", label: "分析或跟踪 SDK" },
     ],
     journalDemoCaption: "真实操作演示 · 从期刊首字母简写到收录全名",
@@ -425,7 +425,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       "WOS Aide Bar 将期刊首字母简写补全为 Web of Science 收录期刊全名的演示",
     showcaseKicker: "完整 App",
     showcaseTitle: "一个紧凑工具，覆盖完整科研检索流程。",
-    showcaseIntro: "下面每张图都来自 WOS Aide Bar 1.0 的当前真实界面，不是概念渲染。",
+    showcaseIntro: "下面是 WOS Aide Bar 1.0 的产品实拍界面，不是概念渲染。",
     showcaseItems: [
       {
         ...screens.main,
@@ -450,7 +450,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "AI 助手",
         title: "服务商、模型与端点由你决定",
         description:
-          "支持 OpenAI、OpenRouter、兼容 OpenAI 的服务与本地 LM Studio 类端点；自动发现模型，密钥存入钥匙串，远程外发前先征得同意。",
+          "提供 12 种模板，覆盖 OpenAI、Anthropic、Gemini、Azure OpenAI、OpenRouter、国内兼容服务、Ollama、LM Studio 与自定义端点。配置启用、模型发现、手动模型清单、连接状态、钥匙串凭据及内容外发许可均清晰分开。",
         stat: "三阶段生成与审核",
         imageAlt: "WOS Aide Bar AI 服务商与模型配置",
       },
@@ -505,7 +505,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "自由选择 AI 服务",
-        description: "使用 OpenAI、OpenRouter、命名的兼容服务或本地模型端点，支持模型发现与手动填写。",
+        description: "自由选择远程、国内兼容或本地服务，支持 Anthropic／Gemini 原生协议、Azure 部署参数、模型发现、手动白名单、启用开关与连接状态。",
       },
       {
         title: "Crossref DOI 解析",
@@ -549,7 +549,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "外部服务清楚透明",
-        description: "首次远程 AI 请求前，App 会说明服务商与端点并征得许可；请求直达所配置服务，不经 IIDEV 中转。",
+        description: "模型刷新与连接测试仅在你主动操作时联网，且不会携带研究问题或所选文本；首次发送研究或翻译内容前，App 会说明服务商与端点并按用途征得许可。请求直达所配置服务，不经 IIDEV 中转。",
       },
     ],
     detailsKicker: "安装前清楚了解",
@@ -608,7 +608,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "AI 檢索式生成",
         title: "用自然語言提問，審核後再檢索。",
         description:
-          "使用 OpenAI、OpenRouter、相容 OpenAI 的服務或本機 LLM 端點，把研究問題轉換成結構化 Web of Science Query；確認運算式後再開啟檢索。",
+          "使用 OpenAI、Anthropic、Gemini、Azure OpenAI、OpenRouter、區域相容服務、Ollama、LM Studio 或自訂端點，把研究問題轉換成結構化 Web of Science Query；確認運算式後再開啟檢索。",
         stat: "遠端或本機 LLM · 語法覆核",
         ariaLabel:
           "WOS Aide Bar 將自然語言轉換為經審核的 Web of Science 檢索運算式",
@@ -627,7 +627,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     metrics: [
       { value: "7", label: "可選期刊目錄來源" },
       { value: "9", label: "介面語言" },
-      { value: "3", label: "AI 服務模式" },
+      { value: "12", label: "服務商範本" },
       { value: "0", label: "分析或追蹤 SDK" },
     ],
     journalDemoCaption: "真實操作示範 · 從期刊首字母簡寫到收錄全名",
@@ -635,7 +635,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       "WOS Aide Bar 將期刊首字母簡寫補全為 Web of Science 收錄期刊全名的示範",
     showcaseKicker: "完整 App",
     showcaseTitle: "一個緊湊工具，涵蓋完整科研檢索流程。",
-    showcaseIntro: "下方每張圖都來自 WOS Aide Bar 1.0 的目前真實介面，不是概念渲染。",
+    showcaseIntro: "下方是 WOS Aide Bar 1.0 的產品實拍介面，不是概念渲染。",
     showcaseItems: [
       {
         ...screens.main,
@@ -660,7 +660,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "AI 助手",
         title: "服務商、模型與端點由你決定",
         description:
-          "支援 OpenAI、OpenRouter、相容 OpenAI 的服務與本機 LM Studio 類端點；自動探索模型，密鑰存入鑰匙圈，遠端外傳前先徵得同意。",
+          "提供 12 種範本，涵蓋 OpenAI、Anthropic、Gemini、Azure OpenAI、OpenRouter、區域相容服務、Ollama、LM Studio 與自訂端點。設定啟用、模型探索、手動模型清單、連線狀態、鑰匙圈憑證及內容外傳許可均清楚分開。",
         stat: "三階段生成與審核",
         imageAlt: "WOS Aide Bar AI 服務商與模型設定",
       },
@@ -715,7 +715,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "自由選擇 AI 服務",
-        description: "使用 OpenAI、OpenRouter、命名的相容服務或本機模型端點，支援模型探索與手動填寫。",
+        description: "自由選擇遠端、區域相容或本機服務，支援 Anthropic／Gemini 原生協定、Azure 部署參數、模型探索、手動白名單、啟用開關與連線狀態。",
       },
       {
         title: "Crossref DOI 解析",
@@ -759,7 +759,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "外部服務清楚透明",
-        description: "首次遠端 AI 請求前，App 會說明服務商與端點並徵得許可；請求直達所設定服務，不經 IIDEV 中轉。",
+        description: "模型探索與連線測試只在你主動操作時連網，且不會帶入研究問題或所選文字；首次傳送研究或翻譯內容前，App 會說明服務商與端點並按用途徵得許可。請求直達所設定服務，不經 IIDEV 中轉。",
       },
     ],
     detailsKicker: "安裝前清楚瞭解",

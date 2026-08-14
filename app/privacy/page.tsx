@@ -31,7 +31,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>AI 助手</h3>
         <p>
-          AI 助手为可选功能。远程请求发送前，App 会显示服务商、端点和将发送的数据，并要求你明确允许。允许后，输入的研究问题、为完成请求所需的上下文及随机安装安全标识符（仅 OpenAI）会直接发送至你选择的 OpenAI、OpenRouter 或自定义兼容服务；IIDEV 不会接收这些内容。你可以在设置中撤回许可。API 密钥保存在 macOS 钥匙串中，可能在卸载 App 后仍由系统保留，直至你主动删除。
+          AI 助手为可选功能。只有你主动刷新模型或测试连接时，App 才会联系已配置端点；这些设置操作可能发送凭据、常规请求元数据及合成测试请求，但不会发送研究问题或所选文本。首次发送研究或翻译内容前，App 会显示服务商、端点及将发送的数据，并按用途要求明确许可。允许后，相关内容会直接发送至你配置的远程 AI 服务或自定义端点；仅直接 OpenAI 请求还会包含随机安装安全标识符。IIDEV 不接收这些内容。许可可在设置中撤回，API 密钥保存在 macOS 钥匙串中。
         </p>
         <h3>划词翻译与 EasyScholar</h3>
         <p>
@@ -68,7 +68,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>AI 助手</h3>
         <p>
-          AI 助手為選用功能。傳送遠端要求前，App 會顯示供應商、端點及將傳送的資料，並要求你明確同意。同意後，研究問題、完成要求所需的內容，以及隨機安裝安全識別碼（僅 OpenAI）會直接傳送至你選擇的 OpenAI、OpenRouter 或自訂相容服務；IIDEV 不會接收這些內容。你可以在設定中撤回許可。API 金鑰儲存在 macOS 鑰匙圈中，解除安裝 App 後仍可能由系統保留，直到你主動刪除。
+          AI 助手為選用功能。只有你主動重新整理模型或測試連線時，App 才會聯絡已設定端點；這些設定操作可能傳送憑證、一般要求中繼資料及合成測試要求，但不會傳送研究問題或所選文字。首次傳送研究或翻譯內容前，App 會顯示供應商、端點及將傳送的資料，並按用途要求明確許可。同意後，相關內容會直接傳送至你設定的遠端 AI 服務或自訂端點；只有直接 OpenAI 要求還會包含隨機安裝安全識別碼。IIDEV 不接收這些內容。許可可在設定中撤回，API 金鑰儲存在 macOS 鑰匙圈中。
         </p>
         <h3>選取文字翻譯與 EasyScholar</h3>
         <p>
@@ -105,7 +105,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>AI アシスタント</h3>
         <p>
-          AI アシスタントは任意の機能です。リモートリクエストを送信する前に、App はプロバイダー、エンドポイント、送信されるデータを表示し、明示的な許可を求めます。許可した場合、研究上の質問、リクエストの処理に必要なコンテキスト、およびランダムなインストール安全識別子（OpenAI のみ）が、選択した OpenAI、OpenRouter、または互換性のあるカスタムサービスに直接送信されます。IIDEV がこの内容を受信することはありません。許可は設定で取り消せます。API キーは macOS キーチェーンに保存され、App をアンインストールした後も、ユーザーが削除するまでシステムに残る場合があります。
+          AI アシスタントは任意の機能です。モデル更新または接続テストを明示的に実行した場合にのみ、設定済みエンドポイントへ接続します。これらの設定操作では認証情報、通常のリクエストメタデータ、合成テストリクエストが送信されることがありますが、研究上の質問や選択テキストは送信されません。研究または翻訳の内容を初めて送信する前に、App はプロバイダー、エンドポイント、送信データを表示し、用途別の明示的な許可を求めます。内容は設定したリモート AI サービスまたはカスタムエンドポイントへ直接送信され、OpenAI への直接リクエストだけにランダムなインストール安全識別子が含まれます。IIDEV は内容を受信しません。API キーは macOS キーチェーンに保存されます。
         </p>
         <h3>選択テキスト翻訳と EasyScholar</h3>
         <p>
@@ -142,7 +142,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>AI 어시스턴트</h3>
         <p>
-          AI 어시스턴트는 선택 기능입니다. 원격 요청을 보내기 전에 App은 제공업체, 엔드포인트 및 전송할 데이터를 표시하고 사용자의 명시적 허용을 요청합니다. 허용하면 연구 질문, 요청 수행에 필요한 맥락 및 무작위 설치 안전 식별자(OpenAI에만 해당)가 선택한 OpenAI, OpenRouter 또는 호환되는 사용자 지정 서비스로 직접 전송됩니다. IIDEV는 이 내용을 받지 않습니다. 설정에서 허용을 철회할 수 있습니다. API 키는 macOS 키체인에 저장되며 App을 제거한 후에도 사용자가 직접 삭제할 때까지 시스템에 남아 있을 수 있습니다.
+          AI 어시스턴트는 선택 기능입니다. 모델 새로 고침이나 연결 테스트를 직접 실행한 경우에만 설정된 엔드포인트에 연결합니다. 이러한 설정 작업은 자격 증명, 일반 요청 메타데이터 및 합성 테스트 요청을 전송할 수 있지만 연구 질문이나 선택한 텍스트는 보내지 않습니다. 연구 또는 번역 내용을 처음 전송하기 전에 App은 제공업체, 엔드포인트와 전송 데이터를 표시하고 용도별 명시적 동의를 요청합니다. 내용은 설정한 원격 AI 서비스나 사용자 지정 엔드포인트로 직접 전송되며 OpenAI 직접 요청에만 무작위 설치 안전 식별자가 포함됩니다. IIDEV는 이 내용을 받지 않으며 API 키는 macOS 키체인에 저장됩니다.
         </p>
         <h3>선택 텍스트 번역 및 EasyScholar</h3>
         <p>
@@ -179,7 +179,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Asistente de IA</h3>
         <p>
-          El Asistente de IA es opcional. Antes de enviar una solicitud remota, la App muestra el proveedor, el punto de conexión y los datos que se enviarán, y solicita tu permiso expreso. Si lo autorizas, la pregunta de investigación, el contexto necesario para completar la solicitud y un identificador de seguridad de instalación aleatorio (solo con OpenAI) se envían directamente al servicio OpenAI, OpenRouter o compatible personalizado que hayas elegido. IIDEV no recibe ese contenido. Puedes retirar el permiso en Ajustes. Las claves API se guardan en el llavero de macOS y pueden permanecer en el sistema después de desinstalar la App hasta que las elimines.
+          El Asistente de IA es opcional. La App solo contacta el endpoint configurado cuando actualizas los modelos o pruebas la conexión; estas acciones pueden enviar credenciales, metadatos habituales y una prueba sintética, pero no tu pregunta de investigación ni el texto seleccionado. Antes de enviar por primera vez contenido de investigación o traducción, la App muestra el proveedor, el endpoint y los datos y solicita un permiso específico para ese uso. El contenido se envía directamente al proveedor de IA remoto o endpoint personalizado configurado; solo las solicitudes directas a OpenAI incluyen un identificador de seguridad de instalación aleatorio. IIDEV no recibe el contenido y las claves API se guardan en el llavero de macOS.
         </p>
         <h3>Traducción de texto seleccionado y EasyScholar</h3>
         <p>
@@ -216,7 +216,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Assistente de IA</h3>
         <p>
-          O Assistente de IA é opcional. Antes de enviar uma solicitação remota, o App mostra o provedor, o endpoint e os dados que serão enviados, e solicita sua permissão expressa. Se você permitir, a pergunta de pesquisa, o contexto necessário para concluir a solicitação e um identificador aleatório de segurança da instalação (somente para OpenAI) serão enviados diretamente ao serviço OpenAI, OpenRouter ou compatível personalizado que você escolher. A IIDEV não recebe esse conteúdo. A permissão pode ser revogada nos Ajustes. As chaves de API são armazenadas nas Chaves do macOS e podem permanecer no sistema após a desinstalação do App até que você as exclua.
+          O Assistente de IA é opcional. O App só contata o endpoint configurado quando você atualiza os modelos ou testa a conexão; essas ações podem enviar credenciais, metadados comuns e uma sondagem sintética, mas não a pergunta de pesquisa nem o texto selecionado. Antes do primeiro envio de conteúdo de pesquisa ou tradução, o App mostra o provedor, o endpoint e os dados e solicita permissão específica para essa finalidade. O conteúdo segue diretamente ao provedor remoto de IA ou endpoint personalizado configurado; somente solicitações diretas à OpenAI incluem um identificador aleatório de segurança da instalação. A IIDEV não recebe o conteúdo e as chaves de API ficam nas Chaves do macOS.
         </p>
         <h3>Tradução de texto selecionado e EasyScholar</h3>
         <p>
@@ -253,7 +253,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Assistant IA</h3>
         <p>
-          L’Assistant IA est facultatif. Avant d’envoyer une requête à distance, l’App affiche le fournisseur, le point de terminaison et les données qui seront envoyées, puis demande votre autorisation explicite. Si vous l’autorisez, la question de recherche, le contexte nécessaire au traitement de la requête et un identifiant de sécurité d’installation aléatoire (OpenAI uniquement) sont envoyés directement au service OpenAI, OpenRouter ou compatible personnalisé de votre choix. IIDEV ne reçoit pas ce contenu. Vous pouvez retirer l’autorisation dans Réglages. Les clés API sont stockées dans le trousseau macOS et peuvent rester dans le système après la désinstallation de l’App jusqu’à ce que vous les supprimiez.
+          L’Assistant IA est facultatif. L’App ne contacte le point de terminaison configuré que lorsque vous actualisez les modèles ou testez la connexion ; ces actions peuvent envoyer les identifiants, des métadonnées ordinaires et une requête synthétique, mais ni votre question de recherche ni le texte sélectionné. Avant le premier envoi de contenu de recherche ou de traduction, l’App affiche le fournisseur, le point de terminaison et les données, puis demande une autorisation propre à cet usage. Le contenu est envoyé directement au fournisseur d’IA distant ou au point de terminaison personnalisé configuré ; seules les requêtes directes à OpenAI incluent un identifiant de sécurité d’installation aléatoire. IIDEV ne reçoit pas le contenu et les clés API restent dans le trousseau macOS.
         </p>
         <h3>Traduction du texte sélectionné et EasyScholar</h3>
         <p>
@@ -290,7 +290,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>KI-Assistent</h3>
         <p>
-          Der KI-Assistent ist optional. Vor dem Senden einer Remote-Anfrage zeigt die App den Anbieter, den Endpunkt und die zu übertragenden Daten an und bittet um deine ausdrückliche Erlaubnis. Nach deiner Zustimmung werden die Forschungsfrage, der zur Bearbeitung erforderliche Kontext und eine zufällige Installations-Sicherheitskennung (nur bei OpenAI) direkt an den von dir gewählten Dienst OpenAI, OpenRouter oder einen kompatiblen benutzerdefinierten Dienst gesendet. IIDEV empfängt diese Inhalte nicht. Du kannst die Erlaubnis in den Einstellungen widerrufen. API-Schlüssel werden im macOS-Schlüsselbund gespeichert und können nach der Deinstallation der App im System verbleiben, bis du sie löschst.
+          Der KI-Assistent ist optional. Die App kontaktiert den konfigurierten Endpunkt nur, wenn du Modelle aktualisierst oder die Verbindung testest; dabei können Zugangsdaten, übliche Metadaten und eine synthetische Testanfrage gesendet werden, aber weder Forschungsfrage noch ausgewählter Text. Vor der ersten Übertragung von Forschungs- oder Übersetzungsinhalten zeigt die App Anbieter, Endpunkt und Daten an und bittet um eine zweckgebundene Erlaubnis. Inhalte gehen direkt an den konfigurierten Remote-KI-Anbieter oder benutzerdefinierten Endpunkt; nur direkte OpenAI-Anfragen enthalten eine zufällige Installations-Sicherheitskennung. IIDEV empfängt die Inhalte nicht, und API-Schlüssel bleiben im macOS-Schlüsselbund.
         </p>
         <h3>Übersetzung ausgewählter Texte und EasyScholar</h3>
         <p>
@@ -316,7 +316,7 @@ export default function PrivacyPage() {
       eyebrow="Legal · Privacy"
       title="Privacy Policy"
       intro="WOS Aide Bar has no developer account system, advertising, tracking, or developer-operated analytics. Most data stays on your Mac. Optional features contact clearly identified third-party services only when you choose to use them."
-      updated="Effective August 12, 2026"
+      updated="Effective August 14, 2026"
       translations={translations}
     >
       <LegalSection number="01" title="Scope and controller">
@@ -362,17 +362,24 @@ export default function PrivacyPage() {
 
       <LegalSection number="03" title="Optional AI Assistant">
         <p>
-          AI Assistant is optional. Before the first request to each remote
-          provider and endpoint, the App identifies the provider, endpoint,
-          data being sent, and available provider privacy policy, then asks for
-          your explicit permission. No remote AI request is made if you cancel.
-          You can revoke saved permissions in AI Assistant settings.
+          AI Assistant is optional. Model Refresh contacts the configured
+          endpoint only when you request it and may send the saved credential
+          plus ordinary request metadata. Test Connection additionally sends
+          the selected model a synthetic structured-output probe. Neither setup
+          action sends your research question or selected text.
+        </p>
+        <p>
+          Before the first content-bearing research or translation request to
+          each remote provider and endpoint, the App identifies the provider,
+          endpoint, data being sent, and available privacy policy, then asks
+          for purpose-specific permission. Cancelling sends no research or
+          translation content. You can revoke saved permissions in Settings.
         </p>
         <p>
           If you allow and generate, the research question and request context
           needed for the three-stage query-generation process are sent directly
-          from your Mac to the selected OpenAI, OpenRouter, or custom
-          OpenAI-compatible endpoint. Direct OpenAI requests also contain a
+          from your Mac to the configured remote AI provider or custom
+          endpoint. Direct OpenAI requests also contain a
           random App-generated installation safety identifier. It is not your
           Apple ID, email address, hardware serial number, or advertising ID.
           IIDEV does not receive these requests or responses.
@@ -388,13 +395,10 @@ export default function PrivacyPage() {
         </p>
         <p>
           Data is sent only to perform the feature you request. IIDEV does not
-          authorize an integrated service to use App-transmitted data for
-          advertising or tracking. IIDEV integrates only services whose
-          published privacy and security commitments provide protection at
-          least equivalent to this policy and applicable Apple requirements
-          for data sent by the App. A custom endpoint is selected by you and is
-          not controlled by IIDEV; grant permission only if its operator
-          commits to at least equivalent protection.
+          authorize advertising or tracking with App-transmitted data. External
+          providers are governed by their own policies; review them before
+          enabling a profile. A custom endpoint is selected by you and is not
+          controlled by IIDEV.
         </p>
         <p>
           Provider policies:{" "}
@@ -403,6 +407,20 @@ export default function PrivacyPage() {
           </a>
           {" · "}
           <a href="https://openrouter.ai/privacy">OpenRouter privacy policy</a>
+          {" · "}
+          <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a>
+          {" · "}
+          <a href="https://policies.google.com/privacy">Google privacy policy</a>
+          {" · "}
+          <a href="https://privacy.microsoft.com/privacystatement">Microsoft privacy statement</a>
+          {" · "}
+          <a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html">DeepSeek privacy policy</a>
+          {" · "}
+          <a href="https://docs.siliconflow.cn/en/legals/privacy-policy">SiliconFlow privacy policy</a>
+          {" · "}
+          <a href="https://groq.com/privacy-policy">Groq privacy policy</a>
+          {" · "}
+          <a href="https://legal.mistral.ai/terms/privacy-policy">Mistral AI privacy policy</a>
         </p>
         <p>
           API credentials are stored in macOS Keychain, not in App preferences
@@ -428,7 +446,7 @@ export default function PrivacyPage() {
           the provider, endpoint, data disclosure, and privacy-policy link and
           asks for separate, purpose-scoped consent. If you allow the request,
           the selected text and translation direction are sent directly to the
-          chosen OpenAI, OpenRouter, or compatible endpoint. IIDEV does not
+          configured remote AI provider or custom endpoint. IIDEV does not
           receive the request or response. A local endpoint does not transmit
           the text to a third-party AI service.
         </p>
