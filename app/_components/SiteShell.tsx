@@ -5,7 +5,9 @@ import type { SiteLocale } from "../_lib/site-copy";
 
 const shellCopy = {
   en: {
+    home: "Home",
     features: "Features",
+    community: "Community",
     privacy: "Privacy",
     terms: "Terms",
     support: "Support",
@@ -15,7 +17,9 @@ const shellCopy = {
     disclaimer: "Not affiliated with Clarivate or Web of Science.",
   },
   "zh-Hans": {
+    home: "Home",
     features: "功能",
+    community: "讨论群",
     privacy: "隐私",
     terms: "条款",
     support: "支持",
@@ -25,7 +29,9 @@ const shellCopy = {
     disclaimer: "与 Clarivate 或 Web of Science 无隶属关系。",
   },
   "zh-Hant": {
+    home: "Home",
     features: "功能",
+    community: "討論群",
     privacy: "隱私",
     terms: "條款",
     support: "支援",
@@ -45,6 +51,14 @@ export function SiteShell({
 }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const copy = shellCopy[locale];
+  const localeRoot =
+    locale === "en"
+      ? `${basePath}/en`
+      : locale === "zh-Hant"
+        ? `${basePath}/zh-hant`
+        : `${basePath}/`;
+  const homeHref = `${localeRoot}?replay=1`;
+  const featuresHref = `${localeRoot}?skipIntro=1#features`;
 
   return (
     <div className="site-shell">
@@ -62,7 +76,9 @@ export function SiteShell({
           </Link>
           <div className="nav-actions">
             <nav aria-label="Primary navigation">
-              <Link href="/#features">{copy.features}</Link>
+              <a href={homeHref}>{copy.home}</a>
+              <Link href={featuresHref}>{copy.features}</Link>
+              <Link href="/community">{copy.community}</Link>
               <Link href="/privacy">{copy.privacy}</Link>
               <Link href="/terms">{copy.terms}</Link>
               <Link href="/support">{copy.support}</Link>
@@ -115,7 +131,7 @@ export function SiteShell({
           <div className="footer-links">
             <div>
               <strong>{copy.product}</strong>
-              <Link href="/#features">{copy.features}</Link>
+              <Link href={featuresHref}>{copy.features}</Link>
               <Link href="/support">{copy.support}</Link>
             </div>
             <div>

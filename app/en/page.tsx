@@ -1,5 +1,10 @@
 import { ProductHome } from "../_components/ProductHome";
 
-export default function EnglishHome() {
-  return <ProductHome locale="en" />;
+export default async function EnglishHome({
+  searchParams,
+}: {
+  searchParams: Promise<{ skipIntro?: string }>;
+}) {
+  const params = await searchParams;
+  return <ProductHome locale="en" skipIntro={params.skipIntro === "1"} />;
 }

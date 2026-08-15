@@ -1,180 +1,103 @@
-import Image from "next/image";
 import Link from "next/link";
 import { homeCopy, type SiteLocale } from "../_lib/site-copy";
-import { FeatureDemoCarousel } from "./FeatureDemoCarousel";
+import { CinematicHero } from "./CinematicHero";
 import { SiteShell } from "./SiteShell";
 
-export function ProductHome({ locale }: { locale: SiteLocale }) {
+export function ProductHome({
+  locale,
+  skipIntro = false,
+}: {
+  locale: SiteLocale;
+  skipIntro?: boolean;
+}) {
   const copy = homeCopy[locale];
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const pageCopy = {
     en: {
-      workflowKicker: "Four essential workflows",
-      workflowTitle: "From a research question to a reviewable WOS query.",
-      workflowIntro:
-        "WOS Aide Bar sits between your research intent and the Web of Science search page. It reduces manual syntax work without replacing Web of Science.",
-      accessLabel: "Before you search",
-      accessNote:
-        "WOS Aide Bar does not provide a Web of Science account, subscription, or database access. Sign in with your own or institutional access before using the generated search.",
-      privacyNote: "No account. No tracking SDK. No developer data server.",
-      availability:
-        "Requires macOS 13+ and your own Web of Science access",
+      badge: "A native macOS research companion",
+      headline: "Build WOS searches with less friction.",
+      subline: "Turn research intent into a query you can review, refine, and open in Web of Science.",
+      button: "Explore WOS Aide",
+      storeLabel: "Download on the Mac App Store",
+      storeAvailability: "Available in Hong Kong, Taiwan, the US, UK, Japan, Singapore, Europe, and most international storefronts. Not currently available in mainland China.",
+      workflows: "Four focused workflows",
+      privacy: "Local by default",
+      privacyItems: ["No account", "No tracking SDK", "Your history stays on Mac"],
+      cta: "Designed for researchers who already use Web of Science.",
+      ctaButton: "Product guide",
     },
     "zh-Hans": {
-      workflowKicker: "四个核心工作流",
-      workflowTitle: "从研究问题，到可核验的 WOS Query。",
-      workflowIntro:
-        "WOS Aide Bar 位于你的研究意图与 Web of Science 检索页面之间，减少手动编写语法的工作，但不会替代 Web of Science。",
-      accessLabel: "使用前提",
-      accessNote:
-        "WOS Aide Bar 不提供 Web of Science 账户、订阅或数据库访问权限。请先通过个人或机构权限登录 WOS，再使用 App 生成并打开检索。",
-      privacyNote: "无需账户，无跟踪 SDK，无开发者数据服务器。",
-      availability:
-        "需要 macOS 13 及以上版本，以及你自己的 Web of Science 使用权限",
+      badge: "原生 macOS 科研助手",
+      headline: "更轻松地构建 WOS 检索式",
+      subline: "把研究问题转化为可核验、可修改，并能直接打开的 Web of Science 检索式。",
+      button: "了解 WOS Aide",
+      storeLabel: "在 Mac App Store 下载",
+      storeAvailability: "香港、台湾、美国、英国、日本、新加坡及欧洲等多数地区可下载；中国大陆 App Store 暂未上架。",
+      workflows: "四个专注的工作流",
+      privacy: "默认本地优先",
+      privacyItems: ["无需账户", "无跟踪 SDK", "历史记录保存在 Mac"],
+      cta: "为已经使用 Web of Science 的研究者而设计。",
+      ctaButton: "查看产品指南",
     },
     "zh-Hant": {
-      workflowKicker: "四個核心工作流",
-      workflowTitle: "從研究問題，到可核驗的 WOS Query。",
-      workflowIntro:
-        "WOS Aide Bar 位於你的研究意圖與 Web of Science 檢索頁面之間，減少手動編寫語法的工作，但不會取代 Web of Science。",
-      accessLabel: "使用前提",
-      accessNote:
-        "WOS Aide Bar 不提供 Web of Science 帳戶、訂閱或資料庫存取權限。請先透過個人或機構權限登入 WOS，再使用 App 產生並開啟檢索。",
-      privacyNote: "無需帳戶，無追蹤 SDK，無開發者資料伺服器。",
-      availability:
-        "需要 macOS 13 及以上版本，以及你自己的 Web of Science 使用權限",
+      badge: "原生 macOS 研究助手",
+      headline: "更輕鬆地建立 WOS 檢索式",
+      subline: "把研究問題轉化為可核驗、可修改，並能直接開啟的 Web of Science 檢索式。",
+      button: "了解 WOS Aide",
+      storeLabel: "在 Mac App Store 下載",
+      storeAvailability: "香港、台灣、美國、英國、日本、新加坡及歐洲等多數地區可下載；中國大陸 App Store 暫未上架。",
+      workflows: "四個專注的工作流程",
+      privacy: "預設本機優先",
+      privacyItems: ["無需帳戶", "無追蹤 SDK", "歷史記錄保存在 Mac"],
+      cta: "為已經使用 Web of Science 的研究者而設計。",
+      ctaButton: "查看產品指南",
     },
   }[locale];
 
   return (
     <SiteShell locale={locale}>
       <main lang={locale}>
-        <section className="product-hero">
-          <div className="wrap product-hero-grid">
-            <div className="product-hero-copy">
-              <p className="eyebrow">
-                <span className="eyebrow-dot" />
-                {copy.eyebrow}
-              </p>
-              <h1>{copy.hero}</h1>
-              <p className="product-hero-lede">{copy.heroSecondary}</p>
-              <p className="access-note">
-                <strong>{pageCopy.accessLabel}</strong>
-                {pageCopy.accessNote}
-              </p>
-              <div className="hero-actions">
-                <Link className="button button-primary" href="/support">
-                  {copy.support}
-                </Link>
-                <Link
-                  className="button button-secondary"
-                  href="#features"
-                >
-                  {copy.developer}
-                </Link>
-              </div>
-              <div className="trust-line" aria-label="Product assurances">
-                {copy.assurances.map((assurance) => (
-                  <span key={assurance}>{assurance}</span>
-                ))}
-              </div>
-            </div>
+        <CinematicHero
+          badge={pageCopy.badge}
+          basePath={basePath}
+          bird={`${basePath}/brand/bird-logo-animated-concept.svg`}
+          button={pageCopy.button}
+          controls={copy.demoControls}
+          headline={pageCopy.headline}
+          items={copy.demoItems}
+          productName="WOS Aide Bar"
+          storeLabel={pageCopy.storeLabel}
+          storeAvailability={pageCopy.storeAvailability}
+          storeUrl={"https://apps.apple.com/app/wos-aide-bar/id6795536028?mt=12"}
+          subline={pageCopy.subline}
+          skipIntro={skipIntro}
+        />
 
-            <div
-              className="hero-product-stack"
-              aria-label={copy.demoControls.carouselLabel}
-            >
-              <FeatureDemoCarousel
-                basePath={basePath}
-                controls={copy.demoControls}
-                items={copy.demoItems}
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="workflow-section wrap" id="features">
-          <div className="section-heading">
-            <div>
-              <p className="kicker">{pageCopy.workflowKicker}</p>
-              <h2>{pageCopy.workflowTitle}</h2>
-            </div>
-            <p>{pageCopy.workflowIntro}</p>
-          </div>
-          <div className="workflow-list">
+        <section className="compact-workflows wrap" id="features">
+          <p className="compact-label">{pageCopy.workflows}</p>
+          <div className="compact-workflow-grid">
             {copy.demoItems.map((item, index) => (
               <article key={item.title}>
-                <span>
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <p>{item.badge}</p>
-                  <h3>{item.title}</h3>
-                </div>
-                <p>{item.description}</p>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{item.badge}</p>
+                <h2>{item.title}</h2>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="privacy-section">
-          <div className="wrap privacy-grid">
-            <div>
-              <p className="kicker kicker-light">{copy.privacyKicker}</p>
-              <h2>{copy.privacyTitle}</h2>
-              <p className="privacy-note">{pageCopy.privacyNote}</p>
-            </div>
-            <div className="privacy-points">
-              {copy.privacyItems.map((item, index) => (
-                <article key={item.title}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section wrap" id="details">
-          <div className="section-heading">
-            <div>
-              <p className="kicker">{copy.detailsKicker}</p>
-              <h2>{copy.detailsTitle}</h2>
-            </div>
-          </div>
-          <div className="detail-links">
-            {[
-              ["/privacy", copy.privacyPolicy, copy.detailsDescriptions[0]],
-              ["/terms", copy.terms, copy.detailsDescriptions[1]],
-              ["/support", copy.supportLabel, copy.detailsDescriptions[2]],
-            ].map(([href, title, description]) => (
-              <Link href={href} key={href}>
-                <span>{title}</span>
-                <small>{description}</small>
-                <b>→</b>
-              </Link>
+        <section className="compact-privacy">
+          <div className="wrap compact-privacy-row">
+            <p>{pageCopy.privacy}</p>
+            {pageCopy.privacyItems.map((item) => (
+              <span key={item}>{item}</span>
             ))}
           </div>
         </section>
 
-        <section className="cta wrap">
-          <Image
-            alt="WOS Aide Bar app icon"
-            height={100}
-            src={`${basePath}/brand/app-icon.png`}
-            width={100}
-          />
-          <div>
-            <p className="kicker">{copy.ctaKicker}</p>
-            <h2>{copy.ctaTitle}</h2>
-            <p>{pageCopy.availability}</p>
-          </div>
-          <Link className="button button-primary" href="/support">
-            {copy.learnMore}
-          </Link>
+        <section className="compact-cta wrap">
+          <h2>{pageCopy.cta}</h2>
+          <Link href="/support">{pageCopy.ctaButton} <span>→</span></Link>
         </section>
       </main>
     </SiteShell>

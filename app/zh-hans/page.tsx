@@ -1,5 +1,10 @@
 import { ProductHome } from "../_components/ProductHome";
 
-export default function SimplifiedChineseHome() {
-  return <ProductHome locale="zh-Hans" />;
+export default async function SimplifiedChineseHome({
+  searchParams,
+}: {
+  searchParams: Promise<{ skipIntro?: string }>;
+}) {
+  const params = await searchParams;
+  return <ProductHome locale="zh-Hans" skipIntro={params.skipIntro === "1"} />;
 }

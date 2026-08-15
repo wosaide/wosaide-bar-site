@@ -25,10 +25,11 @@ async function render(pathname) {
 }
 
 for (const [path, title, phrase] of [
-  ["/", "WOS Aide Bar", "Make Web of Science search construction simple."],
-  ["/en", "WOS Aide Bar", "Four essential workflows"],
-  ["/zh-hans", "WOS Aide Bar", "WOS Aide Bar 不提供 Web of Science 账户"],
-  ["/zh-hant", "WOS Aide Bar", "WOS Aide Bar 不提供 Web of Science 帳戶"],
+  ["/", "WOS Aide Bar", "更轻松地构建 WOS 检索式"],
+  ["/en", "WOS Aide Bar", "Build WOS searches with less friction."],
+  ["/zh-hans", "WOS Aide Bar", "更轻松地构建 WOS 检索式"],
+  ["/zh-hant", "WOS Aide Bar", "更輕鬆地建立 WOS 檢索式"],
+  ["/community", "加入讨论群", "一起把工具做得更好"],
   ["/privacy", "Privacy Policy", "Optional AI Assistant"],
   ["/terms", "Terms of Use", "Journal-list sources and rights"],
   ["/support", "Support", "How can we help?"],
@@ -62,4 +63,12 @@ test("privacy page includes every app language", async () => {
   ]) {
     assert.match(html, new RegExp(language));
   }
+});
+
+test("feature navigation skips the bird intro while the homepage keeps it", async () => {
+  const homepage = await render("/");
+  assert.match(await homepage.text(), /cinematic-hero is-intro/);
+
+  const features = await render("/?skipIntro=1#features");
+  assert.match(await features.text(), /cinematic-hero is-product/);
 });
