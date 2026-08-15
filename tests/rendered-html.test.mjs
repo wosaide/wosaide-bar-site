@@ -65,10 +65,9 @@ test("privacy page includes every app language", async () => {
   }
 });
 
-test("feature navigation skips the bird intro while the homepage keeps it", async () => {
+test("feature navigation uses the client-side intro bypass", async () => {
   const homepage = await render("/");
-  assert.match(await homepage.text(), /cinematic-hero is-intro/);
-
-  const features = await render("/?skipIntro=1#features");
-  assert.match(await features.text(), /cinematic-hero is-product/);
+  const html = await homepage.text();
+  assert.match(html, /cinematic-hero is-checking/);
+  assert.match(html, /href="\/wosaide-bar-site\/#features"|href="\/#features"/);
 });

@@ -3,13 +3,7 @@ import { homeCopy, type SiteLocale } from "../_lib/site-copy";
 import { CinematicHero } from "./CinematicHero";
 import { SiteShell } from "./SiteShell";
 
-export function ProductHome({
-  locale,
-  skipIntro = false,
-}: {
-  locale: SiteLocale;
-  skipIntro?: boolean;
-}) {
+export function ProductHome({ locale }: { locale: SiteLocale }) {
   const copy = homeCopy[locale];
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const pageCopy = {
@@ -70,7 +64,6 @@ export function ProductHome({
           storeAvailability={pageCopy.storeAvailability}
           storeUrl={"https://apps.apple.com/app/wos-aide-bar/id6795536028?mt=12"}
           subline={pageCopy.subline}
-          skipIntro={skipIntro}
         />
 
         <section className="compact-workflows wrap" id="features">

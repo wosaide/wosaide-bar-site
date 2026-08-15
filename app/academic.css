@@ -1334,6 +1334,10 @@ main[lang^="zh"] .cinematic-copy > p:not(.cinematic-kicker):not(.store-availabil
   z-index: 40;
 }
 
+.is-checking .cinematic-bird {
+  opacity: 0;
+}
+
 .is-flying .cinematic-bird,
 .is-product .cinematic-bird {
   height: 34px;

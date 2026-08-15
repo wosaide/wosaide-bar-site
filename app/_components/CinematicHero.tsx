@@ -17,7 +17,6 @@ type CinematicHeroProps = {
   storeAvailability: string;
   storeUrl: string;
   subline: string;
-  skipIntro?: boolean;
 };
 
 export function CinematicHero({
@@ -33,11 +32,10 @@ export function CinematicHero({
   storeAvailability,
   storeUrl,
   subline,
-  skipIntro = false,
 }: CinematicHeroProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [phase, setPhase] = useState<"intro" | "flying" | "product">(
-    skipIntro ? "product" : "intro",
+  const [phase, setPhase] = useState<"checking" | "intro" | "flying" | "product">(
+    "checking",
   );
   const [playing, setPlaying] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
@@ -45,6 +43,10 @@ export function CinematicHero({
   const active = items[activeIndex];
 
   useEffect(() => {
+    const skipIntro =
+      window.location.hash === "#features" ||
+      new URLSearchParams(window.location.search).get("skipIntro") === "1";
+
     if (skipIntro) {
       setPhase("product");
       return;
@@ -58,6 +60,7 @@ export function CinematicHero({
       return;
     }
 
+    setPhase("intro");
     const flightTimer = window.setTimeout(() => setPhase("flying"), 2050);
     const productTimer = window.setTimeout(() => setPhase("product"), 3250);
 
@@ -65,7 +68,7 @@ export function CinematicHero({
       window.clearTimeout(flightTimer);
       window.clearTimeout(productTimer);
     };
-  }, [skipIntro]);
+  }, []);
 
   useEffect(() => {
     const media = videoRef.current;
