@@ -10,6 +10,9 @@ type CinematicHeroProps = {
   bird: string;
   button: string;
   controls: DemoControls;
+  directDownloadLabel: string;
+  directDownloadMeta: string;
+  directDownloadUrl: string;
   headline: string;
   items: DemoItem[];
   productName: string;
@@ -25,6 +28,9 @@ export function CinematicHero({
   bird,
   button,
   controls,
+  directDownloadLabel,
+  directDownloadMeta,
+  directDownloadUrl,
   headline,
   items,
   productName,
@@ -46,27 +52,30 @@ export function CinematicHero({
     const skipIntro =
       window.location.hash === "#features" ||
       new URLSearchParams(window.location.search).get("skipIntro") === "1";
-
-    if (skipIntro) {
-      setPhase("product");
-      return;
-    }
-
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let flightTimer: number | undefined;
+    let productTimer: number | undefined;
+    const setupTimer = window.setTimeout(() => {
+      if (skipIntro) {
+        setPhase("product");
+        return;
+      }
 
-    if (motion.matches) {
-      setReduceMotion(true);
-      setPhase("product");
-      return;
-    }
+      if (motion.matches) {
+        setReduceMotion(true);
+        setPhase("product");
+        return;
+      }
 
-    setPhase("intro");
-    const flightTimer = window.setTimeout(() => setPhase("flying"), 2050);
-    const productTimer = window.setTimeout(() => setPhase("product"), 3250);
+      setPhase("intro");
+      flightTimer = window.setTimeout(() => setPhase("flying"), 2050);
+      productTimer = window.setTimeout(() => setPhase("product"), 3250);
+    }, 0);
 
     return () => {
-      window.clearTimeout(flightTimer);
-      window.clearTimeout(productTimer);
+      window.clearTimeout(setupTimer);
+      if (flightTimer !== undefined) window.clearTimeout(flightTimer);
+      if (productTimer !== undefined) window.clearTimeout(productTimer);
     };
   }, []);
 
@@ -117,6 +126,18 @@ export function CinematicHero({
           </h1>
           <p>{subline}</p>
           <div className="cinematic-actions">
+            <a
+              aria-label={`${directDownloadLabel} — WOS Aide Bar`}
+              className="direct-download-button"
+              download
+              href={directDownloadUrl}
+            >
+              <span aria-hidden="true">↓</span>
+              <span>
+                <strong>{directDownloadLabel}</strong>
+                <small>{directDownloadMeta}</small>
+              </span>
+            </a>
             <a
               aria-label={`${storeLabel} — WOS Aide Bar`}
               className="app-store-button"

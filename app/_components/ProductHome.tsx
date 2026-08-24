@@ -12,8 +12,10 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
       headline: "Build WOS searches with less friction.",
       subline: "Turn research intent into a query you can review, refine, and open in Web of Science.",
       button: "Explore WOS Aide",
+      directDownloadLabel: "Direct download for mainland China",
+      directDownloadMeta: "macOS 13+ · v1.0.4 · 6 MB",
       storeLabel: "Download on the Mac App Store",
-      storeAvailability: "Available in Hong Kong, Taiwan, the US, UK, Japan, Singapore, Europe, and most international storefronts. Not currently available in mainland China.",
+      storeAvailability: "Users in mainland China can download the signed DMG directly. The Mac App Store remains available in most other regions.",
       workflows: "Four focused workflows",
       privacy: "Local by default",
       privacyItems: ["No account", "No tracking SDK", "Your history stays on Mac"],
@@ -25,8 +27,10 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
       headline: "更轻松地构建 WOS 检索式",
       subline: "把研究问题转化为可核验、可修改，并能直接打开的 Web of Science 检索式。",
       button: "了解 WOS Aide",
+      directDownloadLabel: "中国大陆直接下载",
+      directDownloadMeta: "macOS 13+ · v1.0.4 · 6 MB",
       storeLabel: "在 Mac App Store 下载",
-      storeAvailability: "香港、台湾、美国、英国、日本、新加坡及欧洲等多数地区可下载；中国大陆 App Store 暂未上架。",
+      storeAvailability: "中国大陆用户可直接下载已签名的 DMG 安装包；其他多数地区也可通过 Mac App Store 获取。",
       workflows: "四个专注的工作流",
       privacy: "默认本地优先",
       privacyItems: ["无需账户", "无跟踪 SDK", "历史记录保存在 Mac"],
@@ -38,8 +42,10 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
       headline: "更輕鬆地建立 WOS 檢索式",
       subline: "把研究問題轉化為可核驗、可修改，並能直接開啟的 Web of Science 檢索式。",
       button: "了解 WOS Aide",
+      directDownloadLabel: "中國大陸直接下載",
+      directDownloadMeta: "macOS 13+ · v1.0.4 · 6 MB",
       storeLabel: "在 Mac App Store 下載",
-      storeAvailability: "香港、台灣、美國、英國、日本、新加坡及歐洲等多數地區可下載；中國大陸 App Store 暫未上架。",
+      storeAvailability: "中國大陸使用者可直接下載已簽署的 DMG 安裝套件；其他多數地區也可透過 Mac App Store 取得。",
       workflows: "四個專注的工作流程",
       privacy: "預設本機優先",
       privacyItems: ["無需帳戶", "無追蹤 SDK", "歷史記錄保存在 Mac"],
@@ -57,6 +63,9 @@ export function ProductHome({ locale }: { locale: SiteLocale }) {
           bird={`${basePath}/brand/bird-logo-animated-concept.svg`}
           button={pageCopy.button}
           controls={copy.demoControls}
+          directDownloadLabel={pageCopy.directDownloadLabel}
+          directDownloadMeta={pageCopy.directDownloadMeta}
+          directDownloadUrl={`${basePath}/downloads/WOS-Aide-Bar-1.0.4-DeveloperID.dmg`}
           headline={pageCopy.headline}
           items={copy.demoItems}
           productName="WOS Aide Bar"

@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { stat } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
@@ -70,4 +71,22 @@ test("feature navigation uses the client-side intro bypass", async () => {
   const html = await homepage.text();
   assert.match(html, /cinematic-hero is-checking/);
   assert.match(html, /href="\/wosaide-bar-site\/#features"|href="\/#features"/);
+});
+
+test("homepage offers the mainland China DMG download", async () => {
+  const homepage = await render("/");
+  const html = await homepage.text();
+  const installer = await stat(
+    new URL(
+      "../public/downloads/WOS-Aide-Bar-1.0.4-DeveloperID.dmg",
+      import.meta.url,
+    ),
+  );
+
+  assert.match(html, /中国大陆直接下载/);
+  assert.match(
+    html,
+    /href="(?:\/wosaide-bar-site)?\/downloads\/WOS-Aide-Bar-1\.0\.4-DeveloperID\.dmg"/,
+  );
+  assert.ok(installer.size > 5_000_000);
 });
