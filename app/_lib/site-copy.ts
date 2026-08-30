@@ -75,11 +75,6 @@ const screens = {
     imageWidth: 714,
     imageHeight: 162,
   },
-  assistant: {
-    image: "/screenshots/assistant-settings.png",
-    imageWidth: 900,
-    imageHeight: 688,
-  },
   catalogs: {
     image: "/screenshots/journal-catalogs.png",
     imageWidth: 900,
@@ -111,10 +106,6 @@ const demoMedia = {
     poster: "/videos/features/doi-lookup-poster.jpg",
     video: "/videos/features/doi-lookup.mp4",
   },
-  query: {
-    poster: "/videos/features/ai-query-poster.jpg",
-    video: "/videos/features/ai-query.mp4",
-  },
   settings: {
     poster: "/videos/features/settings-workflow-04-v2-poster.jpg",
     video: "/videos/features/settings-workflow-04-v2.mp4",
@@ -136,7 +127,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       "Review before opening",
     ],
     demoControls: {
-      carouselLabel: "Four live product workflows",
+      carouselLabel: "Three live product workflows",
       previous: "Previous demo",
       next: "Next demo",
       pause: "Pause demo",
@@ -164,24 +155,14 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "WOS Aide Bar resolving a literature reference to a DOI and Web of Science result",
       },
       {
-        ...demoMedia.query,
-        badge: "AI query builder",
-        title: "Ask naturally. Review a valid WOS expression.",
-        description:
-          "Turn a research question into a structured Web of Science query with OpenAI, Anthropic, Gemini, Azure OpenAI, OpenRouter, compatible cloud services, Ollama, LM Studio, or a custom endpoint. Review the expression before opening the search.",
-        stat: "Remote or local LLM · syntax reviewed",
-        ariaLabel:
-          "WOS Aide Bar converting natural language into a reviewed Web of Science query",
-      },
-      {
         ...demoMedia.settings,
         badge: "Settings & control",
         title: "Configure the app around your workflow.",
         description:
-          "Choose providers and models, connect a local endpoint, manage consent, journal catalogs, personal lists, language, appearance, launch behavior, and shortcuts from one native settings window.",
+          "Configure translation providers and models, privacy consent, journal catalogs, full-text access, personal lists, language, appearance, launch behavior, and shortcuts from one native settings window.",
         stat: "Keychain credentials · permission controls",
         ariaLabel:
-          "Tour of WOS Aide Bar settings for AI providers, models, privacy, journal lists, appearance, and shortcuts",
+          "Tour of WOS Aide Bar settings for translation providers, privacy, journal lists, full-text access, appearance, and shortcuts",
       },
     ],
     metrics: [
@@ -204,34 +185,25 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "Menu bar",
         title: "Everything starts one click away",
         description:
-          "Open manual search, search the clipboard, revisit favorites and recent searches, manage your journal list, inspect local usage, or change language and theme from one compact panel.",
+          "Open Quick Search, search the clipboard, revisit recent searches, manage your journal list, inspect local usage, or change language and theme from one compact menu.",
         stat: "Native menu-bar control center",
-        imageAlt: "WOS Aide Bar main menu with search, favorites, settings, and local insights",
+        imageAlt: "WOS Aide Bar main menu with search, settings, journal lists, and local insights",
       },
       {
         ...screens.search,
         badge: "Quick search",
         title: "Search the way the source is written",
         description:
-          "Enter a journal, topic, author, DOI, WOS ID, publication year, or advanced expression. Choose the field, generate an AI-assisted query, or open the search directly.",
+          "Enter a journal, topic, author, DOI, WOS ID, publication year, or advanced expression. Choose the WOS field and open the search directly, with journal completion available as an independent action.",
         stat: "Guided fields · advanced syntax · DOI",
         imageAlt: "WOS Aide Bar floating manual search window",
-      },
-      {
-        ...screens.assistant,
-        badge: "AI assistant",
-        title: "Your provider, model, and endpoint",
-        description:
-          "Choose from 12 templates spanning OpenAI, Anthropic, Gemini, Azure OpenAI, OpenRouter, compatible cloud services, Ollama, LM Studio, and custom endpoints. Profiles stay unavailable until enabled; discovery, manual model IDs, connection health, Keychain credentials, and content-sharing consent are explicit.",
-        stat: "Three-stage generation and review",
-        imageAlt: "WOS Aide Bar assistant provider and model configuration",
       },
       {
         ...screens.catalogs,
         badge: "Journal catalogs",
         title: "Current lists, installed only when you need them",
         description:
-          "Import your own SCIE, SSCI, AHCI, ESCI, or AJG 2024 CSV. Download UTD24 and FT50 title lists on request. Files are validated, indexed, and matched locally.",
+          "Use SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 sources. Download or refresh them from the project GitHub repository only when you choose to, or replace a source with a compatible CSV you have the right to use. Files are validated, indexed, and matched locally.",
         stat: "7 sources · local CSV processing",
         imageAlt: "WOS Aide Bar journal catalog manager",
       },
@@ -249,7 +221,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "Local insights",
         title: "See your workflow without becoming telemetry",
         description:
-          "Review searches, model calls, DOI lookups, journal completions, streaks, model success, tokens, and frequently used fields. Statistics are calculated and stored only on this Mac.",
+          "Review WOS searches, DOI lookups, accepted journal suggestions, streaks, DOI resolution success, and frequently used WOS fields. Statistics are calculated and stored only on this Mac.",
         stat: "Private usage statistics",
         imageAlt: "WOS Aide Bar local insights calendar and activity statistics",
       },
@@ -266,7 +238,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     featureKicker: "Everything included",
     featureTitle: "Built around real literature-search work.",
     featureIntro:
-      "The latest release covers the path from a rough idea or copied reference to a reusable, verifiable query.",
+      "The latest release covers fast WOS search construction, reference resolution, journal information, full-text access, and translation without adding a cloud account.",
     features: [
       {
         title: "Clipboard to search",
@@ -274,14 +246,9 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "Read the clipboard only when you ask, then turn journal titles, topics, authors, DOIs, WOS IDs, and advanced expressions into ready-to-open searches.",
       },
       {
-        title: "Reviewed AI queries",
+        title: "Translation provider freedom",
         description:
-          "Translate a natural-language question into structured intent, generate broad, balanced, and precise candidates, then review them with a deterministic syntax validator.",
-      },
-      {
-        title: "Provider freedom",
-        description:
-          "Choose remote, regional, or local providers with native Anthropic and Gemini protocols, Azure deployment settings, model discovery, a manual allowlist, enable controls, and connection health.",
+          "Use remote or loopback AI providers only for optional translation, with provider templates, model discovery on explicit request, manual model IDs, enable controls, Keychain credentials, and connection health.",
       },
       {
         title: "Crossref DOI lookup",
@@ -291,7 +258,12 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "Selection translation",
         description:
-          "Select text in another app and press your shortcut to translate it with a chosen AI profile. Access is on demand, consent is explicit, and up to 100 results stay in local history.",
+          "Select text in another app and press your shortcut, or enter source text manually. Remote source text is sent only after consent, and up to 100 results stay in local history.",
+      },
+      {
+        title: "Institutional full-text access",
+        description:
+          "Optionally configure a participating institution and resolve DOI-based article access through Third Iron/BrowZine/LibKey only when you start a lookup.",
       },
       {
         title: "EasyScholar journal ranks",
@@ -304,9 +276,9 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "Search by source, topic, author, organization, publication year, identifier, or a free-form advanced query without keeping field codes in memory.",
       },
       {
-        title: "Favorites and history",
+        title: "Local search history",
         description:
-          "Save, rename, reopen, and organize useful searches locally. Recent work stays close without a cloud account.",
+          "Reopen recent searches and feature histories locally. Your normal workflow stays available without an IIDEV cloud account.",
       },
       {
         title: "Journal intelligence",
@@ -325,17 +297,17 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "User-initiated access",
         description:
-          "Clipboard and selected text are read only after an explicit panel, refresh, or shortcut action. Crossref and selection translation are off by default.",
+          "Clipboard and selected text are read only after an explicit panel, refresh, or shortcut action. Crossref and Library Access are off by default; remote translation content requires consent.",
       },
       {
         title: "Sandboxed local storage",
         description:
-          "Search, AI, translation, DOI, and journal-rank history, favorites, settings, catalogs, caches, and usage insights stay in the app sandbox; API keys stay in macOS Keychain.",
+          "Search, translation, DOI, full-text, and journal-rank history, settings, catalogs, caches, and usage insights stay in the app sandbox; API keys stay in macOS Keychain.",
       },
       {
         title: "Transparent external services",
         description:
-          "Model refresh and connection tests run only when requested and never include research or selected text. Before the first content-bearing remote request, the app names the provider and endpoint and asks for purpose-specific permission. Requests go directly to that service, not through IIDEV.",
+          "Model refresh and connection tests run only when requested and never include translation source text. Before remote translation text is sent, the app names the provider and endpoint and asks permission. Requests go directly to that service, not through IIDEV.",
       },
     ],
     detailsKicker: "Clear before you install",
@@ -366,7 +338,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       "打开检索前可审核",
     ],
     demoControls: {
-      carouselLabel: "四段真实功能演示",
+      carouselLabel: "三段真实功能演示",
       previous: "上一段演示",
       next: "下一段演示",
       pause: "暂停演示",
@@ -394,24 +366,14 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "WOS Aide Bar 将参考文献解析为 DOI 并打开 Web of Science 结果",
       },
       {
-        ...demoMedia.query,
-        badge: "AI 检索式生成",
-        title: "用自然语言提问，审核后再检索。",
-        description:
-          "使用 OpenAI、Anthropic、Gemini、Azure OpenAI、OpenRouter、国内兼容服务、Ollama、LM Studio 或自定义端点，把研究问题转换成结构化 Web of Science Query；确认表达式后再打开检索。",
-        stat: "远程或本地 LLM · 语法复核",
-        ariaLabel:
-          "WOS Aide Bar 将自然语言转换为经审核的 Web of Science 检索表达式",
-      },
-      {
         ...demoMedia.settings,
         badge: "设置与控制",
         title: "让 App 适应你的科研工作流。",
         description:
-          "在一个原生设置窗口中选择服务商与模型、连接本地端点、管理外发许可、期刊目录、个人清单、语言、外观、登录启动和快捷键。",
+          "在一个原生设置窗口中配置翻译服务商与模型、外发许可、期刊目录、机构全文、个人清单、语言、外观、登录启动和快捷键。",
         stat: "钥匙串保存密钥 · 明确权限控制",
         ariaLabel:
-          "WOS Aide Bar 的 AI 服务商、模型、隐私、期刊清单、外观和快捷键设置演示",
+          "WOS Aide Bar 的翻译服务商、隐私、期刊清单、机构全文、外观和快捷键设置演示",
       },
     ],
     metrics: [
@@ -432,34 +394,25 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "菜单栏",
         title: "所有功能，一点即达",
         description:
-          "手动检索、剪贴板检索、收藏、最近记录、个人期刊列表、本地洞察、语言和主题，都集中在一个紧凑面板。",
+          "快速检索、剪贴板检索、最近记录、个人期刊列表、本地洞察、语言和主题，都集中在一个紧凑菜单中。",
         stat: "原生菜单栏控制中心",
-        imageAlt: "WOS Aide Bar 主菜单，包含检索、收藏、设置和本地洞察",
+        imageAlt: "WOS Aide Bar 主菜单，包含检索、设置、期刊列表和本地洞察",
       },
       {
         ...screens.search,
         badge: "快速检索",
         title: "按资料本来的样子输入",
         description:
-          "输入期刊、主题、作者、DOI、WOS ID、出版年或高级表达式；选择字段、生成 AI 检索式，或直接打开检索。",
+          "输入期刊、主题、作者、DOI、WOS ID、出版年或高级表达式；选择 WOS 字段后直接打开检索，期刊补全可作为独立操作使用。",
         stat: "引导字段 · 高级语法 · DOI",
         imageAlt: "WOS Aide Bar 浮动手动检索窗口",
-      },
-      {
-        ...screens.assistant,
-        badge: "AI 助手",
-        title: "服务商、模型与端点由你决定",
-        description:
-          "提供 12 种模板，覆盖 OpenAI、Anthropic、Gemini、Azure OpenAI、OpenRouter、国内兼容服务、Ollama、LM Studio 与自定义端点。配置启用、模型发现、手动模型清单、连接状态、钥匙串凭据及内容外发许可均清晰分开。",
-        stat: "三阶段生成与审核",
-        imageAlt: "WOS Aide Bar AI 服务商与模型配置",
       },
       {
         ...screens.catalogs,
         badge: "期刊目录",
         title: "只在需要时安装最新清单",
         description:
-          "导入你自行取得的 SCIE、SSCI、AHCI、ESCI 或 AJG 2024 CSV；UTD24 与 FT50 名称清单可按需下载。所有文件都在本机验证、索引与匹配。",
+          "支持 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50。只有在你主动点击下载或刷新时才从项目 GitHub 获取，也可以用你有权使用的兼容 CSV 替换来源。所有文件都在本机验证、索引与匹配。",
         stat: "7 个来源 · 本地 CSV 处理",
         imageAlt: "WOS Aide Bar 期刊目录管理器",
       },
@@ -477,7 +430,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "本地洞察",
         title: "看清使用方式，不把它变成遥测数据",
         description:
-          "查看检索、模型调用、DOI 查询、期刊补全、连续使用、模型成功率、tokens 与常用字段；统计只在本机计算和保存。",
+          "查看 WOS 检索、DOI 查询、已接受的期刊补全、连续使用、DOI 解析成功率与常用 WOS 字段；统计只在本机计算和保存。",
         stat: "私密的个人使用统计",
         imageAlt: "WOS Aide Bar 本地洞察日历和活动统计",
       },
@@ -493,19 +446,15 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     ],
     featureKicker: "完整功能",
     featureTitle: "围绕真实文献检索流程构建。",
-    featureIntro: "从模糊想法或复制的参考文献，到可复用、可验证的检索式，最新版覆盖完整路径。",
+    featureIntro: "最新版覆盖快速 WOS 检索、参考文献解析、期刊信息、机构全文与翻译，无需建立 IIDEV 云端账户。",
     features: [
       {
         title: "剪贴板直达检索",
         description: "仅在你要求时读取剪贴板，把期刊、主题、作者、DOI、WOS ID 与高级表达式变成可打开的检索。",
       },
       {
-        title: "经审核的 AI 检索式",
-        description: "把自然语言问题转为结构化意图，生成宽泛、平衡、精确三类候选，再用确定性语法验证器复核。",
-      },
-      {
-        title: "自由选择 AI 服务",
-        description: "自由选择远程、国内兼容或本地服务，支持 Anthropic／Gemini 原生协议、Azure 部署参数、模型发现、手动白名单、启用开关与连接状态。",
+        title: "自由选择翻译服务",
+        description: "AI 服务只用于可选翻译。可选择远程或回环端点，并使用服务商模板、主动模型发现、手动模型 ID、启用开关、钥匙串凭据与连接状态。",
       },
       {
         title: "Crossref DOI 解析",
@@ -513,7 +462,11 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "全局划词翻译",
-        description: "在其他 App 中选中文字并按下快捷键，即可通过所选 AI 配置翻译。仅按需读取、明确征得许可，最多 100 条结果保存在本机历史中。",
+        description: "在其他 App 中选中文字并按下快捷键，或在翻译窗口手动输入原文。远程翻译仅在取得许可后发送原文，最多 100 条结果保存在本机历史中。",
+      },
+      {
+        title: "机构全文访问",
+        description: "可选配置参与机构，仅在你发起查询时通过 Third Iron/BrowZine/LibKey 按 DOI 解析机构授权的文章访问链接。",
       },
       {
         title: "EasyScholar 期刊等级",
@@ -524,8 +477,8 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         description: "按来源、主题、作者、机构、出版年、标识符检索，或直接输入高级检索式，无需背字段代码。",
       },
       {
-        title: "收藏与历史",
-        description: "在本机保存、重命名、重新打开并整理检索；无需云端账户，最近工作始终触手可及。",
+        title: "本地查询历史",
+        description: "在本机重新打开最近查询与各功能历史；无需 IIDEV 云端账户即可继续日常工作。",
       },
       {
         title: "期刊智能匹配",
@@ -541,15 +494,15 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     privacyItems: [
       {
         title: "仅在用户操作时访问",
-        description: "只有打开面板、主动刷新或按下快捷键后才读取剪贴板或选中文字；Crossref 与划词翻译默认关闭。",
+        description: "只有打开面板、主动刷新或按下快捷键后才读取剪贴板或选中文字；Crossref 与机构全文默认关闭，远程翻译原文需先取得许可。",
       },
       {
         title: "沙盒内本地保存",
-        description: "检索、AI、翻译、DOI 与期刊等级历史，以及收藏、设置、目录、缓存与使用洞察均留在 App 沙盒；API 密钥保存在 macOS 钥匙串。",
+        description: "检索、翻译、DOI、机构全文与期刊等级历史，以及设置、目录、缓存与使用洞察均留在 App 沙盒；API 密钥保存在 macOS 钥匙串。",
       },
       {
         title: "外部服务清楚透明",
-        description: "模型刷新与连接测试仅在你主动操作时联网，且不会携带研究问题或所选文本；首次发送研究或翻译内容前，App 会说明服务商与端点并按用途征得许可。请求直达所配置服务，不经 IIDEV 中转。",
+        description: "模型刷新与连接测试仅在你主动操作时联网，且不会携带翻译原文；远程发送翻译原文前，App 会说明服务商与端点并征得许可。请求直达所配置服务，不经 IIDEV 中转。",
       },
     ],
     detailsKicker: "安装前清楚了解",
@@ -576,7 +529,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       "開啟檢索前可審核",
     ],
     demoControls: {
-      carouselLabel: "四段真實功能示範",
+      carouselLabel: "三段真實功能示範",
       previous: "上一段示範",
       next: "下一段示範",
       pause: "暫停示範",
@@ -604,24 +557,14 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "WOS Aide Bar 將參考文獻解析為 DOI 並開啟 Web of Science 結果",
       },
       {
-        ...demoMedia.query,
-        badge: "AI 檢索式生成",
-        title: "用自然語言提問，審核後再檢索。",
-        description:
-          "使用 OpenAI、Anthropic、Gemini、Azure OpenAI、OpenRouter、區域相容服務、Ollama、LM Studio 或自訂端點，把研究問題轉換成結構化 Web of Science Query；確認運算式後再開啟檢索。",
-        stat: "遠端或本機 LLM · 語法覆核",
-        ariaLabel:
-          "WOS Aide Bar 將自然語言轉換為經審核的 Web of Science 檢索運算式",
-      },
-      {
         ...demoMedia.settings,
         badge: "設定與控制",
         title: "讓 App 配合你的科研工作流程。",
         description:
-          "在一個原生設定視窗中選擇服務商與模型、連接本機端點、管理外傳許可、期刊目錄、個人清單、語言、外觀、登入啟動和快速鍵。",
+          "在一個原生設定視窗中設定翻譯服務商與模型、外傳許可、期刊目錄、機構全文、個人清單、語言、外觀、登入啟動和快速鍵。",
         stat: "鑰匙圈保存密鑰 · 明確權限控制",
         ariaLabel:
-          "WOS Aide Bar 的 AI 服務商、模型、隱私、期刊清單、外觀和快速鍵設定示範",
+          "WOS Aide Bar 的翻譯服務商、隱私、期刊清單、機構全文、外觀和快速鍵設定示範",
       },
     ],
     metrics: [
@@ -642,34 +585,25 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "選單列",
         title: "所有功能，一點即達",
         description:
-          "手動檢索、剪貼簿檢索、收藏、最近記錄、個人期刊清單、本機洞察、語言與主題，都集中在一個緊湊面板。",
+          "快速檢索、剪貼簿檢索、最近記錄、個人期刊清單、本機洞察、語言與主題，都集中在一個緊湊選單中。",
         stat: "原生選單列控制中心",
-        imageAlt: "WOS Aide Bar 主選單，包含檢索、收藏、設定和本機洞察",
+        imageAlt: "WOS Aide Bar 主選單，包含檢索、設定、期刊清單和本機洞察",
       },
       {
         ...screens.search,
         badge: "快速檢索",
         title: "按資料原本的樣子輸入",
         description:
-          "輸入期刊、主題、作者、DOI、WOS ID、出版年或進階運算式；選擇欄位、生成 AI 檢索式，或直接開啟檢索。",
+          "輸入期刊、主題、作者、DOI、WOS ID、出版年或進階運算式；選擇 WOS 欄位後直接開啟檢索，期刊補全可作為獨立操作使用。",
         stat: "引導欄位 · 進階語法 · DOI",
         imageAlt: "WOS Aide Bar 浮動手動檢索視窗",
-      },
-      {
-        ...screens.assistant,
-        badge: "AI 助手",
-        title: "服務商、模型與端點由你決定",
-        description:
-          "提供 12 種範本，涵蓋 OpenAI、Anthropic、Gemini、Azure OpenAI、OpenRouter、區域相容服務、Ollama、LM Studio 與自訂端點。設定啟用、模型探索、手動模型清單、連線狀態、鑰匙圈憑證及內容外傳許可均清楚分開。",
-        stat: "三階段生成與審核",
-        imageAlt: "WOS Aide Bar AI 服務商與模型設定",
       },
       {
         ...screens.catalogs,
         badge: "期刊目錄",
         title: "只在需要時安裝最新清單",
         description:
-          "匯入你自行取得的 SCIE、SSCI、AHCI、ESCI 或 AJG 2024 CSV；UTD24 與 FT50 名稱清單可按需下載。所有檔案都在本機驗證、索引與配對。",
+          "支援 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 與 FT50。只有在你主動按下下載或重新整理時才從專案 GitHub 取得，也可以用你有權使用的相容 CSV 取代來源。所有檔案都在本機驗證、索引與配對。",
         stat: "7 個來源 · 本機 CSV 處理",
         imageAlt: "WOS Aide Bar 期刊目錄管理器",
       },
@@ -687,7 +621,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "本機洞察",
         title: "看清使用方式，不把它變成遙測資料",
         description:
-          "查看檢索、模型呼叫、DOI 查詢、期刊補全、連續使用、模型成功率、tokens 與常用欄位；統計只在本機計算和保存。",
+          "查看 WOS 檢索、DOI 查詢、已接受的期刊補全、連續使用、DOI 解析成功率與常用 WOS 欄位；統計只在本機計算和保存。",
         stat: "私密的個人使用統計",
         imageAlt: "WOS Aide Bar 本機洞察日曆和活動統計",
       },
@@ -703,19 +637,15 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     ],
     featureKicker: "完整功能",
     featureTitle: "圍繞真實文獻檢索流程建立。",
-    featureIntro: "從模糊想法或複製的參考文獻，到可重用、可驗證的檢索式，最新版涵蓋完整路徑。",
+    featureIntro: "最新版涵蓋快速 WOS 檢索、參考文獻解析、期刊資訊、機構全文與翻譯，無需建立 IIDEV 雲端帳戶。",
     features: [
       {
         title: "剪貼簿直達檢索",
         description: "僅在你要求時讀取剪貼簿，把期刊、主題、作者、DOI、WOS ID 與進階運算式變成可開啟的檢索。",
       },
       {
-        title: "經審核的 AI 檢索式",
-        description: "把自然語言問題轉為結構化意圖，生成寬泛、平衡、精確三類候選，再用確定性語法驗證器覆核。",
-      },
-      {
-        title: "自由選擇 AI 服務",
-        description: "自由選擇遠端、區域相容或本機服務，支援 Anthropic／Gemini 原生協定、Azure 部署參數、模型探索、手動白名單、啟用開關與連線狀態。",
+        title: "自由選擇翻譯服務",
+        description: "AI 服務只用於選用翻譯。可選擇遠端或迴路端點，並使用服務商範本、主動模型探索、手動模型 ID、啟用開關、鑰匙圈憑證與連線狀態。",
       },
       {
         title: "Crossref DOI 解析",
@@ -723,7 +653,11 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "全域選取文字翻譯",
-        description: "在其他 App 中選取文字並按下快速鍵，即可透過所選 AI 設定翻譯。僅按需讀取、明確取得同意，最多 100 筆結果保存在本機記錄中。",
+        description: "在其他 App 中選取文字並按下快速鍵，或在翻譯視窗手動輸入原文。遠端翻譯只有取得許可後才傳送原文，最多 100 筆結果保存在本機記錄中。",
+      },
+      {
+        title: "機構全文存取",
+        description: "可選設定參與機構，僅在你發起查詢時透過 Third Iron/BrowZine/LibKey 按 DOI 解析機構授權的文章存取連結。",
       },
       {
         title: "EasyScholar 期刊等級",
@@ -734,8 +668,8 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         description: "按來源、主題、作者、機構、出版年、識別碼檢索，或直接輸入進階檢索式，無需背欄位代碼。",
       },
       {
-        title: "收藏與歷史",
-        description: "在本機保存、重新命名、再次開啟並整理檢索；無需雲端帳戶，最近工作始終觸手可及。",
+        title: "本機查詢記錄",
+        description: "在本機重新開啟最近查詢與各功能記錄；無需 IIDEV 雲端帳戶即可繼續日常工作。",
       },
       {
         title: "期刊智慧配對",
@@ -751,15 +685,15 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     privacyItems: [
       {
         title: "僅在使用者操作時存取",
-        description: "只有開啟面板、主動重新整理或按下快速鍵後才讀取剪貼簿或選取文字；Crossref 與選取文字翻譯預設關閉。",
+        description: "只有開啟面板、主動重新整理或按下快速鍵後才讀取剪貼簿或選取文字；Crossref 與機構全文預設關閉，遠端翻譯原文需先取得許可。",
       },
       {
         title: "沙盒內本機保存",
-        description: "搜尋、AI、翻譯、DOI 與期刊等級記錄，以及收藏、設定、目錄、快取與使用洞察均留在 App 沙盒；API 密鑰保存在 macOS 鑰匙圈。",
+        description: "搜尋、翻譯、DOI、機構全文與期刊等級記錄，以及設定、目錄、快取與使用洞察均留在 App 沙盒；API 密鑰保存在 macOS 鑰匙圈。",
       },
       {
         title: "外部服務清楚透明",
-        description: "模型探索與連線測試只在你主動操作時連網，且不會帶入研究問題或所選文字；首次傳送研究或翻譯內容前，App 會說明服務商與端點並按用途徵得許可。請求直達所設定服務，不經 IIDEV 中轉。",
+        description: "模型探索與連線測試只在你主動操作時連網，且不會帶入翻譯原文；遠端傳送翻譯原文前，App 會說明服務商與端點並徵得許可。請求直達所設定服務，不經 IIDEV 中轉。",
       },
     ],
     detailsKicker: "安裝前清楚瞭解",

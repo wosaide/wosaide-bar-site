@@ -31,7 +31,7 @@ for (const [path, title, phrase] of [
   ["/zh-hans", "WOS Aide Bar", "更轻松地构建 WOS 检索式"],
   ["/zh-hant", "WOS Aide Bar", "更輕鬆地建立 WOS 檢索式"],
   ["/community", "加入讨论群", "一起把工具做得更好"],
-  ["/privacy", "Privacy Policy", "Optional AI Assistant"],
+  ["/privacy", "Privacy Policy", "Optional AI translation and model providers"],
   ["/terms", "Terms of Use", "Journal-list sources and rights"],
   ["/support", "Support", "How can we help?"],
 ]) {
@@ -64,6 +64,21 @@ test("privacy page includes every app language", async () => {
   ]) {
     assert.match(html, new RegExp(language));
   }
+});
+
+test("privacy page reflects current app behavior", async () => {
+  const response = await render("/privacy");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(html, /does not use an LLM to generate Web of Science queries/);
+  assert.match(html, /history limit defaults to 50/);
+  assert.match(html, /Library Access uses Third Iron/);
+  assert.match(html, /iCloud Drive backup is off by default/);
+  assert.doesNotMatch(
+    html,
+    /Optional AI Assistant|three-stage query-generation|AI query builder/i,
+  );
 });
 
 test("feature navigation uses the client-side intro bypass", async () => {

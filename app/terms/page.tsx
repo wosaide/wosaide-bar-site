@@ -13,7 +13,7 @@ export default function TermsPage() {
       eyebrow="Legal · Terms"
       title="Terms of Use"
       intro="These terms supplement Apple’s Standard EULA and explain WOS Aide Bar’s independent role, optional external features, journal-list sources, and voluntary support purchases."
-      updated="Effective August 14, 2026"
+      updated="Effective August 31, 2026"
       chinese={
         <>
           <h2>使用条款摘要</h2>
@@ -22,7 +22,7 @@ export default function TermsPage() {
           </p>
           <h3>用途与外部服务</h3>
           <p>
-            本 App 是独立的科研效率工具，不隶属于任何外部服务商或数据来源。Web of Science、AI 服务商、Crossref、EasyScholar、GitHub、自定义端点及期刊名单来源各自适用其条款、隐私政策、访问限制与费用。你应在依赖检索式、AI 或翻译输出、DOI 匹配、CAS／JCR 查询结果或期刊名单前自行核验。
+            本 App 是独立的科研效率工具，不隶属于任何外部服务商或数据来源。Web of Science、翻译 AI 服务商、Crossref、EasyScholar、Third Iron/BrowZine/LibKey、GitHub、自定义端点及期刊名单来源各自适用其条款、隐私政策、访问限制与费用。你应在依赖检索表达式、翻译输出、DOI 匹配、机构全文链接、CAS／JCR 查询结果或期刊名单前自行核验。
           </p>
           <h3>划词翻译与 EasyScholar</h3>
           <p>
@@ -30,7 +30,7 @@ export default function TermsPage() {
           </p>
           <h3>期刊名单与内容权利</h3>
           <p>
-            App 不内置商业期刊数据库。SCIE、SSCI、AHCI、ESCI 与 AJG 2024 仅支持用户自行导入；你须确保有权取得和使用所选 CSV。可选 UTD24 与 FT50 名称清单可按需从项目 GitHub 下载，仅用于名称识别和互操作。相关名称、商标及第三方资料归各权利人所有。
+            App 不内置完整商业期刊数据库。它支持 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50；这些列表仅在你主动点击下载或刷新时从项目公开 GitHub 仓库获取，也可以导入你有权使用的兼容 CSV。相关名称、商标及第三方资料归各权利人所有，使用者仍须遵守原始来源的许可与使用条件。
           </p>
           <h3>自愿支持购买</h3>
           <p>
@@ -55,11 +55,12 @@ export default function TermsPage() {
         <p>
           WOS Aide Bar is a research-productivity utility that constructs
           search URLs on your device, opens them in your browser, manages local
-          journal-title suggestions, and offers optional AI query generation,
-          selection translation, Crossref DOI matching, and EasyScholar
-          journal-rank lookup. It does not provide a Web of Science account,
-          subscription, database, translation service, publication assessment,
-          or guarantee of access or results.
+          journal-title suggestions, and offers optional selection/manual
+          translation, Crossref DOI matching, institutional full-text lookup,
+          and EasyScholar journal-rank lookup. It does not provide a Web of
+          Science account, subscription, database, translation service,
+          publication assessment, or guarantee of access or results. The App
+          does not use an LLM to generate Web of Science queries.
         </p>
       </LegalSection>
 
@@ -67,9 +68,9 @@ export default function TermsPage() {
         <ul>
           <li>Use the App and external services lawfully.</li>
           <li>
-            Review generated queries, AI and translation output, DOI matches,
-            EasyScholar ranking results, and journal-list suggestions before
-            relying on them.
+            Review search expressions, translation output, DOI matches,
+            institutional full-text links, EasyScholar ranking results, and
+            journal-list suggestions before relying on them.
           </li>
           <li>
             Maintain required third-party accounts, credentials, subscriptions,
@@ -80,7 +81,8 @@ export default function TermsPage() {
           </li>
           <li>
             Protect API keys and verify the operator, terms, and privacy
-            practices of any AI endpoint or EasyScholar service you use.
+            practices of any translation AI endpoint, EasyScholar service, or
+            institutional-access service you use.
           </li>
           <li>
             Enable selection translation and grant macOS Accessibility
@@ -92,37 +94,41 @@ export default function TermsPage() {
 
       <LegalSection
         number="04"
-        title="AI, selection translation, Crossref, and EasyScholar"
+        title="Translation, Crossref, Library Access, and EasyScholar"
       >
         <p>
-          AI Assistant, selection translation, Crossref DOI lookup, and
-          EasyScholar journal-rank lookup are optional third-party
-          integrations. AI and translation output may be incomplete,
-          inaccurate, biased, or unsuitable. DOI matching may return the wrong
-          work or no work. CAS, JCR, and other journal-rank information may be
-          unavailable, delayed, incomplete, or outdated. You remain responsible
-          for checking syntax, translations, sources, citations, licenses,
-          journal information, and research decisions.
+          Selection/manual translation, Crossref DOI lookup, Library Access,
+          and EasyScholar journal-rank lookup are optional third-party
+          integrations. Translation output may be incomplete, inaccurate,
+          biased, or unsuitable. DOI matching or an institutional full-text
+          lookup may return the wrong work, a temporary link, or no result.
+          CAS, JCR, and other journal-rank information may be unavailable,
+          delayed, incomplete, or outdated. You remain responsible for checking
+          search syntax, translations, sources, citations, licenses, journal
+          information, access rights, and research decisions.
         </p>
         <p>
-          Remote AI providers, custom endpoint operators, Crossref, and
-          EasyScholar may impose separate terms, privacy practices, account or
-          API-key rules, usage limits, and fees. Selection translation uses the
-          AI provider and endpoint you choose. EasyScholar access requires a
-          user-provided API key. IIDEV does not operate or control those
-          services and cannot guarantee their availability, confidentiality,
-          retention, ranking methodology, or output.
+          Remote translation providers, custom endpoint operators, Crossref,
+          Third Iron/BrowZine/LibKey, and EasyScholar may impose separate
+          terms, privacy practices, account or API-key rules, usage limits, and
+          fees. Translation uses the provider and endpoint you choose.
+          EasyScholar access requires a user-provided API key. Library Access
+          depends on a participating institution and Third Iron services. IIDEV
+          does not operate or control those services and cannot guarantee their
+          availability, confidentiality, retention, ranking methodology, links,
+          or output.
         </p>
       </LegalSection>
 
       <LegalSection number="05" title="Journal-list sources and rights">
         <p>
           No commercial Web of Science journal database is bundled with the
-          App. SCIE, SSCI, AHCI, ESCI, and AJG 2024 CSV files are user-supplied
-          and processed locally; you are responsible for obtaining and using
-          them lawfully. Optional UTD24 and FT50 journal-title lists may be
-          downloaded from the project&apos;s public GitHub repository for
-          identification and interoperability.
+          App. The App supports SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and
+          FT50 sources. Those lists are downloaded from the project&apos;s public
+          GitHub repository only after an explicit Download or Refresh action.
+          You may also import compatible CSV files you obtained independently;
+          imported files are processed locally. You remain responsible for
+          having the right to obtain and use third-party list data.
         </p>
         <p>
           Third-party list names, journal names, marks, and source materials
@@ -137,10 +143,11 @@ export default function TermsPage() {
         <p>
           WOS Aide Bar and IIDEV are independent and are not affiliated with,
           sponsored by, or endorsed by any external service provider or data
-          source. AI providers, Web of Science, Crossref, EasyScholar, GitHub,
-          custom endpoint operators, and journal-list sources govern their own
-          services, accounts, subscriptions, content, APIs, marks,
-          methodologies, and access under their respective terms.
+          source. Translation AI providers, Web of Science, Crossref,
+          EasyScholar, Third Iron/BrowZine/LibKey, GitHub, custom endpoint
+          operators, and journal-list sources govern their own services,
+          accounts, subscriptions, content, APIs, marks, methodologies, and
+          access under their respective terms.
         </p>
       </LegalSection>
 
@@ -167,10 +174,11 @@ export default function TermsPage() {
       <LegalSection number="09" title="Disclaimers and limitation">
         <p>
           To the maximum extent permitted by law, the App and Site are provided
-          “as is” and “as available.” We do not promise that queries, AI or
-          translation output, DOI matches, journal-rank results, journal lists,
-          or external services will be complete, current, accurate, secure,
-          uninterrupted, or fit for a particular purpose. The App is not
+          “as is” and “as available.” We do not promise that search expressions,
+          translation output, DOI matches, institutional full-text links,
+          journal-rank results, journal lists, or external services will be
+          complete, current, accurate, secure, uninterrupted, or fit for a
+          particular purpose. The App is not
           legal, medical, financial, translation, bibliometric, publication,
           or research-integrity advice.
         </p>

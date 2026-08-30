@@ -20,13 +20,17 @@ The production GitHub Pages URL is:
 Website copy must stay aligned with the shipping app:
 
 - no bundled commercial journal database;
-- user-imported SCIE, SSCI, AHCI, and ESCI CSV files are processed locally;
-- UTD24 and FT50 are optional GitHub downloads;
-- remote AI requests require explicit user permission;
+- SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 are downloaded from the
+  project GitHub repository only after an explicit Download or Refresh action;
+- compatible user-selected journal CSV files are processed locally and are not
+  uploaded;
+- AI is used only for optional translation/provider configuration; the app does
+  not generate Web of Science queries with an LLM;
+- remote translation content requires explicit user permission;
 - Crossref DOI lookup is optional and off by default;
+- Library Access is optional and off by default;
+- optional iCloud Drive backup is off by default;
 - no advertising, analytics, or tracking SDK.
-
-Do not publish Clarivate or AJG exports in this repository.
 
 ## Development
 
