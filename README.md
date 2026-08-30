@@ -19,8 +19,7 @@ The production GitHub Pages URL is:
 
 Website copy must stay aligned with the shipping app:
 
-- no bundled commercial journal database;
-- SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 are downloaded from the
+- SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 can be downloaded from the
   project GitHub repository only after an explicit Download or Refresh action;
 - compatible user-selected journal CSV files are processed locally and are not
   uploaded;

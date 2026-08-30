@@ -108,6 +108,8 @@ export function CinematicHero({
 
   return (
     <section className={`cinematic-hero is-${phase}`}>
+      {/* Decorative animated SVG; keep the original asset URL and sizing. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         alt=""
         aria-hidden="true"

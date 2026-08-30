@@ -32,7 +32,7 @@ for (const [path, title, phrase] of [
   ["/zh-hant", "WOS Aide Bar", "更輕鬆地建立 WOS 檢索式"],
   ["/community", "加入讨论群", "一起把工具做得更好"],
   ["/privacy", "Privacy Policy", "Optional AI translation and model providers"],
-  ["/terms", "Terms of Use", "Journal-list sources and rights"],
+  ["/terms", "Terms of Use", "Journal-list sources"],
   ["/support", "Support", "How can we help?"],
 ]) {
   test(`server-renders ${path}`, async () => {

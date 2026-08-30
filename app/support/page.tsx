@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "How do I add journal catalogs?",
-    a: "Open Settings → Query Panel → Web of Science Core Collection. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 can be downloaded or refreshed from the project GitHub repository only when you click the corresponding action. You can also replace a source with a compatible CSV you have the right to use. Files are processed locally.",
+    a: "Open Settings → Query Panel → Web of Science Core Collection. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 can be downloaded or refreshed from the project GitHub repository only when you click the corresponding action. You can also replace a source with a compatible CSV. Files are processed locally.",
   },
 ];
 

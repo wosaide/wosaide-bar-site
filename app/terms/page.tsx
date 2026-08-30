@@ -28,9 +28,9 @@ export default function TermsPage() {
           <p>
             划词翻译与 EasyScholar 查询均为可选功能。划词翻译需要你主动启用、授予 macOS 辅助功能权限并选择快捷键；远程翻译使用你选择的 AI 服务。EasyScholar 查询使用你自行提供并负责保护的 API Key。第三方输出可能不完整、过时或不准确，不构成翻译、期刊评价或科研决策建议。
           </p>
-          <h3>期刊名单与内容权利</h3>
+          <h3>期刊名单</h3>
           <p>
-            App 不内置完整商业期刊数据库。它支持 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50；这些列表仅在你主动点击下载或刷新时从项目公开 GitHub 仓库获取，也可以导入你有权使用的兼容 CSV。相关名称、商标及第三方资料归各权利人所有，使用者仍须遵守原始来源的许可与使用条件。
+            App 支持 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50；这些列表仅在你主动点击下载或刷新时从项目公开 GitHub 仓库获取，也可以导入兼容 CSV。相关名称和商标归各自所有者所有，项目与这些来源保持独立。
           </p>
           <h3>自愿支持购买</h3>
           <p>
@@ -77,9 +77,6 @@ export default function TermsPage() {
             permissions, and institutional access.
           </li>
           <li>
-            Import only CSV files that you have the right to possess and use.
-          </li>
-          <li>
             Protect API keys and verify the operator, terms, and privacy
             practices of any translation AI endpoint, EasyScholar service, or
             institutional-access service you use.
@@ -120,22 +117,19 @@ export default function TermsPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="05" title="Journal-list sources and rights">
+      <LegalSection number="05" title="Journal-list sources">
         <p>
-          No commercial Web of Science journal database is bundled with the
-          App. The App supports SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and
-          FT50 sources. Those lists are downloaded from the project&apos;s public
-          GitHub repository only after an explicit Download or Refresh action.
-          You may also import compatible CSV files you obtained independently;
-          imported files are processed locally. You remain responsible for
-          having the right to obtain and use third-party list data.
+          The App supports SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50
+          sources. Those lists are downloaded from the project&apos;s public GitHub
+          repository only after an explicit Download or Refresh action. You may
+          also import compatible CSV files; imported files are processed
+          locally.
         </p>
         <p>
-          Third-party list names, journal names, marks, and source materials
-          remain the property of their respective owners. Availability through
-          the App does not transfer ownership, endorsement, ranking authority,
-          database rights, or permission to republish a source dataset. Source
-          organizations may revise their lists at any time.
+          Third-party list names, journal names, and marks remain the property
+          of their respective owners. Availability through the App does not
+          imply affiliation or endorsement. Source organizations may revise
+          their lists at any time.
         </p>
       </LegalSection>
 

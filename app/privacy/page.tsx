@@ -32,7 +32,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>期刊列表、iCloud 与 Apple 服务</h3>
         <p>
-          App 仅内置小型 UTD24 期刊名称默认列表，不内置完整商业目录。SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50 都可在你主动点击下载或刷新时从项目公开 GitHub 仓库获取，也可导入你有权使用的兼容 CSV；用户选择的 CSV 仅在本机处理，不会上传。iCloud Drive 备份默认关闭；启用后可备份选定本机数据，翻译原文/译文可能包含其中，但服务商元数据会移除；AI 服务商配置、API 密钥、钥匙串凭据、安全标识符、远程许可与网络缓存不会进入备份。App 启动时可能进行不含用户内容的 App Store 更新检查；StoreKit 可能为 Support/Local Insights 获取商品与商店信息并处理自愿支持购买。IIDEV 不接收付款卡信息。网站不使用广告 Cookie 或行为分析。联系：<a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>。
+          App 默认包含小型 UTD24 期刊名称列表。SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50 都可在你主动点击下载或刷新时从项目公开 GitHub 仓库获取，也可导入兼容 CSV；用户选择的 CSV 仅在本机处理，不会上传。iCloud Drive 备份默认关闭；启用后可备份选定本机数据，翻译原文/译文可能包含其中，但服务商元数据会移除；AI 服务商配置、API 密钥、钥匙串凭据、安全标识符、远程许可与网络缓存不会进入备份。App 启动时可能进行不含用户内容的 App Store 更新检查；StoreKit 可能为 Support/Local Insights 获取商品与商店信息并处理自愿支持购买。IIDEV 不接收付款卡信息。网站不使用广告 Cookie 或行为分析。联系：<a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>。
         </p>
       </>
     ),
@@ -57,7 +57,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>期刊清單、iCloud 與 Apple 服務</h3>
         <p>
-          App 僅內建小型 UTD24 期刊名稱預設清單，不內建完整商業目錄。SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 與 FT50 都可在你主動按下下載或重新整理時從專案公開 GitHub 儲存庫取得，也可匯入你有權使用的相容 CSV；使用者選取的 CSV 僅在本機處理，不會上傳。iCloud Drive 備份預設關閉；啟用後可備份選定本機資料，翻譯原文/譯文可能包含其中，但服務商中繼資料會移除；AI 服務商設定、API 金鑰、鑰匙圈憑證、安全識別碼、遠端許可與網路快取不會進入備份。App 啟動時可能進行不含使用者內容的 App Store 更新檢查；StoreKit 可能為 Support/Local Insights 取得商品與商店資訊並處理自願支持購買。IIDEV 不接收付款卡資料。網站不使用廣告 Cookie 或行為分析。聯絡：<a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>。
+          App 預設包含小型 UTD24 期刊名稱清單。SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 與 FT50 都可在你主動按下下載或重新整理時從專案公開 GitHub 儲存庫取得，也可匯入相容 CSV；使用者選取的 CSV 僅在本機處理，不會上傳。iCloud Drive 備份預設關閉；啟用後可備份選定本機資料，翻譯原文/譯文可能包含其中，但服務商中繼資料會移除；AI 服務商設定、API 金鑰、鑰匙圈憑證、安全識別碼、遠端許可與網路快取不會進入備份。App 啟動時可能進行不含使用者內容的 App Store 更新檢查；StoreKit 可能為 Support/Local Insights 取得商品與商店資訊並處理自願支持購買。IIDEV 不接收付款卡資料。網站不使用廣告 Cookie 或行為分析。聯絡：<a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>。
         </p>
       </>
     ),
@@ -82,7 +82,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>ジャーナルリスト、iCloud、Apple</h3>
         <p>
-          App に含まれるのは小規模な UTD24 ジャーナル名リストだけです。SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24、FT50 は、ダウンロードまたは更新を明示的に実行した場合にプロジェクトの公開 GitHub リポジトリから取得でき、利用権のある互換 CSV を読み込むこともできます。ユーザーが選択した CSV は Mac 上でのみ処理され、アップロードされません。iCloud Drive バックアップは既定で無効です。翻訳の原文/訳文はバックアップ対象になり得ますが、プロバイダーメタデータは除去され、AI 設定、API キー、キーチェーン認証情報、安全識別子、リモート同意、ネットワークキャッシュは除外されます。起動時にはユーザー内容を含まない App Store 更新確認を行う場合があり、StoreKit は Support/Local Insights の商品情報取得と任意購入を Apple 経由で処理します。IIDEV はカード情報を受信しません。サイトは広告 Cookie や行動分析を使いません。連絡先：<a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>。
+          App には小規模な UTD24 ジャーナル名リストが既定で含まれます。SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24、FT50 は、ダウンロードまたは更新を明示的に実行した場合にプロジェクトの公開 GitHub リポジトリから取得でき、互換 CSV を読み込むこともできます。ユーザーが選択した CSV は Mac 上でのみ処理され、アップロードされません。iCloud Drive バックアップは既定で無効です。翻訳の原文/訳文はバックアップ対象になり得ますが、プロバイダーメタデータは除去され、AI 設定、API キー、キーチェーン認証情報、安全識別子、リモート同意、ネットワークキャッシュは除外されます。起動時にはユーザー内容を含まない App Store 更新確認を行う場合があり、StoreKit は Support/Local Insights の商品情報取得と任意購入を Apple 経由で処理します。IIDEV はカード情報を受信しません。サイトは広告 Cookie や行動分析を使いません。連絡先：<a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>。
         </p>
       </>
     ),
@@ -107,7 +107,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>저널 목록, iCloud, Apple</h3>
         <p>
-          앱에는 소규모 UTD24 저널명 목록만 기본 포함됩니다. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, FT50은 사용자가 다운로드 또는 새로 고침을 명시적으로 실행할 때 프로젝트의 공개 GitHub 저장소에서 받을 수 있으며, 사용 권한이 있는 호환 CSV를 직접 가져올 수도 있습니다. 사용자가 선택한 CSV는 Mac에서만 처리되고 업로드되지 않습니다. iCloud Drive 백업은 기본적으로 꺼져 있습니다. 번역 원문/번역문은 백업될 수 있지만 제공업체 메타데이터는 제거되고, AI 설정, API 키, 키체인 자격 증명, 안전 식별자, 원격 동의, 네트워크 캐시는 제외됩니다. 시작 시 사용자 콘텐츠가 없는 App Store 업데이트 확인을 할 수 있으며 StoreKit은 Support/Local Insights 상품 정보와 선택적 후원 구매를 Apple을 통해 처리합니다. IIDEV는 카드 정보를 받지 않습니다. 사이트는 광고 쿠키나 행동 분석을 사용하지 않습니다. 문의: <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
+          앱에는 소규모 UTD24 저널명 목록이 기본 포함됩니다. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, FT50은 사용자가 다운로드 또는 새로 고침을 명시적으로 실행할 때 프로젝트의 공개 GitHub 저장소에서 받을 수 있으며, 호환 CSV를 직접 가져올 수도 있습니다. 사용자가 선택한 CSV는 Mac에서만 처리되고 업로드되지 않습니다. iCloud Drive 백업은 기본적으로 꺼져 있습니다. 번역 원문/번역문은 백업될 수 있지만 제공업체 메타데이터는 제거되고, AI 설정, API 키, 키체인 자격 증명, 안전 식별자, 원격 동의, 네트워크 캐시는 제외됩니다. 시작 시 사용자 콘텐츠가 없는 App Store 업데이트 확인을 할 수 있으며 StoreKit은 Support/Local Insights 상품 정보와 선택적 후원 구매를 Apple을 통해 처리합니다. IIDEV는 카드 정보를 받지 않습니다. 사이트는 광고 쿠키나 행동 분석을 사용하지 않습니다. 문의: <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
         </p>
       </>
     ),
@@ -132,7 +132,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Listas, iCloud y Apple</h3>
         <p>
-          La app solo incluye una pequeña lista UTD24. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24 y FT50 pueden descargarse del repositorio público de GitHub del proyecto únicamente cuando eliges Descargar o Actualizar; también puedes importar CSV compatibles que tengas derecho a usar. Los CSV seleccionados por el usuario se procesan solo en el Mac y no se cargan. iCloud Drive está desactivado por defecto. El texto original/traducido puede formar parte del backup, pero se elimina metadata del proveedor; quedan excluidos configuración de IA, claves API, Llavero, identificador de seguridad, consentimientos remotos y cachés de red. Al iniciar puede hacerse una comprobación de App Store sin contenido del usuario; StoreKit obtiene información de productos para Support/Local Insights y procesa compras voluntarias mediante Apple. IIDEV no recibe datos de tarjetas. El sitio no usa cookies publicitarias ni analítica de comportamiento. Contacto: <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
+          La app incluye una pequeña lista UTD24 por defecto. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24 y FT50 pueden descargarse del repositorio público de GitHub del proyecto únicamente cuando eliges Descargar o Actualizar; también puedes importar CSV compatibles. Los CSV seleccionados por el usuario se procesan solo en el Mac y no se cargan. iCloud Drive está desactivado por defecto. El texto original/traducido puede formar parte del backup, pero se elimina metadata del proveedor; quedan excluidos configuración de IA, claves API, Llavero, identificador de seguridad, consentimientos remotos y cachés de red. Al iniciar puede hacerse una comprobación de App Store sin contenido del usuario; StoreKit obtiene información de productos para Support/Local Insights y procesa compras voluntarias mediante Apple. IIDEV no recibe datos de tarjetas. El sitio no usa cookies publicitarias ni analítica de comportamiento. Contacto: <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
         </p>
       </>
     ),
@@ -157,7 +157,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Listas, iCloud e Apple</h3>
         <p>
-          O app inclui apenas uma pequena lista UTD24. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24 e FT50 podem ser baixados do repositório público do projeto no GitHub somente quando você escolhe Baixar ou Atualizar; também é possível importar CSV compatíveis que você tenha direito de usar. CSV selecionados pelo usuário são processados apenas no Mac e não são enviados. iCloud Drive fica desativado por padrão. Texto original/traduzido pode fazer parte do backup, mas metadata do provedor é removida; configuração de IA, chaves API, Chaves, identificador de segurança, consentimentos remotos e caches de rede são excluídos. Na inicialização pode ocorrer uma verificação da App Store sem conteúdo do usuário; StoreKit obtém informações de produtos para Support/Local Insights e processa compras voluntárias pela Apple. A IIDEV não recebe dados de cartão. O site não usa cookies de publicidade nem análise comportamental. Contato: <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
+          O app inclui uma pequena lista UTD24 por padrão. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24 e FT50 podem ser baixados do repositório público do projeto no GitHub somente quando você escolhe Baixar ou Atualizar; também é possível importar CSV compatíveis. CSV selecionados pelo usuário são processados apenas no Mac e não são enviados. iCloud Drive fica desativado por padrão. Texto original/traduzido pode fazer parte do backup, mas metadata do provedor é removida; configuração de IA, chaves API, Chaves, identificador de segurança, consentimentos remotos e caches de rede são excluídos. Na inicialização pode ocorrer uma verificação da App Store sem conteúdo do usuário; StoreKit obtém informações de produtos para Support/Local Insights e processa compras voluntárias pela Apple. A IIDEV não recebe dados de cartão. O site não usa cookies de publicidade nem análise comportamental. Contato: <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
         </p>
       </>
     ),
@@ -182,7 +182,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Listes, iCloud et Apple</h3>
         <p>
-          L’app n’inclut qu’une petite liste UTD24. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24 et FT50 peuvent être téléchargés depuis le dépôt GitHub public du projet uniquement lorsque vous choisissez Télécharger ou Actualiser ; vous pouvez aussi importer des CSV compatibles que vous êtes autorisé à utiliser. Les CSV sélectionnés par l’utilisateur sont traités uniquement sur le Mac et ne sont pas téléversés. iCloud Drive est désactivé par défaut. Le texte source/traduit peut être sauvegardé, mais la metadata du fournisseur est supprimée ; configuration IA, clés API, Trousseau, identifiant de sécurité, consentements distants et caches réseau sont exclus. Au lancement, une vérification App Store sans contenu utilisateur peut avoir lieu ; StoreKit charge les informations produit pour Support/Local Insights et traite les achats volontaires via Apple. IIDEV ne reçoit pas les données de carte. Le site n’utilise ni cookies publicitaires ni analyse comportementale. Contact : <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
+          L’app inclut une petite liste UTD24 par défaut. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24 et FT50 peuvent être téléchargés depuis le dépôt GitHub public du projet uniquement lorsque vous choisissez Télécharger ou Actualiser ; vous pouvez aussi importer des CSV compatibles. Les CSV sélectionnés par l’utilisateur sont traités uniquement sur le Mac et ne sont pas téléversés. iCloud Drive est désactivé par défaut. Le texte source/traduit peut être sauvegardé, mais la metadata du fournisseur est supprimée ; configuration IA, clés API, Trousseau, identifiant de sécurité, consentements distants et caches réseau sont exclus. Au lancement, une vérification App Store sans contenu utilisateur peut avoir lieu ; StoreKit charge les informations produit pour Support/Local Insights et traite les achats volontaires via Apple. IIDEV ne reçoit pas les données de carte. Le site n’utilise ni cookies publicitaires ni analyse comportementale. Contact : <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
         </p>
       </>
     ),
@@ -207,7 +207,7 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Listen, iCloud und Apple</h3>
         <p>
-          Die App enthält nur eine kleine UTD24-Liste. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24 und FT50 können nur nach einer ausdrücklichen Aktion „Laden“ oder „Aktualisieren“ aus dem öffentlichen GitHub-Repository des Projekts geladen werden; kompatible CSV-Dateien, zu deren Nutzung Sie berechtigt sind, können ebenfalls importiert werden. Vom Benutzer ausgewählte CSV-Dateien werden nur auf dem Mac verarbeitet und nicht hochgeladen. iCloud Drive ist standardmäßig deaktiviert. Ausgangs-/Übersetzungstext kann gesichert werden, Anbieter-Metadaten werden entfernt; KI-Konfiguration, API-Schlüssel, Schlüsselbund, Sicherheitskennung, Remote-Einwilligungen und Netzwerk-Caches sind ausgeschlossen. Beim Start kann eine App-Store-Prüfung ohne Benutzerinhalte erfolgen; StoreKit lädt Produktdaten für Support/Local Insights und verarbeitet freiwillige Käufe über Apple. IIDEV erhält keine Kartendaten. Die Website nutzt keine Werbe-Cookies oder Verhaltensanalyse. Kontakt: <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
+          Die App enthält standardmäßig eine kleine UTD24-Liste. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24 und FT50 können nur nach einer ausdrücklichen Aktion „Laden“ oder „Aktualisieren“ aus dem öffentlichen GitHub-Repository des Projekts geladen werden; kompatible CSV-Dateien können ebenfalls importiert werden. Vom Benutzer ausgewählte CSV-Dateien werden nur auf dem Mac verarbeitet und nicht hochgeladen. iCloud Drive ist standardmäßig deaktiviert. Ausgangs-/Übersetzungstext kann gesichert werden, Anbieter-Metadaten werden entfernt; KI-Konfiguration, API-Schlüssel, Schlüsselbund, Sicherheitskennung, Remote-Einwilligungen und Netzwerk-Caches sind ausgeschlossen. Beim Start kann eine App-Store-Prüfung ohne Benutzerinhalte erfolgen; StoreKit lädt Produktdaten für Support/Local Insights und verarbeitet freiwillige Käufe über Apple. IIDEV erhält keine Kartendaten. Die Website nutzt keine Werbe-Cookies oder Verhaltensanalyse. Kontakt: <a href="mailto:iihciyekub@gmail.com">iihciyekub@gmail.com</a>.
         </p>
       </>
     ),
@@ -391,16 +391,14 @@ export default function PrivacyPage() {
 
       <LegalSection number="09" title="Journal lists">
         <p>
-          The App includes only a small default UTD24 journal-title list; it does
-          not bundle complete commercial catalogs. SCIE, SSCI, AHCI, ESCI, AJG
-          2024, UTD24, and FT50 lists may be downloaded from the public
+          The App includes a small default UTD24 journal-title list. SCIE, SSCI,
+          AHCI, ESCI, AJG 2024, UTD24, and FT50 lists may be downloaded from the public
           <a href="https://github.com/wosaide/wosaide-journal-lists">
             wosaide-journal-lists repository
           </a>{" "}
           only when you explicitly choose Download or Refresh. You may also
-          import compatible CSV files you obtained independently and have the
-          right to use. User-selected CSV files are processed locally and are
-          not uploaded. GitHub and its CDN may process ordinary delivery
+          import compatible CSV files. User-selected CSV files are processed
+          locally and are not uploaded. GitHub and its CDN may process ordinary delivery
           metadata such as IP address, timestamp, and request path for an
           explicit download or refresh.
         </p>
