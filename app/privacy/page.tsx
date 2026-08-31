@@ -24,11 +24,11 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>翻译与 AI 服务商</h3>
         <p>
-          AI 仅用于可选翻译及服务商配置，不用于生成 Web of Science 检索式。打开服务商设置、切换服务商或保存凭据不会自动刷新模型；只有你主动“刷新模型”或“测试连接”时才联系端点，而且不会发送翻译原文。首次向非回环端点发送翻译原文前会显示服务商、端点及隐私信息并征得许可。localhost、127.0.0.1 与 ::1 视为本机回环；LAN/mDNS 主机视为远程并要求 HTTPS 与许可。直接 OpenAI 翻译请求还会包含随机安装安全标识符。API 密钥保存在 macOS 钥匙串。成功翻译最多保存 100 条本机历史。
+          AI 服务商配置可用于可选翻译和可选截图文献 LLM 整理，但不用于生成 Web of Science 检索式；翻译与文献整理分别选择模型。打开服务商设置、切换服务商或保存凭据不会自动刷新模型，只有主动“刷新模型”或“测试连接”时才联系端点，且不会发送翻译原文或截图 OCR／参考文献文本。截图识别需要 macOS 屏幕录制权限，所选图片仅在本机捕获并 OCR，不保存或上传；截图翻译只把识别文本送入翻译许可流程。若主动开启文献 LLM 整理，只会把本地 OCR 文本发送给单独选择的整理模型，截图图片不会上传。首次向非回环端点发送翻译原文前会显示服务商、端点及隐私信息并征得许可。API 密钥保存在 macOS 钥匙串。
         </p>
         <h3>Crossref、机构全文、EasyScholar 与本地统计</h3>
         <p>
-          Crossref DOI 查询默认关闭，仅在主动使用时发送参考文献；元数据最多缓存 30 天，DOI 查询历史与 BibTeX 历史均默认 50 条、可设为 10–500，BibTeX 只在主动请求时获取。Library Access 默认关闭；启用后打开“添加机构”时可能刷新 Third Iron/BrowZine 支持机构目录，全文查询会发送 Library ID 与 DOI；已配置机构和最多 50 条近期 DOI 输入快照保存在本机，结果历史默认 100 条、可设为 1–10,000。EasyScholar 只在 CAS/JCR 查询或主动测试凭据时发送期刊名与用户 API Key，结果最多缓存 24 小时、历史最多 100 条。本地洞察仅保存 WOS 查询、已接受的期刊补全、DOI 查询/解析数量、日期和 WOS 字段等聚合统计；每日统计最多保留 400 天。IIDEV 不接收这些数据。
+          Crossref 仅在你从独立面板、截图识别文献流程或对话窗口中可见的 Crossref 动作主动发起查询时发送参考文献或 DOI；隐藏对话中的 Crossref 图标／Tab 动作不会停用独立面板。元数据最多缓存 30 天，DOI 与 BibTeX 历史均默认 50 条、可设为 10–500。Library Access 默认关闭；全新安装会在本机预先配置 PolyU 与 Monash，这一本地默认配置不会连接 Third Iron。启用后仅在需要刷新机构目录或主动全文查询时连接 Third Iron/BrowZine，并发送 Library ID 与 DOI。EasyScholar 只在 CAS/JCR 查询或主动测试凭据时发送期刊名与用户 API Key。本地洞察仅保存聚合统计。IIDEV 不接收这些数据。
         </p>
         <h3>期刊列表、iCloud 与 Apple 服务</h3>
         <p>
@@ -49,11 +49,11 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>翻譯與 AI 服務商</h3>
         <p>
-          AI 僅用於選用翻譯及服務商設定，不用於產生 Web of Science 檢索式。開啟服務商設定、切換服務商或儲存憑證不會自動探索模型；只有你主動「重新整理模型」或「測試連線」時才連線端點，而且不會傳送翻譯原文。首次向非迴路端點傳送翻譯原文前會顯示服務商、端點及隱私資訊並取得許可。localhost、127.0.0.1 與 ::1 視為本機迴路；LAN/mDNS 主機視為遠端並要求 HTTPS 與許可。直接 OpenAI 翻譯請求還會包含隨機安裝安全識別碼。API 金鑰儲存在 macOS 鑰匙圈。成功翻譯最多儲存 100 筆本機記錄。
+          AI 服務商設定可用於可選翻譯和可選截圖文獻 LLM 整理，但不用於產生 Web of Science 檢索式；翻譯與文獻整理分別選擇模型。開啟服務商設定、切換服務商或儲存憑證不會自動探索模型，只有主動「重新整理模型」或「測試連線」時才連線端點，且不會傳送翻譯原文或截圖 OCR／參考文獻文字。截圖辨識需要 macOS 螢幕錄製權限，所選圖片僅在本機擷取並 OCR，不儲存或上傳；截圖翻譯只把辨識文字送入翻譯許可流程。若主動開啟文獻 LLM 整理，只會把本機 OCR 文字傳送給獨立選擇的整理模型，截圖圖片不會上傳。首次向非迴路端點傳送翻譯原文前會顯示服務商、端點及隱私資訊並取得許可。API 金鑰儲存在 macOS 鑰匙圈。
         </p>
         <h3>Crossref、機構全文、EasyScholar 與本機統計</h3>
         <p>
-          Crossref DOI 查詢預設關閉，只在主動使用時傳送參考文獻；中繼資料最多快取 30 天，DOI 查詢記錄與 BibTeX 記錄均預設 50 筆、可設為 10–500，BibTeX 只在主動要求時取得。Library Access 預設關閉；啟用後開啟「新增機構」時可能重新整理 Third Iron/BrowZine 支援機構目錄，全文查詢會傳送 Library ID 與 DOI；已設定機構與最多 50 筆近期 DOI 輸入快照儲存在本機，結果記錄預設 100 筆、可設為 1–10,000。EasyScholar 只在 CAS/JCR 查詢或主動測試憑證時傳送期刊名稱與使用者 API Key，結果最多快取 24 小時、記錄最多 100 筆。本機洞察僅儲存 WOS 查詢、已接受的期刊補全、DOI 查詢/解析數量、日期和 WOS 欄位等彙總統計；每日統計最多保留 400 天。IIDEV 不接收這些資料。
+          Crossref 僅在你從獨立面板、截圖辨識文獻流程或對話視窗中可見的 Crossref 動作主動發起查詢時傳送參考文獻或 DOI；隱藏對話中的 Crossref 圖示／Tab 動作不會停用獨立面板。中繼資料最多快取 30 天，DOI 與 BibTeX 記錄均預設 50 筆、可設為 10–500。Library Access 預設關閉；全新安裝會在本機預先設定 PolyU 與 Monash，這一本機預設設定不會連線 Third Iron。啟用後僅在需要重新整理機構目錄或主動全文查詢時連線 Third Iron/BrowZine，並傳送 Library ID 與 DOI。EasyScholar 只在 CAS/JCR 查詢或主動測試憑證時傳送期刊名稱與使用者 API Key。本機洞察僅儲存彙總統計。IIDEV 不接收這些資料。
         </p>
         <h3>期刊清單、iCloud 與 Apple 服務</h3>
         <p>
@@ -74,11 +74,11 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>翻訳と AI プロバイダー</h3>
         <p>
-          AI は任意の翻訳とプロバイダー設定にのみ使用され、Web of Science 検索式の生成には使用されません。設定を開く、プロバイダーを切り替える、認証情報を保存するだけではモデル取得を行いません。モデル更新・接続テストを明示的に実行した場合のみエンドポイントへ接続し、翻訳元テキストは送りません。非ループバックへ翻訳元を初めて送る前に送信先とプライバシー情報を表示して許可を求めます。localhost、127.0.0.1、::1 はローカル、LAN/mDNS は HTTPS と同意が必要なリモートとして扱います。OpenAI への直接翻訳にはランダムなインストール安全識別子も含まれます。API キーは macOS キーチェーンに保存され、翻訳履歴は最大 100 件です。
+          AI プロバイダーは任意の翻訳と、スクリーンショットからローカル認識した参考文献テキストの任意 LLM 整理に使用でき、Web of Science 検索式の生成には使用されません。翻訳と文献整理は別々にモデルを選択します。モデル更新・接続テストを明示的に実行した場合のみエンドポイントへ接続し、翻訳元やスクリーンショット OCR テキストは送りません。スクリーンショット認識には macOS の画面収録権限が必要で、画像はローカルで取得・OCR 処理され、保存もアップロードもされません。翻訳では認識テキストだけが通常の同意フローへ進み、任意の文献整理を有効にした場合は OCR テキストだけが別途選択した整理モデルへ送られます。API キーは macOS キーチェーンに保存されます。
         </p>
         <h3>Crossref、機関全文、EasyScholar、統計</h3>
         <p>
-          Crossref は初期設定で無効で、明示的に使った場合のみ参考文献を送信します。メタデータは最大 30 日キャッシュされ、DOI 検索履歴と BibTeX 履歴はいずれも既定 50 件・10～500 件で、BibTeX は要求時だけ取得します。Library Access も初期設定で無効です。有効化後に「機関を追加」を開くと Third Iron/BrowZine の一覧を更新する場合があり、全文検索では Library ID と DOI を送信します。設定した機関と直近最大 50 件の DOI 入力スナップショットはローカル保存され、結果履歴は既定 100 件・1～10,000 件です。EasyScholar は CAS/JCR 検索または認証情報テスト時だけジャーナル名とユーザー API キーを送信し、結果は最大 24 時間キャッシュ、履歴は最大 100 件です。Local Insights は WOS 検索、採用したジャーナル候補、DOI 検索/解決数、日付、WOS フィールドなどの集計値だけを保持し、日別データは最大 400 日です。IIDEV はこれらを受信しません。
+          Crossref は専用パネル、スクリーンショット文献認識、またはダイアログに表示された Crossref アクションから明示的に検索した場合にのみ参考文献や DOI を送信します。ダイアログのアイコン／Tab アクションを隠しても専用パネルは無効になりません。メタデータは最大 30 日キャッシュされ、DOI と BibTeX の履歴は既定 50 件・10～500 件です。Library Access は初期設定で無効ですが、新規インストールでは PolyU と Monash がローカルに事前設定され、この設定だけでは Third Iron に接続しません。有効化後、機関一覧更新が必要な場合または明示的な全文検索時に Third Iron/BrowZine へ Library ID と DOI を送信します。EasyScholar は CAS/JCR または認証情報テスト時のみ接続し、Local Insights は集計値だけをローカル保存します。IIDEV はこれらを受信しません。
         </p>
         <h3>ジャーナルリスト、iCloud、Apple</h3>
         <p>
@@ -99,11 +99,11 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>번역 및 AI 제공업체</h3>
         <p>
-          AI는 선택적 번역과 제공업체 설정에만 사용되며 Web of Science 검색식 생성에는 사용되지 않습니다. 설정 열기, 제공업체 전환, 자격 증명 저장만으로 모델을 자동 조회하지 않습니다. 모델 새로 고침이나 연결 테스트를 명시적으로 실행할 때만 엔드포인트에 연결하며 번역 원문은 보내지 않습니다. 비루프백 엔드포인트로 원문을 처음 보내기 전에 대상과 개인정보 정보를 표시하고 동의를 요청합니다. localhost, 127.0.0.1, ::1은 로컬 루프백, LAN/mDNS는 HTTPS와 동의가 필요한 원격으로 처리합니다. OpenAI 직접 번역 요청에는 무작위 설치 안전 식별자도 포함됩니다. API 키는 macOS 키체인에 저장되고 번역 기록은 최대 100개입니다.
+          AI 제공업체는 선택적 번역과 스크린샷에서 로컬로 인식한 참고문헌 텍스트의 선택적 LLM 정리에 사용할 수 있으며 Web of Science 검색식 생성에는 사용되지 않습니다. 번역과 참고문헌 정리는 모델을 독립적으로 선택합니다. 모델 새로 고침이나 연결 테스트를 명시적으로 실행할 때만 엔드포인트에 연결하며 번역 원문이나 스크린샷 OCR 텍스트는 보내지 않습니다. 스크린샷 인식에는 macOS 화면 기록 권한이 필요하며 이미지는 로컬에서 캡처·OCR 처리되고 저장하거나 업로드하지 않습니다. 번역은 인식 텍스트만 일반 동의 흐름으로 보내고, 선택적 참고문헌 정리를 켠 경우 OCR 텍스트만 별도로 선택한 모델로 전송합니다. API 키는 macOS 키체인에 저장됩니다.
         </p>
         <h3>Crossref, 기관 원문, EasyScholar, 통계</h3>
         <p>
-          Crossref는 기본적으로 꺼져 있고 명시적으로 사용할 때만 참고문헌을 전송합니다. 메타데이터는 최대 30일 캐시되며 DOI 조회 기록과 BibTeX 기록은 모두 기본 50개, 10~500개로 설정할 수 있고 BibTeX는 요청 시에만 가져옵니다. Library Access도 기본적으로 꺼져 있습니다. 활성화한 뒤 기관 추가를 열면 Third Iron/BrowZine 목록을 갱신할 수 있고 원문 조회에는 Library ID와 DOI를 보냅니다. 구성한 기관과 최근 DOI 입력 스냅샷 최대 50개가 로컬에 저장되며 결과 기록은 기본 100개, 1~10,000개입니다. EasyScholar는 CAS/JCR 조회 또는 자격 증명 테스트 때만 저널명과 사용자 API 키를 전송하며 결과는 최대 24시간 캐시되고 기록은 최대 100개입니다. Local Insights는 WOS 검색, 선택한 저널 제안, DOI 조회/해결 수, 날짜, WOS 필드 등 집계 정보만 저장하며 일별 데이터는 최대 400일입니다. IIDEV는 이를 받지 않습니다.
+          Crossref는 전용 패널, 스크린샷 참고문헌 인식 또는 대화 창에 보이는 Crossref 작업에서 명시적으로 조회할 때만 참고문헌이나 DOI를 전송합니다. 대화 창의 아이콘/Tab 작업을 숨겨도 전용 패널은 비활성화되지 않습니다. 메타데이터는 최대 30일 캐시되며 DOI와 BibTeX 기록은 기본 50개, 10~500개로 설정할 수 있습니다. Library Access는 기본적으로 꺼져 있지만 새 설치에는 PolyU와 Monash가 로컬에 미리 구성되며 이 설정만으로 Third Iron에 연결하지 않습니다. 활성화 후 기관 목록 갱신이 필요하거나 명시적으로 원문을 조회할 때 Third Iron/BrowZine에 Library ID와 DOI를 보냅니다. EasyScholar는 CAS/JCR 또는 자격 증명 테스트 시에만 연결하고 Local Insights는 집계 정보만 로컬에 저장합니다. IIDEV는 이를 받지 않습니다.
         </p>
         <h3>저널 목록, iCloud, Apple</h3>
         <p>
@@ -124,11 +124,11 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Traducción y proveedores de IA</h3>
         <p>
-          La IA se usa solo para traducción opcional y configuración de proveedores, no para generar consultas de Web of Science. Abrir ajustes, cambiar de proveedor o guardar credenciales no actualiza modelos automáticamente. Solo Actualizar modelos o Probar conexión contactan el endpoint y no envían texto fuente. Antes de enviar texto por primera vez a un endpoint que no sea loopback, la app muestra el destino y solicita permiso. localhost, 127.0.0.1 y ::1 son loopback local; LAN/mDNS se tratan como remotos y requieren HTTPS y consentimiento. Las traducciones directas a OpenAI incluyen un identificador de seguridad de instalación aleatorio. Las claves API se guardan en el Llavero de macOS y el historial de traducción admite hasta 100 elementos.
+          Los proveedores de IA pueden usarse para traducción opcional y para el formato LLM opcional de referencias reconocidas localmente desde capturas; no se usan para generar consultas de Web of Science. Traducción y formato de referencias eligen modelos de forma independiente. Actualizar modelos o Probar conexión solo contactan el endpoint cuando se solicita y no envían texto de traducción ni OCR de capturas. El reconocimiento de capturas requiere permiso de Grabación de pantalla de macOS; la imagen se captura y procesa con OCR localmente y no se guarda ni se carga. La traducción pasa solo el texto reconocido a su flujo normal de consentimiento; el formato opcional envía solo texto OCR al modelo elegido por separado. Las claves API se guardan en el Llavero de macOS.
         </p>
         <h3>Crossref, texto completo, EasyScholar y estadísticas</h3>
         <p>
-          Crossref está desactivado por defecto y solo envía referencias al usarlo expresamente. Los metadatos pueden almacenarse 30 días; tanto el historial DOI como el historial BibTeX tienen un límite predeterminado de 50, configurable entre 10 y 500, y BibTeX solo se obtiene bajo petición. Library Access también está desactivado; después de activarlo, Añadir institución puede actualizar el directorio de Third Iron/BrowZine y una consulta envía Library ID y DOI. Las instituciones configuradas y hasta 50 instantáneas recientes de entrada DOI se guardan localmente; el historial de resultados es 100 por defecto, configurable de 1 a 10.000. EasyScholar solo se conecta para CAS/JCR o prueba de credenciales, con nombre de revista y clave API; caché de 24 horas e historial máximo de 100. Local Insights guarda solo estadísticas agregadas de WOS, revistas aceptadas, DOI, fechas y campos WOS; la actividad diaria se conserva hasta 400 días. IIDEV no recibe estos datos.
+          Crossref solo envía referencias o DOI cuando inicia expresamente una consulta desde el panel dedicado, el flujo de referencias por captura o una acción Crossref visible en la ventana de diálogo. Ocultar el icono/acción Tab del diálogo no desactiva el panel dedicado. Los metadatos pueden almacenarse 30 días y los historiales DOI y BibTeX tienen 50 entradas por defecto, configurables entre 10 y 500. Library Access está desactivado por defecto; una instalación nueva preconfigura localmente PolyU y Monash sin contactar Third Iron. Tras activarlo, Third Iron/BrowZine recibe Library ID y DOI solo al actualizar el directorio cuando sea necesario o al consultar expresamente el texto completo. EasyScholar solo se conecta para CAS/JCR o prueba de credenciales y Local Insights guarda únicamente estadísticas agregadas. IIDEV no recibe estos datos.
         </p>
         <h3>Listas, iCloud y Apple</h3>
         <p>
@@ -149,11 +149,11 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Tradução e provedores de IA</h3>
         <p>
-          A IA é usada somente para tradução opcional e configuração de provedores, não para gerar consultas do Web of Science. Abrir ajustes, trocar de provedor ou salvar credenciais não atualiza modelos automaticamente. Apenas Atualizar modelos ou Testar conexão contatam o endpoint, sem enviar texto de origem. Antes do primeiro envio a um endpoint não loopback, o app mostra o destino e pede permissão. localhost, 127.0.0.1 e ::1 são loopback local; LAN/mDNS são remotos e exigem HTTPS e consentimento. Traduções diretas à OpenAI incluem um identificador aleatório de segurança da instalação. Chaves de API ficam nas Chaves do macOS e o histórico de tradução comporta até 100 itens.
+          Provedores de IA podem ser usados para tradução opcional e para formatação LLM opcional de referências reconhecidas localmente em capturas; não são usados para gerar consultas do Web of Science. Tradução e formatação de referências escolhem modelos independentemente. Atualizar modelos ou Testar conexão só contatam o endpoint quando solicitado e não enviam texto de tradução nem OCR de captura. O reconhecimento por captura exige permissão de Gravação da Tela do macOS; a imagem é capturada e processada por OCR localmente e não é salva nem enviada. A tradução passa apenas o texto reconhecido pelo fluxo normal de consentimento; a formatação opcional envia somente texto OCR ao modelo escolhido separadamente. Chaves de API ficam no Chaveiro do macOS.
         </p>
         <h3>Crossref, texto completo, EasyScholar e estatísticas</h3>
         <p>
-          Crossref fica desativado por padrão e só envia referências quando usado explicitamente. Metadados podem ficar em cache por 30 dias; tanto o histórico DOI quanto o histórico BibTeX têm limite padrão de 50, configurável de 10 a 500, e BibTeX só é obtido sob solicitação. Library Access também fica desativado; depois de ativado, Adicionar instituição pode atualizar o diretório Third Iron/BrowZine e uma consulta envia Library ID e DOI. Instituições configuradas e até 50 instantâneos recentes de entrada DOI ficam salvos localmente; o histórico de resultados é 100 por padrão, configurável de 1 a 10.000. EasyScholar só se conecta para CAS/JCR ou teste de credenciais, com nome do periódico e chave API; cache de 24 horas e histórico máximo de 100. Local Insights guarda apenas estatísticas agregadas de WOS, sugestões aceitas, DOI, datas e campos WOS; atividade diária por até 400 dias. A IIDEV não recebe esses dados.
+          O Crossref só envia referências ou DOI quando você inicia explicitamente uma consulta pelo painel dedicado, pelo fluxo de referências de captura ou por uma ação Crossref visível na janela de diálogo. Ocultar o ícone/ação Tab do diálogo não desativa o painel dedicado. Metadados podem ficar em cache por 30 dias e os históricos DOI e BibTeX têm limite padrão de 50, configurável de 10 a 500. O Library Access fica desativado por padrão; uma nova instalação pré-configura localmente PolyU e Monash sem contatar o Third Iron. Depois de ativado, Third Iron/BrowZine recebe Library ID e DOI somente ao atualizar o diretório quando necessário ou ao consultar explicitamente o texto completo. EasyScholar só se conecta para CAS/JCR ou teste de credenciais e Local Insights guarda apenas estatísticas agregadas. A IIDEV não recebe esses dados.
         </p>
         <h3>Listas, iCloud e Apple</h3>
         <p>
@@ -174,11 +174,11 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Traduction et fournisseurs d’IA</h3>
         <p>
-          L’IA sert uniquement à la traduction facultative et à la configuration des fournisseurs, pas à générer des requêtes Web of Science. Ouvrir les réglages, changer de fournisseur ou enregistrer des identifiants ne déclenche pas de découverte automatique des modèles. Seules les actions Actualiser les modèles ou Tester la connexion contactent le point de terminaison, sans envoyer le texte source. Avant le premier envoi vers un endpoint non loopback, l’app affiche la destination et demande l’autorisation. localhost, 127.0.0.1 et ::1 sont locaux ; LAN/mDNS sont distants et nécessitent HTTPS et consentement. Les traductions directes OpenAI incluent un identifiant aléatoire de sécurité d’installation. Les clés API restent dans le Trousseau macOS et l’historique de traduction contient jusqu’à 100 éléments.
+          Les fournisseurs d’IA peuvent servir à la traduction facultative et au formatage LLM facultatif de références reconnues localement depuis des captures ; ils ne servent pas à générer les requêtes Web of Science. Traduction et formatage choisissent leurs modèles indépendamment. Actualiser les modèles ou Tester la connexion ne contactent le point de terminaison que sur demande et n’envoient ni texte de traduction ni OCR de capture. La reconnaissance par capture nécessite l’autorisation Enregistrement de l’écran de macOS ; l’image est capturée et traitée par OCR localement, sans être enregistrée ni téléversée. La traduction transmet seulement le texte reconnu via son flux normal de consentement ; le formatage facultatif envoie uniquement le texte OCR au modèle choisi séparément. Les clés API restent dans le Trousseau macOS.
         </p>
         <h3>Crossref, texte intégral, EasyScholar et statistiques</h3>
         <p>
-          Crossref est désactivé par défaut et n’envoie des références que lors d’une utilisation explicite. Les métadonnées peuvent être mises en cache 30 jours ; l’historique DOI et l’historique BibTeX ont chacun une limite par défaut de 50, configurable de 10 à 500, et BibTeX n’est obtenu que sur demande. Library Access est aussi désactivé ; après activation, Ajouter un établissement peut actualiser l’annuaire Third Iron/BrowZine et une recherche envoie Library ID et DOI. Les établissements configurés et jusqu’à 50 instantanés récents de saisie DOI sont stockés localement ; l’historique des résultats est de 100 par défaut, configurable de 1 à 10 000. EasyScholar se connecte seulement pour CAS/JCR ou un test d’identifiants, avec nom de revue et clé API ; cache 24 heures et historique maximum 100. Local Insights conserve uniquement des agrégats WOS, suggestions acceptées, DOI, dates et champs WOS ; données quotidiennes jusqu’à 400 jours. IIDEV ne reçoit pas ces données.
+          Crossref n’envoie des références ou DOI que lorsque vous lancez explicitement une recherche depuis le panneau dédié, le flux de références par capture ou une action Crossref visible dans la fenêtre de dialogue. Masquer l’icône/action Tab du dialogue ne désactive pas le panneau dédié. Les métadonnées peuvent être mises en cache 30 jours et les historiques DOI et BibTeX ont une limite par défaut de 50, configurable de 10 à 500. Library Access est désactivé par défaut ; une nouvelle installation préconfigure localement PolyU et Monash sans contacter Third Iron. Après activation, Third Iron/BrowZine reçoit Library ID et DOI uniquement lors d’une actualisation nécessaire de l’annuaire ou d’une recherche explicite de texte intégral. EasyScholar se connecte seulement pour CAS/JCR ou un test d’identifiants et Local Insights conserve uniquement des agrégats. IIDEV ne reçoit pas ces données.
         </p>
         <h3>Listes, iCloud et Apple</h3>
         <p>
@@ -199,11 +199,11 @@ const translations: LegalTranslation[] = [
         </p>
         <h3>Übersetzung und KI-Anbieter</h3>
         <p>
-          KI wird nur für optionale Übersetzung und Anbieter-Konfiguration verwendet, nicht zum Erzeugen von Web-of-Science-Abfragen. Einstellungen öffnen, Anbieter wechseln oder Zugangsdaten speichern löst keine automatische Modellsuche aus. Nur Modelle aktualisieren oder Verbindung testen kontaktiert den Endpunkt, ohne Ausgangstext zu senden. Vor dem ersten Versand an einen Nicht-Loopback-Endpunkt zeigt die App das Ziel und bittet um Erlaubnis. localhost, 127.0.0.1 und ::1 sind lokal; LAN/mDNS gelten als remote und benötigen HTTPS und Einwilligung. Direkte OpenAI-Übersetzungen enthalten zusätzlich eine zufällige Installations-Sicherheitskennung. API-Schlüssel liegen im macOS-Schlüsselbund; Übersetzungsverlauf maximal 100 Einträge.
+          KI-Anbieter können für optionale Übersetzung und optionale LLM-Formatierung von lokal erkanntem Screenshot-Literaturtext verwendet werden; Web-of-Science-Abfragen werden damit nicht erzeugt. Übersetzung und Literaturformatierung wählen ihre Modelle unabhängig. Modelle aktualisieren oder Verbindung testen kontaktiert den Endpunkt nur auf ausdrückliche Anforderung und sendet weder Übersetzungstext noch Screenshot-OCR. Screenshot-Erkennung benötigt die macOS-Berechtigung „Bildschirmaufnahme“; das Bild wird lokal erfasst und per OCR verarbeitet und weder gespeichert noch hochgeladen. Übersetzung leitet nur erkannten Text durch den normalen Einwilligungsablauf; die optionale Literaturformatierung sendet ausschließlich OCR-Text an das separat gewählte Modell. API-Schlüssel liegen im macOS-Schlüsselbund.
         </p>
         <h3>Crossref, Volltext, EasyScholar und Statistiken</h3>
         <p>
-          Crossref ist standardmäßig deaktiviert und sendet Literaturangaben nur bei ausdrücklicher Nutzung. Metadaten können bis zu 30 Tage zwischengespeichert werden; DOI- und BibTeX-Verlauf haben jeweils standardmäßig 50 Einträge und sind auf 10–500 einstellbar, BibTeX wird nur auf Anforderung geladen. Library Access ist ebenfalls deaktiviert; nach der Aktivierung kann Einrichtung hinzufügen das Third-Iron/BrowZine-Verzeichnis aktualisieren, eine Volltextabfrage sendet Library ID und DOI. Konfigurierte Einrichtungen und bis zu 50 aktuelle DOI-Eingabe-Snapshots werden lokal gespeichert; der Ergebnisverlauf hat standardmäßig 100 Einträge und ist auf 1–10.000 einstellbar. EasyScholar verbindet sich nur für CAS/JCR oder Zugangsdaten-Test mit Zeitschriftentitel und API-Schlüssel; Cache 24 Stunden, Verlauf maximal 100. Local Insights speichert nur WOS-, angenommene Zeitschriften-, DOI-, Datums- und WOS-Feld-Aggregate; Tagesdaten bis 400 Tage. IIDEV erhält diese Daten nicht.
+          Crossref sendet Literaturangaben oder DOI nur, wenn Sie ausdrücklich eine Abfrage im eigenen Panel, im Screenshot-Literaturworkflow oder über eine sichtbare Crossref-Aktion im Dialogfenster starten. Das Ausblenden von Symbol/Tab-Aktion deaktiviert das eigene Panel nicht. Metadaten können bis zu 30 Tage zwischengespeichert werden; DOI- und BibTeX-Verlauf haben standardmäßig 50 Einträge und sind auf 10–500 einstellbar. Library Access ist standardmäßig deaktiviert; bei einer neuen Installation werden PolyU und Monash lokal vorkonfiguriert, ohne Third Iron zu kontaktieren. Nach der Aktivierung erhält Third Iron/BrowZine Library ID und DOI nur bei einer erforderlichen Verzeichnisaktualisierung oder einer ausdrücklichen Volltextabfrage. EasyScholar verbindet sich nur für CAS/JCR oder Zugangsdaten-Test, und Local Insights speichert nur aggregierte Statistiken. IIDEV erhält diese Daten nicht.
         </p>
         <h3>Listen, iCloud und Apple</h3>
         <p>
@@ -220,7 +220,7 @@ export default function PrivacyPage() {
       eyebrow="Legal · Privacy"
       title="Privacy Policy"
       intro="WOS Aide Bar has no IIDEV account system, advertising, tracking, or developer-operated analytics. App data stays primarily on your Mac; user content leaves the Mac only for the external feature you explicitly use."
-      updated="Effective August 31, 2026"
+      updated="Effective September 1, 2026"
       translations={translations}
     >
       <LegalSection number="01" title="Scope and developer collection">
@@ -271,20 +271,41 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
+      <LegalSection number="04" title="Screenshot recognition and local OCR">
+        <p>
+          Screenshot reference recognition and screenshot translation run only
+          after you explicitly start the feature and select a screen rectangle.
+          They require macOS Screen Recording permission. The selected image is
+          captured and processed with Apple Vision OCR locally on the Mac and is
+          not saved to App history or uploaded.
+        </p>
+        <p>
+          Screenshot translation passes only recognized text into the normal
+          translation flow. If optional LLM reference formatting is enabled in
+          Crossref settings, only locally recognized bibliography OCR text is
+          sent to the separately selected formatting model; the screenshot image
+          is never sent. This formatter is an explicit opt-in setting and does
+          not present the separate translation-consent sheet. If the model fails,
+          the App falls back to local reference parsing.
+        </p>
+      </LegalSection>
+
       <LegalSection
-        number="04"
-        title="Optional AI translation and model providers"
+        number="05"
+        title="Optional AI features and model providers"
       >
         <p>
-          AI provider configuration is used only for optional translation; the
-          App does not use an LLM to generate Web of Science queries. Opening
+          AI provider profiles can be used for optional translation and optional
+          screenshot-reference formatting; the App does not use an LLM to
+          generate Web of Science queries. Translation and reference formatting
+          select their models independently. Opening
           provider settings, switching providers, or saving a credential does
           not automatically refresh models. Model discovery contacts the
           configured endpoint only when you explicitly choose Refresh Models.
           Test Connection also runs only on explicit action and sends a
           synthetic structured-output probe. These setup actions may send
           credentials and ordinary request metadata, but no translation source
-          text.
+          text or screenshot OCR/reference text.
         </p>
         <p>
           Before the first translation request to a non-loopback provider and
@@ -318,7 +339,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="05" title="Translation history">
+      <LegalSection number="06" title="Translation history">
         <p>
           Successful translations are stored locally for reuse, up to 100
           entries. Entries can contain source and translated text, language
@@ -328,10 +349,15 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="06" title="Optional Crossref DOI lookup">
+      <LegalSection number="07" title="Crossref DOI and reference lookup">
         <p>
-          Crossref lookup is off by default. After you enable and explicitly
-          choose it, reference lines are sent directly to the Crossref REST API.
+          Crossref is contacted only when you explicitly start a lookup from
+          the dedicated Crossref panel, the screenshot-reference workflow, or a
+          Crossref action visible in the conversation/Quick Search window. The
+          setting that shows or hides the Crossref icon and Tab action controls
+          only that conversation entry point; hiding it does not disable the
+          dedicated Crossref panel or other DOI tools. Reference text or DOI
+          values used for a lookup are sent directly to the Crossref REST API.
           Returned metadata may be cached locally for up to 30 days. Completed
           queries, original references, and results remain local until deleted.
           The history limit defaults to 50 and is configurable from 10 to 500.
@@ -351,11 +377,14 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="07" title="Optional institutional full-text lookup">
+      <LegalSection number="08" title="Optional institutional full-text lookup">
         <p>
           Library Access uses Third Iron services associated with BrowZine and
           LibKey and is off by default. Its Quick Search launcher stays hidden
-          until you enable it. After Library Access is enabled, opening Add
+          until you enable it. On a new installation, Hong Kong Polytechnic
+          University (PolyU) and Monash University are preconfigured locally for
+          convenience; this local default does not contact Third Iron and can be
+          changed or cleared. After Library Access is enabled, opening Add
           Institution may refresh the supported institution directory when the
           local copy is missing or older than 30 days. A full-text lookup sends
           the selected Library ID and DOI directly to Third Iron over HTTPS to
@@ -374,7 +403,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="08" title="Optional EasyScholar journal-rank lookup">
+      <LegalSection number="09" title="Optional EasyScholar journal-rank lookup">
         <p>
           EasyScholar is contacted only after you press the CAS/JCR lookup
           action or explicitly test a saved credential. The selected journal
@@ -389,14 +418,16 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="09" title="Journal lists">
+      <LegalSection number="10" title="Journal lists">
         <p>
           The App includes a small default UTD24 journal-title list. SCIE, SSCI,
           AHCI, ESCI, AJG 2024, UTD24, and FT50 lists may be downloaded from the public
           <a href="https://github.com/wosaide/wosaide-journal-lists">
             wosaide-journal-lists repository
-          </a>{" "}
-          only when you explicitly choose Download or Refresh. You may also
+          </a>. Opening journal-catalog settings may check that repository&apos;s public
+          commit/version status without research content. Actual CSV files are
+          fetched only when you explicitly choose Download, Update, or Refresh.
+          You may also
           import compatible CSV files. User-selected CSV files are processed
           locally and are not uploaded. GitHub and its CDN may process ordinary delivery
           metadata such as IP address, timestamp, and request path for an
@@ -410,7 +441,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="10" title="Optional iCloud Drive backup">
+      <LegalSection number="11" title="Optional iCloud Drive backup">
         <p>
           iCloud Drive backup is off by default. If enabled, selected local App
           data can be packaged into WOS Aide Bar backup files in your iCloud
@@ -428,7 +459,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="11" title="Browser, App Store, and StoreKit">
+      <LegalSection number="12" title="Browser, App Store, and StoreKit">
         <p>
           Starting a WOS search asks macOS to open a generated Web of Science URL
           in your default browser. Browser activity, authentication,
@@ -450,14 +481,15 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection number="12" title="Retention, Site data, and contact">
+      <LegalSection number="13" title="Retention, Site data, and contact">
         <p>
           Device-local data remains until you delete it, an applicable retention
           limit removes it, you remove the App, or macOS removes it. API
           credentials are stored separately in macOS Keychain and may survive
           App deletion or device migration under macOS/iCloud Keychain behavior;
-          remove credentials in Translation → Configuration or EasyScholar
-          settings if you want them deleted before uninstalling. Revoking
+          remove AI credentials in Settings → LLM or remove EasyScholar
+          credentials in EasyScholar settings if you want them deleted before
+          uninstalling. Revoking
           translation-provider permission prevents future remote requests but
           cannot delete data already processed by a provider. Data already
           processed by Third Iron or another external service is governed by

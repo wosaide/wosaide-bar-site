@@ -31,7 +31,7 @@ for (const [path, title, phrase] of [
   ["/zh-hans", "WOS Aide Bar", "更轻松地构建 WOS 检索式"],
   ["/zh-hant", "WOS Aide Bar", "更輕鬆地建立 WOS 檢索式"],
   ["/community", "加入讨论群", "一起把工具做得更好"],
-  ["/privacy", "Privacy Policy", "Optional AI translation and model providers"],
+  ["/privacy", "Privacy Policy", "Optional AI features and model providers"],
   ["/terms", "Terms of Use", "Journal-list sources"],
   ["/support", "Support", "How can we help?"],
 ]) {
@@ -74,11 +74,40 @@ test("privacy page reflects current app behavior", async () => {
   assert.match(html, /does not use an LLM to generate Web of Science queries/);
   assert.match(html, /history limit defaults to 50/);
   assert.match(html, /Library Access uses Third Iron/);
+  assert.match(html, /Screenshot recognition and local OCR/);
+  assert.match(html, /screenshot image is never sent/);
+  assert.match(html, /Hong Kong Polytechnic University \(PolyU\).*Monash University/s);
+  assert.match(html, /hiding it does not disable the dedicated Crossref panel/);
   assert.match(html, /iCloud Drive backup is off by default/);
   assert.doesNotMatch(
     html,
     /Optional AI Assistant|three-stage query-generation|AI query builder/i,
   );
+});
+
+test("terms page includes every app language and current permission model", async () => {
+  const response = await render("/terms");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  for (const language of [
+    "English",
+    "简体中文",
+    "繁體中文",
+    "日本語",
+    "한국어",
+    "Español",
+    "Português \\(Brasil\\)",
+    "Français",
+    "Deutsch",
+  ]) {
+    assert.match(html, new RegExp(language));
+  }
+
+  assert.match(html, /Screen Recording permission/);
+  assert.match(html, /screenshot image is not uploaded/);
+  assert.match(html, /does not present the separate translation-consent sheet/);
+  assert.match(html, /constructs Web of Science queries deterministically/);
 });
 
 test("feature navigation uses the client-side intro bypass", async () => {

@@ -159,7 +159,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "Settings & control",
         title: "Configure the app around your workflow.",
         description:
-          "Configure translation providers and models, privacy consent, journal catalogs, full-text access, personal lists, language, appearance, launch behavior, and shortcuts from one native settings window.",
+          "Manage LLM providers centrally, then choose translation and screenshot-reference models independently. The same native settings window also covers privacy consent, journal catalogs, full-text access, personal lists, language, appearance, launch behavior, and shortcuts.",
         stat: "Keychain credentials · permission controls",
         ariaLabel:
           "Tour of WOS Aide Bar settings for translation providers, privacy, journal lists, full-text access, appearance, and shortcuts",
@@ -230,7 +230,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "Made for macOS",
         title: "Tune it to your desktop",
         description:
-          "Launch at login, switch among nine languages, follow the system appearance or choose light or dark, set global shortcuts, and size the quick-search window by percentage or pixels.",
+          "Launch at login, switch among nine languages, choose light or dark appearance, set global shortcuts, and size the quick-search window by percentage or pixels.",
         stat: "macOS 13+ · light and dark",
         imageAlt: "WOS Aide Bar general settings",
       },
@@ -246,19 +246,19 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "Read the clipboard only when you ask, then turn journal titles, topics, authors, DOIs, WOS IDs, and advanced expressions into ready-to-open searches.",
       },
       {
-        title: "Translation provider freedom",
+        title: "LLM providers, task-specific models",
         description:
-          "Use remote or loopback AI providers only for optional translation, with provider templates, model discovery on explicit request, manual model IDs, enable controls, Keychain credentials, and connection health.",
+          "Manage remote or loopback AI providers once, then independently choose a model for optional translation and for optional screenshot-reference formatting. Provider templates, explicit model discovery, manual model IDs, enable controls, Keychain credentials, and connection health stay centralized.",
       },
       {
         title: "Crossref DOI lookup",
         description:
-          "Resolve one or several references only when you choose the Crossref action, with history and cache controls available in Settings.",
+          "Resolve one or several references from the dedicated panel, a visible conversation action, or screenshot reference recognition. Screenshot OCR runs locally; optional LLM formatting sends OCR text only, never the screenshot image.",
       },
       {
         title: "Selection translation",
         description:
-          "Select text in another app and press your shortcut, or enter source text manually. Remote source text is sent only after consent, and up to 100 results stay in local history.",
+          "Select text in another app, enter source text manually, or translate a selected screen area after local OCR. Screenshot images stay on the Mac; remote translation receives recognized/source text only after consent, and up to 100 results stay in local history.",
       },
       {
         title: "Institutional full-text access",
@@ -297,7 +297,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "User-initiated access",
         description:
-          "Clipboard and selected text are read only after an explicit panel, refresh, or shortcut action. Crossref and Library Access are off by default; remote translation content requires consent.",
+          "Clipboard, selected text, and screenshot areas are accessed only after an explicit panel, refresh, shortcut, or screenshot action. Crossref sends content only for an explicit lookup. Library Access is off by default, and remote translation content requires consent.",
       },
       {
         title: "Sandboxed local storage",
@@ -307,7 +307,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "Transparent external services",
         description:
-          "Model refresh and connection tests run only when requested and never include translation source text. Before remote translation text is sent, the app names the provider and endpoint and asks permission. Requests go directly to that service, not through IIDEV.",
+          "Model refresh and connection tests run only when requested and include no research text. Before remote translation text is sent, the app names the provider and endpoint and asks permission. Optional screenshot-reference formatting sends only local OCR text to the model you explicitly select. Requests go directly to that service, not through IIDEV.",
       },
     ],
     detailsKicker: "Clear before you install",
@@ -370,7 +370,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "设置与控制",
         title: "让 App 适应你的科研工作流。",
         description:
-          "在一个原生设置窗口中配置翻译服务商与模型、外发许可、期刊目录、机构全文、个人清单、语言、外观、登录启动和快捷键。",
+          "在一个原生设置窗口中集中管理 LLM 服务商，再分别选择翻译模型与截图文献整理模型，同时管理外发许可、期刊目录、机构全文、个人清单、语言、外观、登录启动和快捷键。",
         stat: "钥匙串保存密钥 · 明确权限控制",
         ariaLabel:
           "WOS Aide Bar 的翻译服务商、隐私、期刊清单、机构全文、外观和快捷键设置演示",
@@ -439,7 +439,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "为 macOS 而生",
         title: "按自己的桌面习惯调整",
         description:
-          "登录时启动、九种语言、跟随系统或固定浅色/深色、全局快捷键，以及按百分比或像素设置快速检索窗口宽度。",
+          "登录时启动、九种语言、浅色/深色外观、全局快捷键，以及按百分比或像素设置快速检索窗口宽度。",
         stat: "macOS 13+ · 浅色与深色",
         imageAlt: "WOS Aide Bar 通用设置",
       },
@@ -453,12 +453,12 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         description: "仅在你要求时读取剪贴板，把期刊、主题、作者、DOI、WOS ID 与高级表达式变成可打开的检索。",
       },
       {
-        title: "自由选择翻译服务",
-        description: "AI 服务只用于可选翻译。可选择远程或回环端点，并使用服务商模板、主动模型发现、手动模型 ID、启用开关、钥匙串凭据与连接状态。",
+        title: "统一服务商，任务独立选模型",
+        description: "集中管理远程或回环 LLM 服务商，再分别为可选翻译和可选截图文献整理选择模型；服务商模板、主动模型发现、手动模型 ID、启用开关、钥匙串凭据与连接状态统一管理。",
       },
       {
         title: "Crossref DOI 解析",
-        description: "只有选择 Crossref 操作时才解析一条或多条参考文献；设置中可管理历史与缓存。",
+        description: "可从独立 Crossref 面板、对话窗口动作或截图识别文献流程解析一条或多条参考文献。截图先在本机 OCR；可选 LLM 整理只发送 OCR 文本，不上传截图图片。",
       },
       {
         title: "全局划词翻译",
@@ -494,7 +494,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     privacyItems: [
       {
         title: "仅在用户操作时访问",
-        description: "只有打开面板、主动刷新或按下快捷键后才读取剪贴板或选中文字；Crossref 与机构全文默认关闭，远程翻译原文需先取得许可。",
+        description: "只有打开面板、主动刷新、按下快捷键或主动框选截图后才读取剪贴板、选中文字或屏幕区域；Crossref 仅在主动查询时发送内容，机构全文默认关闭，远程翻译原文需先取得许可。",
       },
       {
         title: "沙盒内本地保存",
@@ -561,7 +561,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "設定與控制",
         title: "讓 App 配合你的科研工作流程。",
         description:
-          "在一個原生設定視窗中設定翻譯服務商與模型、外傳許可、期刊目錄、機構全文、個人清單、語言、外觀、登入啟動和快速鍵。",
+          "在一個原生設定視窗中集中管理 LLM 服務商，再分別選擇翻譯模型與截圖文獻整理模型，同時管理外傳許可、期刊目錄、機構全文、個人清單、語言、外觀、登入啟動和快速鍵。",
         stat: "鑰匙圈保存密鑰 · 明確權限控制",
         ariaLabel:
           "WOS Aide Bar 的翻譯服務商、隱私、期刊清單、機構全文、外觀和快速鍵設定示範",
@@ -630,7 +630,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "為 macOS 而生",
         title: "按自己的桌面習慣調整",
         description:
-          "登入時啟動、九種語言、跟隨系統或固定淺色／深色、全域快速鍵，以及按百分比或像素設定快速檢索視窗寬度。",
+          "登入時啟動、九種語言、淺色／深色外觀、全域快速鍵，以及按百分比或像素設定快速檢索視窗寬度。",
         stat: "macOS 13+ · 淺色與深色",
         imageAlt: "WOS Aide Bar 一般設定",
       },
@@ -644,12 +644,12 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         description: "僅在你要求時讀取剪貼簿，把期刊、主題、作者、DOI、WOS ID 與進階運算式變成可開啟的檢索。",
       },
       {
-        title: "自由選擇翻譯服務",
-        description: "AI 服務只用於選用翻譯。可選擇遠端或迴路端點，並使用服務商範本、主動模型探索、手動模型 ID、啟用開關、鑰匙圈憑證與連線狀態。",
+        title: "統一服務商，任務獨立選模型",
+        description: "集中管理遠端或迴路 LLM 服務商，再分別為可選翻譯和可選截圖文獻整理選擇模型；服務商範本、主動模型探索、手動模型 ID、啟用開關、鑰匙圈憑證與連線狀態統一管理。",
       },
       {
         title: "Crossref DOI 解析",
-        description: "只有選擇 Crossref 操作時才解析一條或多條參考文獻；設定中可管理歷史與快取。",
+        description: "可從獨立 Crossref 面板、對話視窗動作或截圖辨識文獻流程解析一條或多條參考文獻。截圖先在本機 OCR；可選 LLM 整理只傳送 OCR 文字，不上傳截圖圖片。",
       },
       {
         title: "全域選取文字翻譯",
@@ -685,7 +685,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     privacyItems: [
       {
         title: "僅在使用者操作時存取",
-        description: "只有開啟面板、主動重新整理或按下快速鍵後才讀取剪貼簿或選取文字；Crossref 與機構全文預設關閉，遠端翻譯原文需先取得許可。",
+        description: "只有開啟面板、主動重新整理、按下快速鍵或主動框選截圖後才讀取剪貼簿、選取文字或螢幕區域；Crossref 僅在主動查詢時傳送內容，機構全文預設關閉，遠端翻譯原文需先取得許可。",
       },
       {
         title: "沙盒內本機保存",

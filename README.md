@@ -9,7 +9,7 @@ app.
 - `/zh-hans/` — Simplified Chinese product page
 - `/zh-hant/` — Traditional Chinese product page
 - `/privacy/` — privacy policy with summaries in all nine app languages
-- `/terms/` — bilingual supplemental terms
+- `/terms/` — supplemental terms with summaries in all nine app languages
 - `/support/` — support and troubleshooting
 
 The production GitHub Pages URL is:
@@ -19,15 +19,22 @@ The production GitHub Pages URL is:
 
 Website copy must stay aligned with the shipping app:
 
-- SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 can be downloaded from the
-  project GitHub repository only after an explicit Download or Refresh action;
+- opening journal-catalog settings may check the public GitHub commit/version
+  status without research content; SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24,
+  and FT50 CSV files are downloaded only after an explicit Download, Update, or
+  Refresh action;
 - compatible user-selected journal CSV files are processed locally and are not
   uploaded;
-- AI is used only for optional translation/provider configuration; the app does
-  not generate Web of Science queries with an LLM;
+- AI provider profiles can be used for optional translation and optional LLM
+  formatting of locally recognized screenshot reference text; the app does not
+  generate Web of Science queries with an LLM;
 - remote translation content requires explicit user permission;
-- Crossref DOI lookup is optional and off by default;
-- Library Access is optional and off by default;
+- screenshot images are captured and OCR-processed locally after explicit user
+  action and are not uploaded; optional reference formatting sends OCR text only;
+- Crossref is contacted only after an explicit lookup; its conversation icon
+  and Tab action can be hidden without disabling the dedicated Crossref panel;
+- Library Access is off by default; new installations locally preconfigure
+  PolyU and Monash without contacting Third Iron;
 - optional iCloud Drive backup is off by default;
 - no advertising, analytics, or tracking SDK.
 
