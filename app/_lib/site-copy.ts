@@ -85,11 +85,6 @@ const screens = {
     imageWidth: 900,
     imageHeight: 688,
   },
-  insights: {
-    image: "/screenshots/local-insights.png",
-    imageWidth: 900,
-    imageHeight: 688,
-  },
   general: {
     image: "/screenshots/settings-general.png",
     imageWidth: 900,
@@ -159,7 +154,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "Settings & control",
         title: "Configure the app around your workflow.",
         description:
-          "Manage LLM providers centrally, then choose translation and screenshot-reference models independently. The same native settings window also covers privacy consent, journal catalogs, full-text access, personal lists, language, appearance, launch behavior, and shortcuts.",
+          "Manage LLM providers centrally, then choose task-specific models for translation, screenshot-reference formatting, and Math Capture. The same native settings window also covers privacy consent, journal catalogs, full-text access, personal lists, language, appearance, launch behavior, and shortcuts.",
         stat: "Keychain credentials · permission controls",
         ariaLabel:
           "Tour of WOS Aide Bar settings for translation providers, privacy, journal lists, full-text access, appearance, and shortcuts",
@@ -185,9 +180,9 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "Menu bar",
         title: "Everything starts one click away",
         description:
-          "Open Quick Search, search the clipboard, revisit recent searches, manage your journal list, inspect local usage, or change language and theme from one compact menu.",
+          "Open Quick Search, search the clipboard, revisit recent searches, manage your journal list, or change language and theme from one compact menu.",
         stat: "Native menu-bar control center",
-        imageAlt: "WOS Aide Bar main menu with search, settings, journal lists, and local insights",
+        imageAlt: "WOS Aide Bar main menu with search, settings, and journal lists",
       },
       {
         ...screens.search,
@@ -203,8 +198,8 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "Journal catalogs",
         title: "Current lists, installed only when you need them",
         description:
-          "Use SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 sources. Download or refresh them from the project GitHub repository only when you choose to, or replace a source with a compatible CSV. Files are validated, indexed, and matched locally.",
-        stat: "7 sources · local CSV processing",
+          "Use Web of Science SCIE/SSCI/AHCI/ESCI, Scopus, ScienceDirect, PubMed/NLM, EI Compendex, CNKI core lists, AJG 2024, UTD24, and FT50. Download or refresh them from the project GitHub repository only when you choose to, or replace a source with a compatible CSV. Files are validated, indexed, and matched locally.",
+        stat: "Multi-database catalogs · local CSV processing",
         imageAlt: "WOS Aide Bar journal catalog manager",
       },
       {
@@ -215,15 +210,6 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "Start with UTD24, enter one journal per line, or import a CSV. Your list remains immediately available from the floating search window.",
         stat: "Manual editing or CSV import",
         imageAlt: "WOS Aide Bar personal journal list editor",
-      },
-      {
-        ...screens.insights,
-        badge: "Local insights",
-        title: "See your workflow without becoming telemetry",
-        description:
-          "Review WOS searches, DOI lookups, accepted journal suggestions, streaks, DOI resolution success, and frequently used WOS fields. Statistics are calculated and stored only on this Mac.",
-        stat: "Private usage statistics",
-        imageAlt: "WOS Aide Bar local insights calendar and activity statistics",
       },
       {
         ...screens.general,
@@ -238,7 +224,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     featureKicker: "Everything included",
     featureTitle: "Built around real literature-search work.",
     featureIntro:
-      "The latest release covers fast WOS search construction, reference resolution, journal information, full-text access, and translation without adding a cloud account.",
+      "The latest release covers fast WOS search construction, reference resolution, journal information, full-text access, translation, local screenshots, and native Desktop Markup without adding a cloud account.",
     features: [
       {
         title: "Clipboard to search",
@@ -248,7 +234,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "LLM providers, task-specific models",
         description:
-          "Manage remote or loopback AI providers once, then independently choose a model for optional translation and for optional screenshot-reference formatting. Provider templates, explicit model discovery, manual model IDs, enable controls, Keychain credentials, and connection health stay centralized.",
+          "Manage remote or loopback AI providers once, then independently choose models for optional translation, screenshot-reference formatting, and Math Capture. Provider templates, explicit model discovery, manual model IDs, enable controls, Keychain credentials, and connection health stay centralized.",
       },
       {
         title: "Crossref DOI lookup",
@@ -259,6 +245,11 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         title: "Selection translation",
         description:
           "Select text in another app, enter source text manually, or translate a selected screen area after local OCR. Screenshot images stay on the Mac; remote translation receives recognized/source text only after consent, and up to 100 results stay in local history.",
+      },
+      {
+        title: "Local screenshots & native Desktop Markup",
+        description:
+          "Capture region/window/display screenshots into a local editor with bounded 7-day history, or annotate the desktop with native Apple PaperKit/PencilKit pen, text, selection, lasso, and eraser tools. Normal Desktop Markup export captures the display only on request; transparent PNG export contains annotations only.",
       },
       {
         title: "Institutional full-text access",
@@ -297,17 +288,17 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       {
         title: "User-initiated access",
         description:
-          "Clipboard, selected text, and screenshot areas are accessed only after an explicit panel, refresh, shortcut, or screenshot action. Crossref sends content only for an explicit lookup. Library Access is off by default, and remote translation content requires consent.",
+          "Clipboard, selected text, screenshot areas, and Desktop Markup display capture are accessed only after an explicit panel, refresh, shortcut, capture, or export action. Crossref sends content only for an explicit lookup. Library Access is off by default, and remote AI content requires the applicable task-specific consent.",
       },
       {
         title: "Sandboxed local storage",
         description:
-          "Search, translation, DOI, full-text, and journal-rank history, settings, catalogs, caches, and usage insights stay in the app sandbox; API keys stay in macOS Keychain.",
+          "Search, translation, DOI, full-text, journal-rank, bounded Screenshot Editor history, and Desktop Markup annotation state stay local in the app sandbox/Application Support; API keys stay in macOS Keychain.",
       },
       {
         title: "Transparent external services",
         description:
-          "Model refresh and connection tests run only when requested and include no research text. Before remote translation text is sent, the app names the provider and endpoint and asks permission. Optional screenshot-reference formatting sends only local OCR text to the model you explicitly select. Requests go directly to that service, not through IIDEV.",
+          "Model refresh and connection tests run only when requested and include no research text or Math Capture image. Before remote translation text or a selected formula image is sent, the app names the provider and endpoint and uses the task-specific consent flow. Optional screenshot-reference formatting sends only local OCR text. Requests go directly to the selected service, not through IIDEV.",
       },
     ],
     detailsKicker: "Clear before you install",
@@ -370,7 +361,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "设置与控制",
         title: "让 App 适应你的科研工作流。",
         description:
-          "在一个原生设置窗口中集中管理 LLM 服务商，再分别选择翻译模型与截图文献整理模型，同时管理外发许可、期刊目录、机构全文、个人清单、语言、外观、登录启动和快捷键。",
+          "在一个原生设置窗口中集中管理 LLM 服务商，再分别选择翻译、截图文献整理与 Math Capture 的任务模型，同时管理外发许可、期刊目录、机构全文、个人清单、语言、外观、登录启动和快捷键。",
         stat: "钥匙串保存密钥 · 明确权限控制",
         ariaLabel:
           "WOS Aide Bar 的翻译服务商、隐私、期刊清单、机构全文、外观和快捷键设置演示",
@@ -394,9 +385,9 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "菜单栏",
         title: "所有功能，一点即达",
         description:
-          "快速检索、剪贴板检索、最近记录、个人期刊列表、本地洞察、语言和主题，都集中在一个紧凑菜单中。",
+          "快速检索、剪贴板检索、最近记录、个人期刊列表、语言和主题，都集中在一个紧凑菜单中。",
         stat: "原生菜单栏控制中心",
-        imageAlt: "WOS Aide Bar 主菜单，包含检索、设置、期刊列表和本地洞察",
+        imageAlt: "WOS Aide Bar 主菜单，包含检索、设置和期刊列表",
       },
       {
         ...screens.search,
@@ -412,8 +403,8 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "期刊目录",
         title: "只在需要时安装最新清单",
         description:
-          "支持 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 与 FT50。只有在你主动点击下载或刷新时才从项目 GitHub 获取，也可以用兼容 CSV 替换来源。所有文件都在本机验证、索引与匹配。",
-        stat: "7 个来源 · 本地 CSV 处理",
+          "支持 Web of Science SCIE/SSCI/AHCI/ESCI、Scopus、ScienceDirect、PubMed/NLM、EI Compendex、CNKI 北大核心/CSSCI/CSSCI-扩展版，以及 AJG 2024、UTD24 与 FT50。只有在你主动点击下载或刷新时才从项目 GitHub 获取，也可以用兼容 CSV 替换来源。所有文件都在本机验证、索引与匹配。",
+        stat: "多数据库目录 · 本地 CSV 处理",
         imageAlt: "WOS Aide Bar 期刊目录管理器",
       },
       {
@@ -424,15 +415,6 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "从 UTD24 开始、每行输入一本期刊，或导入 CSV；你的清单可从浮动检索窗口直接打开。",
         stat: "手动编辑或 CSV 导入",
         imageAlt: "WOS Aide Bar 个人期刊列表编辑器",
-      },
-      {
-        ...screens.insights,
-        badge: "本地洞察",
-        title: "看清使用方式，不把它变成遥测数据",
-        description:
-          "查看 WOS 检索、DOI 查询、已接受的期刊补全、连续使用、DOI 解析成功率与常用 WOS 字段；统计只在本机计算和保存。",
-        stat: "私密的个人使用统计",
-        imageAlt: "WOS Aide Bar 本地洞察日历和活动统计",
       },
       {
         ...screens.general,
@@ -446,7 +428,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     ],
     featureKicker: "完整功能",
     featureTitle: "围绕真实文献检索流程构建。",
-    featureIntro: "最新版覆盖快速 WOS 检索、参考文献解析、期刊信息、机构全文与翻译，无需建立 IIDEV 云端账户。",
+    featureIntro: "最新版覆盖快速 WOS 检索、参考文献解析、期刊信息、机构全文、翻译、本机截图与原生桌面涂鸦，无需建立 IIDEV 云端账户。",
     features: [
       {
         title: "剪贴板直达检索",
@@ -454,15 +436,19 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "统一服务商，任务独立选模型",
-        description: "集中管理远程或回环 LLM 服务商，再分别为可选翻译和可选截图文献整理选择模型；服务商模板、主动模型发现、手动模型 ID、启用开关、钥匙串凭据与连接状态统一管理。",
+        description: "集中管理远程或回环 LLM 服务商，再分别为可选翻译、截图文献整理和 Math Capture 选择模型；服务商模板、主动模型发现、手动模型 ID、启用开关、钥匙串凭据与连接状态统一管理。",
       },
       {
         title: "Crossref DOI 解析",
-        description: "可从独立 Crossref 面板、对话窗口动作或截图识别文献流程解析一条或多条参考文献。截图先在本机 OCR；可选 LLM 整理只发送 OCR 文本，不上传截图图片。",
+        description: "可从独立 Crossref 面板、对话窗口动作或截图识别文献流程解析一条或多条参考文献。截图先在本机 OCR；可选 LLM 整理只以 OCR 文本作为远程发送内容，不上传截图图片，并按文献整理用途与端点单独征得许可。",
       },
       {
         title: "全局划词翻译",
         description: "在其他 App 中选中文字并按下快捷键，或在翻译窗口手动输入原文。远程翻译仅在取得许可后发送原文，最多 100 条结果保存在本机历史中。",
+      },
+      {
+        title: "本机截图与原生桌面涂鸦",
+        description: "区域/窗口/整屏截图进入本机编辑器并保留有界的 7 天历史；桌面涂鸦使用 Apple PaperKit/PencilKit 的原生画笔、文本、选择、套索和橡皮擦。普通导出仅在你主动操作时捕获当前屏幕，透明 PNG 只导出标注。",
       },
       {
         title: "机构全文访问",
@@ -494,11 +480,11 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     privacyItems: [
       {
         title: "仅在用户操作时访问",
-        description: "只有打开面板、主动刷新、按下快捷键或主动框选截图后才读取剪贴板、选中文字或屏幕区域；Crossref 仅在主动查询时发送内容，机构全文默认关闭，远程翻译原文需先取得许可。",
+        description: "只有打开面板、主动刷新、按下快捷键、主动截图或主动导出桌面涂鸦时才读取剪贴板、选中文字或对应屏幕内容；Crossref 仅在主动查询时发送内容，机构全文默认关闭，远程 AI 内容需先取得对应任务许可。",
       },
       {
         title: "沙盒内本地保存",
-        description: "检索、翻译、DOI、机构全文与期刊等级历史，以及设置、目录、缓存与使用洞察均留在 App 沙盒；API 密钥保存在 macOS 钥匙串。",
+        description: "检索、翻译、DOI、机构全文与期刊等级历史，以及有界截图编辑历史、桌面涂鸦标注状态、设置、目录与缓存均保存在本机 App 沙盒/Application Support；API 密钥保存在 macOS 钥匙串。",
       },
       {
         title: "外部服务清楚透明",
@@ -561,7 +547,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "設定與控制",
         title: "讓 App 配合你的科研工作流程。",
         description:
-          "在一個原生設定視窗中集中管理 LLM 服務商，再分別選擇翻譯模型與截圖文獻整理模型，同時管理外傳許可、期刊目錄、機構全文、個人清單、語言、外觀、登入啟動和快速鍵。",
+          "在一個原生設定視窗中集中管理 LLM 服務商，再分別選擇翻譯、截圖文獻整理與 Math Capture 的任務模型，同時管理外傳許可、期刊目錄、機構全文、個人清單、語言、外觀、登入啟動和快速鍵。",
         stat: "鑰匙圈保存密鑰 · 明確權限控制",
         ariaLabel:
           "WOS Aide Bar 的翻譯服務商、隱私、期刊清單、機構全文、外觀和快速鍵設定示範",
@@ -585,9 +571,9 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "選單列",
         title: "所有功能，一點即達",
         description:
-          "快速檢索、剪貼簿檢索、最近記錄、個人期刊清單、本機洞察、語言與主題，都集中在一個緊湊選單中。",
+          "快速檢索、剪貼簿檢索、最近記錄、個人期刊清單、語言與主題，都集中在一個緊湊選單中。",
         stat: "原生選單列控制中心",
-        imageAlt: "WOS Aide Bar 主選單，包含檢索、設定、期刊清單和本機洞察",
+        imageAlt: "WOS Aide Bar 主選單，包含檢索、設定和期刊清單",
       },
       {
         ...screens.search,
@@ -603,8 +589,8 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
         badge: "期刊目錄",
         title: "只在需要時安裝最新清單",
         description:
-          "支援 SCIE、SSCI、AHCI、ESCI、AJG 2024、UTD24 與 FT50。只有在你主動按下下載或重新整理時才從專案 GitHub 取得，也可以用相容 CSV 取代來源。所有檔案都在本機驗證、索引與配對。",
-        stat: "7 個來源 · 本機 CSV 處理",
+          "支援 Web of Science SCIE/SSCI/AHCI/ESCI、Scopus、ScienceDirect、PubMed/NLM、EI Compendex、CNKI 北大核心/CSSCI/CSSCI-扩展版，以及 AJG 2024、UTD24 與 FT50。只有在你主動按下下載或重新整理時才從專案 GitHub 取得，也可以用相容 CSV 取代來源。所有檔案都在本機驗證、索引與配對。",
+        stat: "多資料庫目錄 · 本機 CSV 處理",
         imageAlt: "WOS Aide Bar 期刊目錄管理器",
       },
       {
@@ -615,15 +601,6 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
           "從 UTD24 開始、每行輸入一本期刊，或匯入 CSV；你的清單可從浮動檢索視窗直接開啟。",
         stat: "手動編輯或 CSV 匯入",
         imageAlt: "WOS Aide Bar 個人期刊清單編輯器",
-      },
-      {
-        ...screens.insights,
-        badge: "本機洞察",
-        title: "看清使用方式，不把它變成遙測資料",
-        description:
-          "查看 WOS 檢索、DOI 查詢、已接受的期刊補全、連續使用、DOI 解析成功率與常用 WOS 欄位；統計只在本機計算和保存。",
-        stat: "私密的個人使用統計",
-        imageAlt: "WOS Aide Bar 本機洞察日曆和活動統計",
       },
       {
         ...screens.general,
@@ -637,7 +614,7 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     ],
     featureKicker: "完整功能",
     featureTitle: "圍繞真實文獻檢索流程建立。",
-    featureIntro: "最新版涵蓋快速 WOS 檢索、參考文獻解析、期刊資訊、機構全文與翻譯，無需建立 IIDEV 雲端帳戶。",
+    featureIntro: "最新版涵蓋快速 WOS 檢索、參考文獻解析、期刊資訊、機構全文、翻譯、本機截圖與原生桌面塗鴉，無需建立 IIDEV 雲端帳戶。",
     features: [
       {
         title: "剪貼簿直達檢索",
@@ -645,15 +622,19 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
       },
       {
         title: "統一服務商，任務獨立選模型",
-        description: "集中管理遠端或迴路 LLM 服務商，再分別為可選翻譯和可選截圖文獻整理選擇模型；服務商範本、主動模型探索、手動模型 ID、啟用開關、鑰匙圈憑證與連線狀態統一管理。",
+        description: "集中管理遠端或迴路 LLM 服務商，再分別為可選翻譯、截圖文獻整理和 Math Capture 選擇模型；服務商範本、主動模型探索、手動模型 ID、啟用開關、鑰匙圈憑證與連線狀態統一管理。",
       },
       {
         title: "Crossref DOI 解析",
-        description: "可從獨立 Crossref 面板、對話視窗動作或截圖辨識文獻流程解析一條或多條參考文獻。截圖先在本機 OCR；可選 LLM 整理只傳送 OCR 文字，不上傳截圖圖片。",
+        description: "可從獨立 Crossref 面板、對話視窗動作或截圖辨識文獻流程解析一條或多條參考文獻。截圖先在本機 OCR；可選 LLM 整理只以 OCR 文字作為遠端傳送內容，不上傳截圖圖片，並按文獻整理用途與端點另外取得許可。",
       },
       {
         title: "全域選取文字翻譯",
         description: "在其他 App 中選取文字並按下快速鍵，或在翻譯視窗手動輸入原文。遠端翻譯只有取得許可後才傳送原文，最多 100 筆結果保存在本機記錄中。",
+      },
+      {
+        title: "本機截圖與原生桌面塗鴉",
+        description: "區域／視窗／整屏截圖進入本機編輯器並保留有界的 7 天歷史；桌面塗鴉使用 Apple PaperKit/PencilKit 的原生畫筆、文字、選取、套索和橡皮擦。普通匯出僅在你主動操作時擷取目前螢幕，透明 PNG 只匯出標註。",
       },
       {
         title: "機構全文存取",
@@ -685,11 +666,11 @@ export const homeCopy: Record<SiteLocale, HomeCopy> = {
     privacyItems: [
       {
         title: "僅在使用者操作時存取",
-        description: "只有開啟面板、主動重新整理、按下快速鍵或主動框選截圖後才讀取剪貼簿、選取文字或螢幕區域；Crossref 僅在主動查詢時傳送內容，機構全文預設關閉，遠端翻譯原文需先取得許可。",
+        description: "只有開啟面板、主動重新整理、按下快速鍵、主動截圖或主動匯出桌面塗鴉時才讀取剪貼簿、選取文字或對應螢幕內容；Crossref 僅在主動查詢時傳送內容，機構全文預設關閉，遠端 AI 內容需先取得對應任務許可。",
       },
       {
         title: "沙盒內本機保存",
-        description: "搜尋、翻譯、DOI、機構全文與期刊等級記錄，以及設定、目錄、快取與使用洞察均留在 App 沙盒；API 密鑰保存在 macOS 鑰匙圈。",
+        description: "搜尋、翻譯、DOI、機構全文與期刊等級記錄，以及有界截圖編輯歷史、桌面塗鴉標註狀態、設定、目錄與快取均保存在本機 App 沙盒/Application Support；API 密鑰保存在 macOS 鑰匙圈。",
       },
       {
         title: "外部服務清楚透明",

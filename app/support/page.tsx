@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "How do I add journal catalogs?",
-    a: "Open Settings → Query Panel → Web of Science Core Collection. SCIE, SSCI, AHCI, ESCI, AJG 2024, UTD24, and FT50 can be downloaded or refreshed from the project GitHub repository only when you click the corresponding action. You can also replace a source with a compatible CSV. Files are processed locally.",
+    a: "Open Settings → Query and choose the journal source you want to manage. Repository-backed catalogs include Web of Science SCIE/SSCI/AHCI/ESCI, Scopus, ScienceDirect, PubMed/NLM, EI Compendex, CNKI 北大核心/CSSCI/CSSCI-扩展版, AJG 2024, UTD24, and FT50. A remote CSV is downloaded only when you explicitly choose Download, Update, or Refresh. Compatible CSV imports are processed locally.",
   },
 ];
 

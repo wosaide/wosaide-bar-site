@@ -74,11 +74,17 @@ test("privacy page reflects current app behavior", async () => {
   assert.match(html, /does not use an LLM to generate Web of Science queries/);
   assert.match(html, /history limit defaults to 50/);
   assert.match(html, /Library Access uses Third Iron/);
-  assert.match(html, /Screenshot recognition and local OCR/);
-  assert.match(html, /screenshot image is never sent/);
+  assert.match(html, /Screenshot tools, Desktop Markup, local OCR, and Math Capture/);
+  assert.match(html, /Apple PaperKit\/PencilKit/);
+  assert.match(html, /transparent PNG export.*does not capture the desktop/s);
+  assert.match(html, /screenshot image.*never sent/s);
+  assert.match(html, /formula-recognition purpose and endpoint/);
+  assert.match(html, /Declining that consent sends no formula image/);
   assert.match(html, /Hong Kong Polytechnic University \(PolyU\).*Monash University/s);
   assert.match(html, /hiding it does not disable the dedicated Crossref panel/);
-  assert.match(html, /iCloud Drive backup is off by default/);
+  assert.match(html, /separate consent scope.*reference-formatting purpose and endpoint/s);
+  assert.match(html, /Scopus.*ScienceDirect.*PubMed\/NLM.*EI Compendex.*CNKI/s);
+  assert.doesNotMatch(html, /Local Insights|iCloud Drive backup/i);
   assert.doesNotMatch(
     html,
     /Optional AI Assistant|three-stage query-generation|AI query builder/i,
@@ -105,8 +111,11 @@ test("terms page includes every app language and current permission model", asyn
   }
 
   assert.match(html, /Screen Recording permission/);
-  assert.match(html, /screenshot image is not uploaded/);
-  assert.match(html, /does not present the separate translation-consent sheet/);
+  assert.match(html, /native PaperKit\/PencilKit Desktop Markup/);
+  assert.match(html, /reference recognition and screenshot translation.*not uploaded/s);
+  assert.match(html, /separate consent scope.*reference-formatting purpose and endpoint/s);
+  assert.match(html, /formula-recognition.*consent/s);
+  assert.match(html, /Declining sends no formula image/);
   assert.match(html, /constructs Web of Science queries deterministically/);
 });
 
@@ -114,7 +123,7 @@ test("feature navigation uses the client-side intro bypass", async () => {
   const homepage = await render("/");
   const html = await homepage.text();
   assert.match(html, /cinematic-hero is-checking/);
-  assert.match(html, /href="\/wosaide-bar-site\/#features"|href="\/#features"/);
+  assert.match(html, /href="\/bar\/#features"|href="\/#features"/);
 });
 
 test("homepage offers the mainland China DMG download", async () => {
@@ -130,7 +139,7 @@ test("homepage offers the mainland China DMG download", async () => {
   assert.match(html, /中国大陆直接下载/);
   assert.match(
     html,
-    /href="(?:\/wosaide-bar-site)?\/downloads\/WOS-Aide-Bar-1\.0\.4-DeveloperID\.dmg"/,
+    /href="(?:\/bar)?\/downloads\/WOS-Aide-Bar-1\.0\.4-DeveloperID\.dmg"/,
   );
   assert.ok(installer.size > 5_000_000);
 });

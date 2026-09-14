@@ -15,8 +15,10 @@ const geistMono = Geist_Mono({
 
 const siteOrigin =
   process.env.NEXT_PUBLIC_SITE_ORIGIN ??
-  "https://wosaide.github.io";
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  "https://wosaide.com";
+const basePath =
+  process.env.NEXT_PUBLIC_BASE_PATH ??
+  (process.env.STATIC_EXPORT === "true" ? "/bar" : "");
 const socialImage = `${siteOrigin}${basePath}/og.png`;
 
 export const metadata: Metadata = {

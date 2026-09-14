@@ -1,17 +1,16 @@
-name: Deploy public website
+name: Validate public website
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: website-validation-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -24,22 +23,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build:pages
+      - name: Build the single production /bar site
+        run: npm run build:pages
         env:
-          GITHUB_PAGES: "true"
-          NEXT_PUBLIC_SITE_ORIGIN: https://wosaide.github.io
-          NEXT_PUBLIC_BASE_PATH: /wosaide-bar-site
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          STATIC_EXPORT: "true"
+          NEXT_PUBLIC_SITE_ORIGIN: https://wosaide.com
+          NEXT_PUBLIC_BASE_PATH: /bar

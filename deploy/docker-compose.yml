@@ -1,0 +1,18 @@
+services:
+  web:
+    image: nginx:1.28-alpine
+    container_name: wosaide-web
+    restart: unless-stopped
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - /srv/wosaide/bar:/usr/share/nginx/html/bar:ro
+      - /srv/wosaide/download:/usr/share/nginx/html/download:ro
+      - /srv/wosaide/update:/usr/share/nginx/html/update:ro
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.wosaide-web.entrypoints: "web,websecure"
+      traefik.http.routers.wosaide-web.priority: "80"
+      traefik.http.routers.wosaide-web.rule: "(Host(`wosaide.com`) || Host(`www.wosaide.com`)) && (PathPrefix(`/bar`) || PathPrefix(`/download`) || PathPrefix(`/update`) || PathPrefix(`/api`) || Path(`/healthz`))"
+      traefik.http.routers.wosaide-web.tls: "true"
+      traefik.http.routers.wosaide-web.tls.certresolver: "letsencrypt"
+      traefik.http.services.wosaide-web.loadbalancer.server.port: "80"

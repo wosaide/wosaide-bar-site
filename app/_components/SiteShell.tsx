@@ -58,7 +58,8 @@ export function SiteShell({
         ? `${basePath}/zh-hant`
         : `${basePath}/`;
   const homeHref = `${localeRoot}?replay=1`;
-  const featuresHref = `${localeRoot}#features`;
+  const featuresHref =
+    locale === "en" ? "/en#features" : locale === "zh-Hant" ? "/zh-hant#features" : "/#features";
 
   return (
     <div className="site-shell">
